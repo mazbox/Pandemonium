@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ZG Importer' target in the 'ZG Importer' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

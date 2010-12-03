@@ -1,0 +1,6 @@
+.DS_Store?
+tools/Pandemonium Importer/build/*
+*.pbxuser
+XCode/build/*
+lib/vstsdk2.4/*
+lib/pd-for-android/*
