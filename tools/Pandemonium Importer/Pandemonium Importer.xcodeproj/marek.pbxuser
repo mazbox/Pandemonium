@@ -9,16 +9,16 @@
 	};
 	256AC3D80F4B6AC300CF3369 /* ZG_ImporterAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1074, 767}}";
-			sepNavSelRange = "{907, 0}";
-			sepNavVisRange = "{462, 1110}";
+			sepNavIntBoundsRect = "{{0, 0}, {1016, 799}}";
+			sepNavSelRange = "{423, 0}";
+			sepNavVisRange = "{0, 1611}";
 		};
 	};
 	256AC3D90F4B6AC300CF3369 /* ZG_ImporterAppDelegate.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {985, 3055}}";
-			sepNavSelRange = "{3110, 0}";
-			sepNavVisRange = "{2786, 583}";
+			sepNavIntBoundsRect = "{{0, 0}, {1307, 2964}}";
+			sepNavSelRange = "{5360, 0}";
+			sepNavVisRange = "{4996, 835}";
 		};
 	};
 	256AC3F00F4B6AF500CF3369 /* ZG_Importer_Prefix.pch */ = {
@@ -29,15 +29,16 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
-		activeExecutable = EACE7A65119570040038CDB0 /* ZG Importer */;
-		activeTarget = 8D1107260486CEB800E47090 /* ZG Importer */;
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = EACE7A65119570040038CDB0 /* Pandemonium Importer */;
+		activeTarget = 8D1107260486CEB800E47090 /* Pandemonium Importer */;
 		addToTargets = (
-			8D1107260486CEB800E47090 /* ZG Importer */,
+			8D1107260486CEB800E47090 /* Pandemonium Importer */,
 		);
 		codeSenseManager = EACE7A77119570080038CDB0 /* Code sense */;
 		executables = (
-			EACE7A65119570040038CDB0 /* ZG Importer */,
+			EACE7A65119570040038CDB0 /* Pandemonium Importer */,
 		);
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -67,7 +68,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					620,
+					798,
 					60,
 					20,
 					48,
@@ -84,37 +85,29 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304875148;
-			PBXWorkspaceStateSaveDate = 304875148;
+			PBXPerProjectTemplateStateSaveDate = 313082742;
+			PBXWorkspaceStateSaveDate = 313082742;
 		};
 		perUserProjectItems = {
-			EA3ADA99122C069800538E78 /* PBXTextBookmark */ = EA3ADA99122C069800538E78 /* PBXTextBookmark */;
-			EA6F7C4A120F33F900FF400B = EA6F7C4A120F33F900FF400B /* PBXTextBookmark */;
-			EA6F7C5C120F34F700FF400B = EA6F7C5C120F34F700FF400B /* PBXTextBookmark */;
-			EA6F7C60120F352100FF400B = EA6F7C60120F352100FF400B /* PBXTextBookmark */;
-			EA6F7D0A120F410700FF400B = EA6F7D0A120F410700FF400B /* PBXTextBookmark */;
-			EA6F7D0C120F410700FF400B = EA6F7D0C120F410700FF400B /* PBXTextBookmark */;
-			EA6F7D29120F419A00FF400B = EA6F7D29120F419A00FF400B /* PBXTextBookmark */;
-			EA6F7D37120F424E00FF400B = EA6F7D37120F424E00FF400B /* PBXTextBookmark */;
-			EA6F7DBB120F4D6000FF400B = EA6F7DBB120F4D6000FF400B /* PBXTextBookmark */;
-			EA6F7DC7120F4DE300FF400B = EA6F7DC7120F4DE300FF400B /* PBXTextBookmark */;
-			EA6F7DC9120F4DE300FF400B = EA6F7DC9120F4DE300FF400B /* PBXTextBookmark */;
-			EA6F7DD7120F4ED800FF400B = EA6F7DD7120F4ED800FF400B /* PBXTextBookmark */;
-			EA6F7DFD120F51E300FF400B = EA6F7DFD120F51E300FF400B /* PBXTextBookmark */;
-			EA6F7ED0120F5A1700FF400B = EA6F7ED0120F5A1700FF400B /* PBXTextBookmark */;
-			EA6F7ED1120F5A1700FF400B = EA6F7ED1120F5A1700FF400B /* PBXTextBookmark */;
-			EA6F7ED2120F5A1700FF400B = EA6F7ED2120F5A1700FF400B /* PBXTextBookmark */;
-			EA7E562311E148850090803A = EA7E562311E148850090803A /* PBXTextBookmark */;
-			EA7E582A11E1CB020090803A = EA7E582A11E1CB020090803A /* PBXTextBookmark */;
-			EA7E582D11E1CB020090803A = EA7E582D11E1CB020090803A /* PBXTextBookmark */;
-			EA7E585511E1CBF50090803A = EA7E585511E1CBF50090803A /* PBXTextBookmark */;
-			EA7E58CF11E1D3F20090803A = EA7E58CF11E1D3F20090803A /* PBXTextBookmark */;
-			EA85340911E7349100168047 = EA85340911E7349100168047 /* PBXTextBookmark */;
-			EACE7A84119571750038CDB0 = EACE7A84119571750038CDB0 /* PBXTextBookmark */;
-			EACE7A91119572E50038CDB0 = EACE7A91119572E50038CDB0 /* PBXTextBookmark */;
-			EAE2578711E3991C0015DB8E = EAE2578711E3991C0015DB8E /* PBXTextBookmark */;
-			EAE2578E11E39A3C0015DB8E = EAE2578E11E39A3C0015DB8E /* PBXTextBookmark */;
-			EAE2579011E39A3C0015DB8E = EAE2579011E39A3C0015DB8E /* PBXTextBookmark */;
+			EA6F7C4A120F33F900FF400B /* PBXTextBookmark */ = EA6F7C4A120F33F900FF400B /* PBXTextBookmark */;
+			EA6F7C5C120F34F700FF400B /* PBXTextBookmark */ = EA6F7C5C120F34F700FF400B /* PBXTextBookmark */;
+			EA6F7C60120F352100FF400B /* PBXTextBookmark */ = EA6F7C60120F352100FF400B /* PBXTextBookmark */;
+			EA6F7D29120F419A00FF400B /* PBXTextBookmark */ = EA6F7D29120F419A00FF400B /* PBXTextBookmark */;
+			EA6F7D37120F424E00FF400B /* PBXTextBookmark */ = EA6F7D37120F424E00FF400B /* PBXTextBookmark */;
+			EA7E562311E148850090803A /* PBXTextBookmark */ = EA7E562311E148850090803A /* PBXTextBookmark */;
+			EA7E582A11E1CB020090803A /* PBXTextBookmark */ = EA7E582A11E1CB020090803A /* PBXTextBookmark */;
+			EA7E582D11E1CB020090803A /* PBXTextBookmark */ = EA7E582D11E1CB020090803A /* PBXTextBookmark */;
+			EA7E585511E1CBF50090803A /* PBXTextBookmark */ = EA7E585511E1CBF50090803A /* PBXTextBookmark */;
+			EA7E58CF11E1D3F20090803A /* PBXTextBookmark */ = EA7E58CF11E1D3F20090803A /* PBXTextBookmark */;
+			EA85340911E7349100168047 /* PBXTextBookmark */ = EA85340911E7349100168047 /* PBXTextBookmark */;
+			EA9BC81F12A9452100EDA5CA /* PBXTextBookmark */ = EA9BC81F12A9452100EDA5CA /* PBXTextBookmark */;
+			EA9BC84912A9469A00EDA5CA /* XCBuildMessageTextBookmark */ = EA9BC84912A9469A00EDA5CA /* XCBuildMessageTextBookmark */;
+			EA9BC85312A946D800EDA5CA /* PBXTextBookmark */ = EA9BC85312A946D800EDA5CA /* PBXTextBookmark */;
+			EACE7A84119571750038CDB0 /* PBXTextBookmark */ = EACE7A84119571750038CDB0 /* PBXTextBookmark */;
+			EACE7A91119572E50038CDB0 /* PBXTextBookmark */ = EACE7A91119572E50038CDB0 /* PBXTextBookmark */;
+			EAE2578711E3991C0015DB8E /* PBXTextBookmark */ = EAE2578711E3991C0015DB8E /* PBXTextBookmark */;
+			EAE2578E11E39A3C0015DB8E /* PBXTextBookmark */ = EAE2578E11E39A3C0015DB8E /* PBXTextBookmark */;
+			EAE2579011E39A3C0015DB8E /* PBXTextBookmark */ = EAE2579011E39A3C0015DB8E /* PBXTextBookmark */;
 		};
 		sourceControlManager = EACE7A76119570080038CDB0 /* Source Control */;
 		userBuildSettings = {
@@ -127,21 +120,11 @@
 			sepNavVisRange = "{0, 272}";
 		};
 	};
-	8D1107260486CEB800E47090 /* ZG Importer */ = {
+	8D1107260486CEB800E47090 /* Pandemonium Importer */ = {
 		activeExec = 0;
 		executables = (
-			EACE7A65119570040038CDB0 /* ZG Importer */,
+			EACE7A65119570040038CDB0 /* Pandemonium Importer */,
 		);
-	};
-	EA3ADA99122C069800538E78 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7E57C611E1C53C0090803A /* ZGAUUtils.cpp */;
-		name = "ZGAUUtils.cpp: 159";
-		rLen = 0;
-		rLoc = 3515;
-		rType = 0;
-		vrLen = 1502;
-		vrLoc = 2693;
 	};
 	EA6F7C4A120F33F900FF400B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -194,26 +177,6 @@
 		path = /Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/stat.h;
 		sourceTree = "<absolute>";
 	};
-	EA6F7D0A120F410700FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EAF8162B11E9D2DF0043E72C /* ParameterTableController.h */;
-		name = "ParameterTableController.h: 20";
-		rLen = 31;
-		rLoc = 434;
-		rType = 0;
-		vrLen = 531;
-		vrLoc = 0;
-	};
-	EA6F7D0C120F410700FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EAF8162C11E9D2DF0043E72C /* ParameterTableController.mm */;
-		name = "ParameterTableController.mm: 26";
-		rLen = 0;
-		rLoc = 331;
-		rType = 0;
-		vrLen = 509;
-		vrLoc = 50;
-	};
 	EA6F7D29120F419A00FF400B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = EA6F7D2A120F419A00FF400B /* fcntl.h */;
@@ -241,86 +204,6 @@
 		vrLen = 1020;
 		vrLoc = 4706;
 	};
-	EA6F7DBB120F4D6000FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 256AC3D80F4B6AC300CF3369 /* ZG_ImporterAppDelegate.h */;
-		name = "ZG_ImporterAppDelegate.h: 39";
-		rLen = 0;
-		rLoc = 907;
-		rType = 0;
-		vrLen = 1110;
-		vrLoc = 462;
-	};
-	EA6F7DC7120F4DE300FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 256AC3D90F4B6AC300CF3369 /* ZG_ImporterAppDelegate.mm */;
-		name = "ZG_ImporterAppDelegate.mm: 136";
-		rLen = 0;
-		rLoc = 3712;
-		rType = 0;
-		vrLen = 1080;
-		vrLoc = 3846;
-	};
-	EA6F7DC9120F4DE300FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7E591411E1D8250090803A /* ofxFileUtils.h */;
-		name = "ofxFileUtils.h: 24";
-		rLen = 0;
-		rLoc = 397;
-		rType = 0;
-		vrLen = 911;
-		vrLoc = 97;
-	};
-	EA6F7DD7120F4ED800FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7E591511E1D8250090803A /* ofxFileUtils.mm */;
-		name = "ofxFileUtils.mm: 89";
-		rLen = 0;
-		rLoc = 1764;
-		rType = 0;
-		vrLen = 607;
-		vrLoc = 1379;
-	};
-	EA6F7DFD120F51E300FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7E57C511E1C53C0090803A /* ZGAUUtils.h */;
-		name = "ZGAUUtils.h: 28";
-		rLen = 0;
-		rLoc = 745;
-		rType = 0;
-		vrLen = 1048;
-		vrLoc = 19;
-	};
-	EA6F7ED0120F5A1700FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7E575E11E1C5150090803A /* PdPluginParameters.h */;
-		name = "PdPluginParameters.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 919;
-		vrLoc = 460;
-	};
-	EA6F7ED1120F5A1700FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7E57C611E1C53C0090803A /* ZGAUUtils.cpp */;
-		name = "ZGAUUtils.cpp: 159";
-		rLen = 0;
-		rLoc = 3515;
-		rType = 0;
-		vrLen = 1078;
-		vrLoc = 2676;
-	};
-	EA6F7ED2120F5A1700FF400B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = EA7E57C611E1C53C0090803A /* ZGAUUtils.cpp */;
-		name = "ZGAUUtils.cpp: 159";
-		rLen = 0;
-		rLoc = 3515;
-		rType = 0;
-		vrLen = 1083;
-		vrLoc = 2679;
-	};
 	EA7E562311E148850090803A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
@@ -330,36 +213,6 @@
 		rType = 0;
 		vrLen = 272;
 		vrLoc = 0;
-	};
-	EA7E565F11E1C5150090803A /* ofxDirList.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {896, 1872}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 662}";
-		};
-	};
-	EA7E575E11E1C5150090803A /* PdPluginParameters.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1063, 1690}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{460, 919}";
-			sepNavWindowFrame = "{{15, 4}, {929, 874}}";
-		};
-	};
-	EA7E57C511E1C53C0090803A /* ZGAUUtils.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1074, 533}}";
-			sepNavSelRange = "{745, 0}";
-			sepNavVisRange = "{19, 1048}";
-			sepNavWindowFrame = "{{15, 4}, {929, 874}}";
-		};
-	};
-	EA7E57C611E1C53C0090803A /* ZGAUUtils.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1016, 2769}}";
-			sepNavSelRange = "{3515, 0}";
-			sepNavVisRange = "{2693, 1502}";
-		};
 	};
 	EA7E580A11E1C8C30090803A /* stl_construct.h */ = {
 		isa = PBXFileReference;
@@ -429,20 +282,6 @@
 		vrLen = 1638;
 		vrLoc = 2833;
 	};
-	EA7E591411E1D8250090803A /* ofxFileUtils.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1074, 754}}";
-			sepNavSelRange = "{397, 0}";
-			sepNavVisRange = "{97, 911}";
-		};
-	};
-	EA7E591511E1D8250090803A /* ofxFileUtils.mm */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1074, 1521}}";
-			sepNavSelRange = "{1588, 0}";
-			sepNavVisRange = "{1379, 607}";
-		};
-	};
 	EA8533FA11E7340400168047 /* NSPasteboard.h */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.h;
@@ -467,7 +306,57 @@
 		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSDragging.h;
 		sourceTree = "<absolute>";
 	};
-	EACE7A65119570040038CDB0 /* ZG Importer */ = {
+	EA9BC7FA12A943BB00EDA5CA /* PdPluginParameters.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1016, 1729}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1097}";
+		};
+	};
+	EA9BC7FB12A943BB00EDA5CA /* ZGAUUtils.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1016, 2678}}";
+			sepNavSelRange = "{3832, 0}";
+			sepNavVisRange = "{2096, 1485}";
+		};
+	};
+	EA9BC7FC12A943BB00EDA5CA /* ZGAUUtils.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1016, 799}}";
+			sepNavSelRange = "{231, 44}";
+			sepNavVisRange = "{0, 1042}";
+		};
+	};
+	EA9BC81F12A9452100EDA5CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* ZG_ImporterAppDelegate.mm */;
+		name = "ZG_ImporterAppDelegate.mm: 136";
+		rLen = 0;
+		rLoc = 3722;
+		rType = 0;
+		vrLen = 1114;
+		vrLoc = 4713;
+	};
+	EA9BC84912A9469A00EDA5CA /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Cannot find protocol declaration for 'NSTableViewDataSource'";
+		fRef = 256AC3D80F4B6AC300CF3369 /* ZG_ImporterAppDelegate.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 16;
+		rType = 1;
+	};
+	EA9BC85312A946D800EDA5CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* ZG_ImporterAppDelegate.h */;
+		name = "ZG_ImporterAppDelegate.h: 19";
+		rLen = 0;
+		rLoc = 423;
+		rType = 0;
+		vrLen = 1611;
+		vrLoc = 0;
+	};
+	EACE7A65119570040038CDB0 /* Pandemonium Importer */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
@@ -490,7 +379,7 @@
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
-		name = "ZG Importer";
+		name = "Pandemonium Importer";
 		savedGlobals = {
 		};
 		showTypeColumn = 0;
@@ -583,19 +472,5 @@
 		name = NSWindow.h;
 		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSWindow.h;
 		sourceTree = "<absolute>";
-	};
-	EAF8162B11E9D2DF0043E72C /* ParameterTableController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {838, 503}}";
-			sepNavSelRange = "{434, 31}";
-			sepNavVisRange = "{0, 531}";
-		};
-	};
-	EAF8162C11E9D2DF0043E72C /* ParameterTableController.mm */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {838, 572}}";
-			sepNavSelRange = "{331, 0}";
-			sepNavVisRange = "{50, 509}";
-		};
 	};
 }

@@ -12,7 +12,7 @@
 
 @implementation ZG_ImporterAppDelegate
 
-@synthesize window, patches, typeSelector, helpWindow, parametersWindow, parameterTable;
+@synthesize window, patches, typeSelector, helpWindow;//, parametersWindow;//, parameterTable;
 
 - (id) init {
 	if(self = [super init]) {
@@ -29,10 +29,10 @@
 	[parameterTable reloadData];
 
 	const char *cStr = patchNameFromPath(path).c_str();
-	[parametersWindow setTitle: 
+	/*[parametersWindow setTitle: 
 	 [NSString 
 	  stringWithUTF8String:cStr]
-	 ];
+	 ];*/
 	
 }
 
@@ -201,7 +201,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 }
 
 - (IBAction) parametersPressed:(id) sender {
-	[parametersWindow makeKeyAndOrderFront:sender];
+	//[parametersWindow makeKeyAndOrderFront:sender];
 }
 
 - (IBAction) helpPressed:(id) sender {

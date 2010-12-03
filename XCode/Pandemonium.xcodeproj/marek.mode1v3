@@ -241,7 +241,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>EA9BC7DD12A93F7400EDA5CA</string>
+						<string>EA9BC82E12A9459700EDA5CA</string>
 						<key>history</key>
 						<array>
 							<string>EA9BC74412A92ABB00EDA5CA</string>
@@ -367,7 +367,7 @@
 							<real>343</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>457 199 1012 830 0 0 1920 1178 </string>
+						<string>458 199 1012 830 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -397,7 +397,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EA9BC7DC12A93F7400EDA5CA</string>
+										<string>EA9BC82D12A9459700EDA5CA</string>
 										<key>history</key>
 										<array>
 											<string>EAD06BB81291986500971CC9</string>
@@ -462,7 +462,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {647, 704}}</string>
 								<key>RubberWindowFrame</key>
-								<string>457 199 1012 830 0 0 1920 1178 </string>
+								<string>458 199 1012 830 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -482,7 +482,7 @@
 								<key>Frame</key>
 								<string>{{0, 709}, {647, 80}}</string>
 								<key>RubberWindowFrame</key>
-								<string>457 199 1012 830 0 0 1920 1178 </string>
+								<string>458 199 1012 830 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -629,7 +629,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>313081716.58625197</real>
+	<real>313083287.59946102</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -652,7 +652,7 @@
 		<string>/Work/Pandemonium/XCode/Pandemonium.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>457 199 1012 830 0 0 1920 1178 </string>
+	<string>458 199 1012 830 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

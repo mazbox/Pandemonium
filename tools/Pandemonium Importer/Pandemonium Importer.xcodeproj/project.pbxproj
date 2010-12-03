@@ -12,10 +12,9 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		EA7E575F11E1C5150090803A /* ofxDirList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA7E565F11E1C5150090803A /* ofxDirList.cpp */; };
-		EA7E57C711E1C53C0090803A /* ZGAUUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA7E57C611E1C53C0090803A /* ZGAUUtils.cpp */; };
-		EA7E591911E1D8250090803A /* ofxFileUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA7E591511E1D8250090803A /* ofxFileUtils.mm */; };
-		EAF8162D11E9D2DF0043E72C /* ParameterTableController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAF8162C11E9D2DF0043E72C /* ParameterTableController.mm */; };
+		EA9BC7F812A9439600EDA5CA /* ofxDirList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9BC7F212A9439600EDA5CA /* ofxDirList.cpp */; };
+		EA9BC7F912A9439600EDA5CA /* ofxFileUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA9BC7F712A9439600EDA5CA /* ofxFileUtils.mm */; };
+		EA9BC7FD12A943BB00EDA5CA /* ZGAUUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9BC7FB12A943BB00EDA5CA /* ZGAUUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +30,13 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* ZG_Importer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZG_Importer-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ZG Importer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZG Importer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7E565F11E1C5150090803A /* ofxDirList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxDirList.cpp; sourceTree = "<group>"; };
-		EA7E566011E1C5150090803A /* ofxDirList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxDirList.h; sourceTree = "<group>"; };
-		EA7E575E11E1C5150090803A /* PdPluginParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdPluginParameters.h; sourceTree = "<group>"; };
-		EA7E57C511E1C53C0090803A /* ZGAUUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGAUUtils.h; sourceTree = "<group>"; };
-		EA7E57C611E1C53C0090803A /* ZGAUUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZGAUUtils.cpp; sourceTree = "<group>"; };
-		EA7E591411E1D8250090803A /* ofxFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFileUtils.h; sourceTree = "<group>"; };
-		EA7E591511E1D8250090803A /* ofxFileUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxFileUtils.mm; sourceTree = "<group>"; };
-		EAF8162B11E9D2DF0043E72C /* ParameterTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterTableController.h; sourceTree = "<group>"; };
-		EAF8162C11E9D2DF0043E72C /* ParameterTableController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ParameterTableController.mm; sourceTree = "<group>"; };
+		EA9BC7F212A9439600EDA5CA /* ofxDirList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxDirList.cpp; sourceTree = "<group>"; };
+		EA9BC7F312A9439600EDA5CA /* ofxDirList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxDirList.h; sourceTree = "<group>"; };
+		EA9BC7F612A9439600EDA5CA /* ofxFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFileUtils.h; sourceTree = "<group>"; };
+		EA9BC7F712A9439600EDA5CA /* ofxFileUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxFileUtils.mm; sourceTree = "<group>"; };
+		EA9BC7FA12A943BB00EDA5CA /* PdPluginParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PdPluginParameters.h; path = ../../src/plugin/PdPluginParameters.h; sourceTree = SOURCE_ROOT; };
+		EA9BC7FB12A943BB00EDA5CA /* ZGAUUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ZGAUUtils.cpp; path = ../../src/plugin/ZGAUUtils.cpp; sourceTree = SOURCE_ROOT; };
+		EA9BC7FC12A943BB00EDA5CA /* ZGAUUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZGAUUtils.h; path = ../../src/plugin/ZGAUUtils.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +54,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				EAF8162B11E9D2DF0043E72C /* ParameterTableController.h */,
-				EAF8162C11E9D2DF0043E72C /* ParameterTableController.mm */,
 				256AC3D80F4B6AC300CF3369 /* ZG_ImporterAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* ZG_ImporterAppDelegate.mm */,
 			);
@@ -94,7 +89,11 @@
 		29B97314FDCFA39411CA2CEA /* ZG Importer */ = {
 			isa = PBXGroup;
 			children = (
-				EA7E565D11E1C5150090803A /* common */,
+				EA9BC7FA12A943BB00EDA5CA /* PdPluginParameters.h */,
+				EA9BC7FB12A943BB00EDA5CA /* ZGAUUtils.cpp */,
+				EA9BC7FC12A943BB00EDA5CA /* ZGAUUtils.h */,
+				EA9BC7F112A9439600EDA5CA /* ofxDirList */,
+				EA9BC7F412A9439600EDA5CA /* ofxFileUtils */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -132,41 +131,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA7E565D11E1C5150090803A /* common */ = {
+		EA9BC7F112A9439600EDA5CA /* ofxDirList */ = {
 			isa = PBXGroup;
 			children = (
-				EA7E590D11E1D8250090803A /* ofxFileUtils */,
-				EA7E565E11E1C5150090803A /* ofxDirList */,
-				EA7E575E11E1C5150090803A /* PdPluginParameters.h */,
-				EA7E57C511E1C53C0090803A /* ZGAUUtils.h */,
-				EA7E57C611E1C53C0090803A /* ZGAUUtils.cpp */,
+				EA9BC7F212A9439600EDA5CA /* ofxDirList.cpp */,
+				EA9BC7F312A9439600EDA5CA /* ofxDirList.h */,
 			);
-			name = common;
-			path = ../common;
+			name = ofxDirList;
+			path = ../../lib/ofxDirList;
 			sourceTree = SOURCE_ROOT;
 		};
-		EA7E565E11E1C5150090803A /* ofxDirList */ = {
+		EA9BC7F412A9439600EDA5CA /* ofxFileUtils */ = {
 			isa = PBXGroup;
 			children = (
-				EA7E565F11E1C5150090803A /* ofxDirList.cpp */,
-				EA7E566011E1C5150090803A /* ofxDirList.h */,
+				EA9BC7F512A9439600EDA5CA /* src */,
 			);
-			path = ofxDirList;
-			sourceTree = "<group>";
+			name = ofxFileUtils;
+			path = ../../lib/ofxFileUtils;
+			sourceTree = SOURCE_ROOT;
 		};
-		EA7E590D11E1D8250090803A /* ofxFileUtils */ = {
+		EA9BC7F512A9439600EDA5CA /* src */ = {
 			isa = PBXGroup;
 			children = (
-				EA7E591311E1D8250090803A /* src */,
-			);
-			path = ofxFileUtils;
-			sourceTree = "<group>";
-		};
-		EA7E591311E1D8250090803A /* src */ = {
-			isa = PBXGroup;
-			children = (
-				EA7E591411E1D8250090803A /* ofxFileUtils.h */,
-				EA7E591511E1D8250090803A /* ofxFileUtils.mm */,
+				EA9BC7F612A9439600EDA5CA /* ofxFileUtils.h */,
+				EA9BC7F712A9439600EDA5CA /* ofxFileUtils.mm */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -174,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* ZG Importer */ = {
+		8D1107260486CEB800E47090 /* Pandemonium Importer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ZG Importer" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Pandemonium Importer" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -186,7 +174,7 @@
 			);
 			dependencies = (
 			);
-			name = "ZG Importer";
+			name = "Pandemonium Importer";
 			productInstallPath = "$(HOME)/Applications";
 			productName = "ZG Importer";
 			productReference = 8D1107320486CEB800E47090 /* ZG Importer.app */;
@@ -197,9 +185,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ZG Importer" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pandemonium Importer" */;
 			compatibilityVersion = "Xcode 3.1";
-			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -211,7 +198,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* ZG Importer */,
+				8D1107260486CEB800E47090 /* Pandemonium Importer */,
 			);
 		};
 /* End PBXProject section */
@@ -235,10 +222,9 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* ZG_ImporterAppDelegate.mm in Sources */,
-				EA7E575F11E1C5150090803A /* ofxDirList.cpp in Sources */,
-				EA7E57C711E1C53C0090803A /* ZGAUUtils.cpp in Sources */,
-				EA7E591911E1D8250090803A /* ofxFileUtils.mm in Sources */,
-				EAF8162D11E9D2DF0043E72C /* ParameterTableController.mm in Sources */,
+				EA9BC7F812A9439600EDA5CA /* ofxDirList.cpp in Sources */,
+				EA9BC7F912A9439600EDA5CA /* ofxFileUtils.mm in Sources */,
+				EA9BC7FD12A943BB00EDA5CA /* ZGAUUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +264,7 @@
 				INFOPLIST_FILE = "ZG_Importer-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "ZG Importer";
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -292,6 +279,7 @@
 				INFOPLIST_FILE = "ZG_Importer-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "ZG Importer";
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
@@ -324,7 +312,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ZG Importer" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Pandemonium Importer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -333,7 +321,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ZG Importer" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pandemonium Importer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

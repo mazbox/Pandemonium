@@ -1,0 +1,14 @@
+#N canvas 562 67 521 432 10;
+#X obj 233 236 dac~;
+#X obj 168 104 adc~;
+#X obj 237 187 *~;
+#X obj 313 155 osc~ 0.5;
+#X text 38 342;
+#X text 43 306 param freq slider 10 300 Hz;
+#X obj 235 59 r freq;
+#X connect 1 0 2 0;
+#X connect 1 1 2 0;
+#X connect 2 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 2 1;
+#X connect 6 0 3 0;

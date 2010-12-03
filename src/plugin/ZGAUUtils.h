@@ -10,8 +10,8 @@
 #include <vector>
 using namespace std;
 
-#define INSTRUMENT		"/Library/Audio/Plug-Ins/Components/ZGInstrument.component"
-#define EFFECT			"/Library/Audio/Plug-Ins/Components/ZenGarden.component"
+#define INSTRUMENT		"/Library/Audio/Sounds/Pandemonium/Instruments"
+#define EFFECT			"/Library/Audio/Sounds/Pandemonium/Effects"
 
 
 // creates directories for the instrument and effects

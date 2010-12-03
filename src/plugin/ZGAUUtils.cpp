@@ -18,11 +18,11 @@ vector<string> patchPaths;
 void findPatches(const char *dir);
 void initDirs() {
 	printf("initDirs()\n");
-	if(!ofxIsDirectory(string(EFFECT)+"/Contents/Resources/patches")) {
-		ofxCreateDirectory(string(EFFECT)+"/Contents/Resources/patches");
+	if(!ofxIsDirectory(string(EFFECT))) {
+		ofxCreateDirectory(string(EFFECT));
 	}
-	if(!ofxIsDirectory(string(INSTRUMENT)+"/Contents/Resources/patches")) {
-		ofxCreateDirectory(string(INSTRUMENT)+"/Contents/Resources/patches");
+	if(!ofxIsDirectory(string(INSTRUMENT))) {
+		ofxCreateDirectory(string(INSTRUMENT));
 	}
 }
 
@@ -34,7 +34,7 @@ vector<string>* loadPatches(const char *pluginPath) {
 	//CFRelease(bundleReference);
 	//strcat(path, "Contents/Resources/");
 	string path = pluginPath;
-	path += "/Contents/Resources/patches";
+	//path += "/Contents/Resources/patches";
 	findPatches(path.c_str());
 	
 	
@@ -156,7 +156,7 @@ const char *installFiles(vector<string> *files) {
 				printf("Copeee\n");
 				// copy the directory
 				type = typ;
-				string dest = string(type)+"/Contents/Resources/patches/"+patchName;
+				string dest = string(type)+"/"+patchName;
 				if(ofxFileExists(dest)) {
 					ofxDeleteDir(dest);
 				}
@@ -174,7 +174,7 @@ const char *installFiles(vector<string> *files) {
 			string dir = path.substr(0, path.rfind(".pd"));
 			dir = dir.substr(dir.rfind("/")+1);
 			type = getType(path);
-			string destDir = string(type) + "/Contents/Resources/patches/"+dir+"/";
+			string destDir = string(type) + "/"+dir+"/";
 			ofxCreateDirectory(destDir);
 			ofxCopyFile(path, destDir  +patchNameFromPath(path));
 

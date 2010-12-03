@@ -9,19 +9,21 @@
 #import <Cocoa/Cocoa.h>
 #include <vector>
 #include <string>
+#include "PdPluginParameters.h"
+
 using namespace std;
-#include "ParameterTableController.h"
+//#include "ParameterTableController.h"
 
 @interface ZG_ImporterAppDelegate : NSObject <NSApplicationDelegate,NSTableViewDataSource> {
     
 	NSWindow *window;
 	NSPanel *helpWindow;
-	NSPanel *parametersWindow;
+//	NSPanel *parametersWindow;
 	NSTableView *patches;
 	NSTableView *parameterTable;
 	NSSegmentedControl *typeSelector;
 
-	ParameterTableController *parameters;
+//	ParameterTableController *parameters;
 	
 	NSMutableArray *p;
 	vector<string> *patchPaths;

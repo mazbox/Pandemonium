@@ -2,20 +2,20 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10F569</string>
-		<string key="IBDocument.InterfaceBuilderVersion">804</string>
+		<string key="IBDocument.SystemVersion">10D575</string>
+		<string key="IBDocument.InterfaceBuilderVersion">788</string>
 		<string key="IBDocument.AppKitVersion">1038.29</string>
-		<string key="IBDocument.HIToolboxVersion">461.00</string>
+		<string key="IBDocument.HIToolboxVersion">460.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">804</string>
+			<string key="NS.object.0">788</string>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="578"/>
 			<integer value="566"/>
 			<integer value="372"/>
 			<integer value="57"/>
-			<integer value="578"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -185,7 +185,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{335, 452}, {262, 298}}</string>
 				<int key="NSWTFlags">1954021376</int>
-				<string key="NSWindowTitle">ZG Importer</string>
+				<string key="NSWindowTitle">Pandemonium Importer</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
@@ -384,26 +384,6 @@
 								<int key="NSPeriodicInterval">75</int>
 							</object>
 						</object>
-						<object class="NSButton" id="358992007">
-							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">289</int>
-							<string key="NSFrame">{{89, 18}, {85, 25}}</string>
-							<reference key="NSSuperview" ref="439893737"/>
-							<bool key="NSEnabled">YES</bool>
-							<object class="NSButtonCell" key="NSCell" id="667541851">
-								<int key="NSCellFlags">67239424</int>
-								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Parameters</string>
-								<reference key="NSSupport" ref="55101914"/>
-								<reference key="NSControlView" ref="358992007"/>
-								<int key="NSButtonFlags">-2038152961</int>
-								<int key="NSButtonFlags2">163</int>
-								<string key="NSAlternateContents"/>
-								<string key="NSKeyEquivalent"/>
-								<int key="NSPeriodicDelay">400</int>
-								<int key="NSPeriodicInterval">75</int>
-							</object>
-						</object>
 						<object class="NSButton" id="691358314">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">292</int>
@@ -440,7 +420,7 @@
 			<object class="NSWindowTemplate" id="1058748005">
 				<int key="NSWindowStyleMask">31</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{162, 286}, {437, 193}}</string>
+				<string key="NSWindowRect">{{162, 320}, {437, 159}}</string>
 				<int key="NSWTFlags">-461897728</int>
 				<string key="NSWindowTitle">Help</string>
 				<string key="NSWindowClass">NSPanel</string>
@@ -454,18 +434,17 @@
 						<object class="NSTextField" id="1053648397">
 							<reference key="NSNextResponder" ref="262128130"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{17, 20}, {403, 153}}</string>
+							<string key="NSFrame">{{17, 20}, {403, 119}}</string>
 							<reference key="NSSuperview" ref="262128130"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="578165121">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">272629760</int>
-								<string type="base64-UTF8" key="NSContents">VG8gaW5zdGFsbCBhIHBhdGNoIGludG8gWmVuR2FyZGVuIEF1ZGlvIFVuaXRzLCBwbGVhc2UgZHJvcCB5
-b3VyIHBhdGNoIG9udG8gdGhlIFpHIEltcG9ydGVyIGljb24gb24gdGhlIGRvY2sgb3Igb250byB0aGUg
-bGlzdCBvZiBpdGVtcyBvbiB0aGUgbWFpbiB3aW5kb3cgb2YgWkcgSW1wb3J0ZXIuCgpZb3UgY2FuIGFk
-ZCBwYXJhbWV0ZXJzIHRvIHRoZSBwYXRjaCBieSBjbGlja2luZyBvbiBpdCBhbmQgcHJlc3NpbmcgdGhl
-ICdwYXJhbWV0ZXJzJyBidXR0b24uCgpQbGVhc2UgcmVwb3J0IGFueSBidWdzIHRvIGJlcmV6YUBnbWFp
-bC5jb20gc28gSSBjYW4gbWFrZSB0aGlzIHByb2dyYW0gYXdlc29tZSE</string>
+								<string type="base64-UTF8" key="NSContents">VG8gaW5zdGFsbCBhIHBhdGNoIGludG8gUGFuZGVtb25pdW0gQXVkaW8gVW5pdHMsIHBsZWFzZSBkcm9w
+IHlvdXIgcGF0Y2ggb250byB0aGUgUGFuZGVtb25pdW0gSW1wb3J0ZXIgaWNvbiBvbiB0aGUgZG9jayBv
+ciBvbnRvIHRoZSBsaXN0IG9mIGl0ZW1zIG9uIHRoZSBtYWluIHdpbmRvdyBvZiBQYW5kZW1vbml1bSBJ
+bXBvcnRlci4KClBsZWFzZSByZXBvcnQgYW55IGJ1Z3MgdG8gYmVyZXphQGdtYWlsLmNvbSBzbyBJIGNh
+biBtYWtlIHRoaXMgcHJvZ3JhbSBhd2Vzb21lIQ</string>
 								<reference key="NSSupport" ref="55101914"/>
 								<reference key="NSControlView" ref="1053648397"/>
 								<object class="NSColor" key="NSBackgroundColor" id="1037723136">
@@ -478,7 +457,7 @@ bC5jb20gc28gSSBjYW4gbWFrZSB0aGlzIHByb2dyYW0gYXdlc29tZSE</string>
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{437, 193}</string>
+					<string key="NSFrameSize">{437, 159}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
@@ -906,14 +885,6 @@ bC5jb20gc28gSSBjYW4gbWFrZSB0aGlzIHByb2dyYW0gYXdlc29tZSE</string>
 					<int key="connectionID">581</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">parametersPressed:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="358992007"/>
-					</object>
-					<int key="connectionID">596</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="954233876"/>
@@ -1078,7 +1049,6 @@ bC5jb20gc28gSSBjYW4gbWFrZSB0aGlzIHByb2dyYW0gYXdlc29tZSE</string>
 							<reference ref="918874236"/>
 							<reference ref="843041765"/>
 							<reference ref="691358314"/>
-							<reference ref="358992007"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -1209,20 +1179,6 @@ bC5jb20gc28gSSBjYW4gbWFrZSB0aGlzIHByb2dyYW0gYXdlc29tZSE</string>
 						<int key="objectID">573</int>
 						<reference key="object" ref="578165121"/>
 						<reference key="parent" ref="1053648397"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">574</int>
-						<reference key="object" ref="358992007"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="667541851"/>
-						</object>
-						<reference key="parent" ref="439893737"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">575</int>
-						<reference key="object" ref="667541851"/>
-						<reference key="parent" ref="358992007"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">577</int>
@@ -1437,8 +1393,6 @@ bC5jb20gc28gSSBjYW4gbWFrZSB0aGlzIHByb2dyYW0gYXdlc29tZSE</string>
 					<string>57.editorWindowContentRectSynchronizationRect</string>
 					<string>572.IBPluginDependency</string>
 					<string>573.IBPluginDependency</string>
-					<string>574.IBPluginDependency</string>
-					<string>575.IBPluginDependency</string>
 					<string>577.IBEditorWindowLastContentRect</string>
 					<string>577.IBPluginDependency</string>
 					<string>577.IBWindowTemplateEditedContentRect</string>
@@ -1495,9 +1449,9 @@ bC5jb20gc28gSSBjYW4gbWFrZSB0aGlzIHByb2dyYW0gYXdlc29tZSE</string>
 					<integer value="1"/>
 					<string>{74, 862}</string>
 					<string>{{6, 978}, {478, 20}}</string>
-					<string>{{731, 632}, {262, 298}}</string>
+					<string>{{1262, 428}, {262, 298}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{731, 632}, {262, 298}}</string>
+					<string>{{1262, 428}, {262, 298}}</string>
 					<integer value="1"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
@@ -1519,17 +1473,15 @@ bC5jb20gc28gSSBjYW4gbWFrZSB0aGlzIHByb2dyYW0gYXdlc29tZSE</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{966, 544}, {437, 193}}</string>
+					<string>{{966, 578}, {437, 159}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{966, 544}, {437, 193}}</string>
+					<string>{{966, 578}, {437, 159}}</string>
 					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{392, 653}, {218, 183}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{{23, 794}, {245, 183}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{459, 307}, {401, 251}}</string>
