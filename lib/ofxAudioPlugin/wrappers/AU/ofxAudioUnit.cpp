@@ -102,7 +102,7 @@ public:
 			plugin->polyTouchIn(inData1, inData2);
 		}
 			
-		LOG("MIDI RECEIVED: " << (int)nStatus << "      Channel: " << (int) inChannel << " DATA 1: " <<(int)inData1<< " DATA 2: " <<(int)inData2);
+		//LOG("MIDI RECEIVED: " << (int)nStatus << "      Channel: " << (int) inChannel << " DATA 1: " <<(int)inData1<< " DATA 2: " <<(int)inData2);
        
 
 		

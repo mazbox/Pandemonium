@@ -43,6 +43,18 @@
 		8BA05B070720754400365D66 /* CAAUParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA05B050720754400365D66 /* CAAUParameter.cpp */; };
 		8BA05B080720754400365D66 /* CAAUParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA05B060720754400365D66 /* CAAUParameter.h */; };
 		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		EA08926C12AAA494008DD2C9 /* ofxVST.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA08926B12AAA494008DD2C9 /* ofxVST.cpp */; };
+		EA08928812AAA591008DD2C9 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA08928312AAA591008DD2C9 /* audioeffect.cpp */; };
+		EA08928912AAA591008DD2C9 /* audioeffect.h in Headers */ = {isa = PBXBuildFile; fileRef = EA08928412AAA591008DD2C9 /* audioeffect.h */; };
+		EA08928A12AAA591008DD2C9 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA08928512AAA591008DD2C9 /* audioeffectx.cpp */; };
+		EA08928B12AAA591008DD2C9 /* audioeffectx.h in Headers */ = {isa = PBXBuildFile; fileRef = EA08928612AAA591008DD2C9 /* audioeffectx.h */; };
+		EA08928C12AAA591008DD2C9 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA08928712AAA591008DD2C9 /* vstplugmain.cpp */; };
+		EA08928D12AAA591008DD2C9 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA08928312AAA591008DD2C9 /* audioeffect.cpp */; };
+		EA08928E12AAA591008DD2C9 /* audioeffect.h in Headers */ = {isa = PBXBuildFile; fileRef = EA08928412AAA591008DD2C9 /* audioeffect.h */; };
+		EA08928F12AAA591008DD2C9 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA08928512AAA591008DD2C9 /* audioeffectx.cpp */; };
+		EA08929012AAA591008DD2C9 /* audioeffectx.h in Headers */ = {isa = PBXBuildFile; fileRef = EA08928612AAA591008DD2C9 /* audioeffectx.h */; };
+		EA08929112AAA591008DD2C9 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA08928712AAA591008DD2C9 /* vstplugmain.cpp */; };
+		EA0892B012AAA6AE008DD2C9 /* ofxVST.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA08926B12AAA494008DD2C9 /* ofxVST.cpp */; };
 		EA410DD312A914D0007E3440 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DBF12A914D0007E3440 /* Logger.h */; };
 		EA410DD412A914D0007E3440 /* ofxAudioPluginConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DC112A914D0007E3440 /* ofxAudioPluginConfig.h */; };
 		EA410DDD12A914D0007E3440 /* Pandemonium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA410DCB12A914D0007E3440 /* Pandemonium.cpp */; };
@@ -380,6 +392,12 @@
 		8BA05B060720754400365D66 /* CAAUParameter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAAUParameter.h; sourceTree = "<group>"; };
 		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D01CCD20486CAD60068D4B7 /* Pandemonium.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pandemonium.component; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA08926B12AAA494008DD2C9 /* ofxVST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxVST.cpp; sourceTree = "<group>"; };
+		EA08928312AAA591008DD2C9 /* audioeffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audioeffect.cpp; path = ../lib/vstsdk2.4/public.sdk/source/vst2.x/audioeffect.cpp; sourceTree = SOURCE_ROOT; };
+		EA08928412AAA591008DD2C9 /* audioeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = audioeffect.h; path = ../lib/vstsdk2.4/public.sdk/source/vst2.x/audioeffect.h; sourceTree = SOURCE_ROOT; };
+		EA08928512AAA591008DD2C9 /* audioeffectx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audioeffectx.cpp; path = ../lib/vstsdk2.4/public.sdk/source/vst2.x/audioeffectx.cpp; sourceTree = SOURCE_ROOT; };
+		EA08928612AAA591008DD2C9 /* audioeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = audioeffectx.h; path = ../lib/vstsdk2.4/public.sdk/source/vst2.x/audioeffectx.h; sourceTree = SOURCE_ROOT; };
+		EA08928712AAA591008DD2C9 /* vstplugmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vstplugmain.cpp; path = ../lib/vstsdk2.4/public.sdk/source/vst2.x/vstplugmain.cpp; sourceTree = SOURCE_ROOT; };
 		EA410DBF12A914D0007E3440 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		EA410DC112A914D0007E3440 /* ofxAudioPluginConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPluginConfig.h; sourceTree = "<group>"; };
 		EA410DCB12A914D0007E3440 /* Pandemonium.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pandemonium.cpp; sourceTree = "<group>"; };
@@ -499,7 +517,6 @@
 		EAD06DEB1292003700971CC9 /* ofxAudioPluginWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPluginWrapper.h; sourceTree = "<group>"; };
 		EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAudioPluginWrapper.cpp; sourceTree = "<group>"; };
 		EAD1F26412918BD20017A281 /* ofxAudioPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPlugin.h; sourceTree = "<group>"; };
-		EAD1F26912918BD20017A281 /* juce_AU_Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = juce_AU_Wrapper.mm; sourceTree = "<group>"; };
 		EAD1F26B12918BD20017A281 /* ofxAudioUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAudioUnit.cpp; sourceTree = "<group>"; };
 		F7C347EE0ECE5AF8008ADFB6 /* AUBaseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AUBaseHelper.cpp; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUBaseHelper.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		F7C347EF0ECE5AF8008ADFB6 /* AUBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUBaseHelper.h; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUBaseHelper.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
@@ -570,6 +587,7 @@
 				EA410DBE12A914D0007E3440 /* src */,
 				EAD06C6E1291F9E800971CC9 /* addons */,
 				EA5D9A10129188A200D2C79F /* Apple */,
+				EA08926E12AAA4A6008DD2C9 /* Steinberg */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -657,6 +675,26 @@
 			name = PublicUtility;
 			path = Extras/CoreAudio/PublicUtility;
 			sourceTree = DEVELOPER_DIR;
+		};
+		EA08926A12AAA494008DD2C9 /* VST */ = {
+			isa = PBXGroup;
+			children = (
+				EA08926B12AAA494008DD2C9 /* ofxVST.cpp */,
+			);
+			path = VST;
+			sourceTree = "<group>";
+		};
+		EA08926E12AAA4A6008DD2C9 /* Steinberg */ = {
+			isa = PBXGroup;
+			children = (
+				EA08928312AAA591008DD2C9 /* audioeffect.cpp */,
+				EA08928412AAA591008DD2C9 /* audioeffect.h */,
+				EA08928512AAA591008DD2C9 /* audioeffectx.cpp */,
+				EA08928612AAA591008DD2C9 /* audioeffectx.h */,
+				EA08928712AAA591008DD2C9 /* vstplugmain.cpp */,
+			);
+			name = Steinberg;
+			sourceTree = "<group>";
 		};
 		EA410DBE12A914D0007E3440 /* src */ = {
 			isa = PBXGroup;
@@ -879,6 +917,7 @@
 		EAD1F26612918BD20017A281 /* wrappers */ = {
 			isa = PBXGroup;
 			children = (
+				EA08926A12AAA494008DD2C9 /* VST */,
 				EAD1F26712918BD20017A281 /* AU */,
 			);
 			path = wrappers;
@@ -889,7 +928,6 @@
 			children = (
 				EA9BC71012A9252800EDA5CA /* AU_Resources.r */,
 				EAD06C0512919B2F00971CC9 /* ofxAudioUnit.exp */,
-				EAD1F26912918BD20017A281 /* juce_AU_Wrapper.mm */,
 				EAD1F26B12918BD20017A281 /* ofxAudioUnit.cpp */,
 			);
 			path = AU;
@@ -944,6 +982,8 @@
 				EA8BD95B12A91A49000D847D /* PdPluginParameters.h in Headers */,
 				EA8BD95C12A91A49000D847D /* Pandemonium.h in Headers */,
 				EA8BD95D12A91A4A000D847D /* Logger.h in Headers */,
+				EA08928912AAA591008DD2C9 /* audioeffect.h in Headers */,
+				EA08928B12AAA591008DD2C9 /* audioeffectx.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,6 +1039,8 @@
 				EA410DE012A914D0007E3440 /* URLLauncher.h in Headers */,
 				EA410DE312A914D0007E3440 /* ZGAUUtils.h in Headers */,
 				EA410DE412A914D0007E3440 /* ZGPlugin.h in Headers */,
+				EA08928E12AAA591008DD2C9 /* audioeffect.h in Headers */,
+				EA08929012AAA591008DD2C9 /* audioeffectx.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,6 +1249,10 @@
 				EA8BD95412A91A3A000D847D /* Pandemonium.cpp in Sources */,
 				EA8BD95812A91A46000D847D /* ZGAUUtils.cpp in Sources */,
 				EA8BD95912A91A47000D847D /* URLLauncher.mm in Sources */,
+				EA08928812AAA591008DD2C9 /* audioeffect.cpp in Sources */,
+				EA08928A12AAA591008DD2C9 /* audioeffectx.cpp in Sources */,
+				EA08928C12AAA591008DD2C9 /* vstplugmain.cpp in Sources */,
+				EA0892B012AAA6AE008DD2C9 /* ofxVST.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1317,6 +1363,10 @@
 				EA410DDD12A914D0007E3440 /* Pandemonium.cpp in Sources */,
 				EA410DE112A914D0007E3440 /* URLLauncher.mm in Sources */,
 				EA410DE212A914D0007E3440 /* ZGAUUtils.cpp in Sources */,
+				EA08926C12AAA494008DD2C9 /* ofxVST.cpp in Sources */,
+				EA08928D12AAA591008DD2C9 /* audioeffect.cpp in Sources */,
+				EA08928F12AAA591008DD2C9 /* audioeffectx.cpp in Sources */,
+				EA08929112AAA591008DD2C9 /* vstplugmain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1342,6 +1392,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = ../lib/vstsdk2.4;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
 				LIBRARY_SEARCH_PATHS = (
@@ -1364,6 +1415,7 @@
 				EXPORTED_SYMBOLS_FILE = ../lib/ofxAudioPlugin/wrappers/AU/ofxAudioUnit.exp;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = ../lib/vstsdk2.4;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
 				LIBRARY_SEARCH_PATHS = (
@@ -1419,6 +1471,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = ../lib/vstsdk2.4;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
 				LIBRARY_SEARCH_PATHS = (
@@ -1442,6 +1495,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = ../lib/vstsdk2.4;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
 				LIBRARY_SEARCH_PATHS = (

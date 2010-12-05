@@ -29,7 +29,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* ZG_Importer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZG_Importer-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* ZG Importer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZG Importer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Pandemonium Importer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pandemonium Importer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9BC7F212A9439600EDA5CA /* ofxDirList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxDirList.cpp; sourceTree = "<group>"; };
 		EA9BC7F312A9439600EDA5CA /* ofxDirList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxDirList.h; sourceTree = "<group>"; };
 		EA9BC7F612A9439600EDA5CA /* ofxFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFileUtils.h; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* ZG Importer.app */,
+				8D1107320486CEB800E47090 /* Pandemonium Importer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			name = "Pandemonium Importer";
 			productInstallPath = "$(HOME)/Applications";
 			productName = "ZG Importer";
-			productReference = 8D1107320486CEB800E47090 /* ZG Importer.app */;
+			productReference = 8D1107320486CEB800E47090 /* Pandemonium Importer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +263,7 @@
 				GCC_PREFIX_HEADER = ZG_Importer_Prefix.pch;
 				INFOPLIST_FILE = "ZG_Importer-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "ZG Importer";
+				PRODUCT_NAME = "Pandemonium Importer";
 				SDKROOT = macosx10.6;
 			};
 			name = Debug;
@@ -278,7 +278,7 @@
 				GCC_PREFIX_HEADER = ZG_Importer_Prefix.pch;
 				INFOPLIST_FILE = "ZG_Importer-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "ZG Importer";
+				PRODUCT_NAME = "Pandemonium Importer";
 				SDKROOT = macosx10.6;
 			};
 			name = Release;

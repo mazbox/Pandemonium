@@ -4,3 +4,5 @@ tools/Pandemonium Importer/build/*
 XCode/build/*
 lib/vstsdk2.4/*
 lib/pd-for-android/*
+dist/packages/*
+XCode/VST/mac/build/*

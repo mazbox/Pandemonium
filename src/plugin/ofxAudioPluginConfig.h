@@ -7,12 +7,12 @@
  *
  */
 
-#define ofxAudioPlugin_IsSynth
+//#define ofxAudioPlugin_IsSynth
 
 // this is set in the project settings
 #ifdef ofxAudioPlugin_IsSynth
 
-#define ofxAudioPlugin_Name                 "Pandemonium Instrument"
+#define ofxAudioPlugin_Name                 "Pandemonium"
 #define ofxAudioPlugin_Desc                 "Pandemonium Instrument"
 #define ofxAudioPlugin_Manufacturer         "MAZBOX.COM"
 #define ofxAudioPlugin_ManufacturerCode     'MazB'
