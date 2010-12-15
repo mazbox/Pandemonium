@@ -1,0 +1,11 @@
+#N canvas 313 291 370 185 10;
+#X obj 146 105 kick~;
+#X msg 113 67 1;
+#X obj 138 140 dac~;
+#X msg 159 67 0.5;
+#X text 23 16 Pretty straightforward: The inlet accepts a velocity
+between 0 and 1 \, serving as a trigger.;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;

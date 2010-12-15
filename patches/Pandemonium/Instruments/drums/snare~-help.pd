@@ -1,0 +1,9 @@
+#N canvas 703 225 294 229 10;
+#X msg 109 66 1;
+#X obj 142 95 snare~;
+#X obj 135 123 dac~;
+#X msg 152 65 0.5;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 1 0;

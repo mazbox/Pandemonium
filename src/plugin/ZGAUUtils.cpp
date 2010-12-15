@@ -18,6 +18,11 @@ vector<string> patchPaths;
 void findPatches(const char *dir);
 void initDirs() {
 	printf("initDirs()\n");
+	if(!ofxIsDirectory(string(BASE_DIRECTORY))) {
+		if(!ofxCreateDirectory(string(BASE_DIRECTORY))) {
+			printf("Couldn't create base directory \n");
+		}
+	}
 	if(!ofxIsDirectory(string(EFFECT))) {
 		ofxCreateDirectory(string(EFFECT));
 	}

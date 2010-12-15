@@ -9,7 +9,7 @@
 #include <fstream>
 #include "ofxPd.h"
 #include "z_libpd.h"
-
+#include "Logger.h"
 extern "C" {
 	void ofxPd_printhook(const char *ptr) {
 		ofstream file("/Users/marek/Desktop/log.txt", ofstream::app);
@@ -25,7 +25,10 @@ ofxPd::ofxPd() {
 	patchIsOpen = false;
 	libpd_init();
 	libpd_clear_search_path();
+	LOG("ofxPd::ofxPd");
+	
 }
+
 
 bool ofxPd::hasInput() {
 	return hasADC;
@@ -45,8 +48,10 @@ void ofxPd::getDirAndFile(const char *path, char *outDir, char *outFile) {
 
 void ofxPd::setBlockSize(int bufferSize) {
 	if(bufferSize != blockSize) {
-		printf("Readjusting block size from %d to %d\n", blockSize, bufferSize);
+		//printf("Readjusting block size from %d to %d\n", blockSize, bufferSize);
+		LOG("Changing buffer size from "<< blockSize << " to " << bufferSize << endl);
 		load(path, numInputChannels, numOutputChannels, sampleRate, bufferSize);
+
 	}
 }
 
@@ -54,6 +59,8 @@ void ofxPd::load(string patchFile, int inputs, int outputs, int samplerate, int 
 	running = false;
 	
 
+	
+	
 	hasADC = false;
 	// ensure that blockSize is a multiple of Pd's blocksize
 	if(bufferSize==0) bufferSize = 256;
@@ -78,9 +85,10 @@ void ofxPd::load(string patchFile, int inputs, int outputs, int samplerate, int 
 	 libpd_messagehook = (t_libpd_messagehook) NULL;
 	 */
 	
+	stopPd();
 	libpd_init_audio(numInputChannels, numOutputChannels, samplerate, blockSize/libpd_blocksize());
 	
-	stopPd();
+	
 	
 	openPatch(file, dir);
 	
@@ -117,6 +125,7 @@ void ofxPd::closePatch(string file, string dir) {
 	libpd_clear_search_path();
 	libpd_start_message();
 	string recvr = "pd-"+file;
+	printf("Trying to close patch %s\n", file.c_str());
 	libpd_finish_message(recvr.c_str(), "menuclose");
 	patchIsOpen = false;
 }
@@ -125,7 +134,7 @@ void ofxPd::closePatch(string file, string dir) {
 void ofxPd::openPatch(string file, string dir) {
 
 	
-	if(patchIsOpen) closePatch(currFile, currDir);
+	//if(patchIsOpen) closePatch(currFile, currDir);
 	libpd_add_to_search_path(dir.c_str());
 	currDir = dir;
 	currFile = file;
@@ -155,6 +164,7 @@ void ofxPd::startPd() {
 
 ofxPd::~ofxPd() {
 	stopPd();
+	LOG("ofxPd::~ofxPd");
 	// TODO(mhroth): what message must be sent to pd in order to clear all canvases?
 }
 

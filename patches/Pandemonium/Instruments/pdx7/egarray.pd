@@ -1,0 +1,78 @@
+#N canvas 258 314 947 478 10;
+#X graph graph1 0 0 140 2 100 160 300 20;
+#X array egratedecay 141 float 1;
+#A 0 0 0 0.025 0.05 0.075 0.1 0.125 0.15 0.175 0.2 0.225 0.25 0.25
+0.26 0.27 0.28 0.29 0.3 0.31 0.32 0.33 0.34 0.35 0.35 0.358 0.366 0.374
+0.382 0.39 0.398 0.406 0.414 0.422 0.43 0.43 0.439 0.448 0.457 0.466
+0.475 0.484 0.493 0.502 0.511 0.52 0.52 0.527 0.534 0.541 0.548 0.555
+0.562 0.569 0.576 0.583 0.59 0.59 0.601 0.612 0.623 0.634 0.645 0.656
+0.667 0.678 0.689 0.7 0.7 0.707 0.714 0.721 0.728 0.735 0.742 0.749
+0.756 0.763 0.77 0.77 0.777 0.784 0.791 0.798 0.805 0.812 0.819 0.826
+0.833 0.833492 0.842143 0.850794 0.859444 0.868095 0.876746 0.885397
+0.894048 0.902698 0.91133 0.920197 0.929064 0.937931 0.946798 0.955665
+0.964532 0.973399 0.982266 0.991133 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0;
+#X pop;
+#X msg 45 209 \; egratedecay read egratedecay.txt;
+#X obj 571 218 print line;
+#X msg 520 -3 0;
+#X msg 529 24 0.25 200;
+#X obj 569 187 line 1;
+#X obj 485 216 t b f;
+#X obj 474 287 f 0;
+#X obj 519 288 + 1;
+#X obj 474 336 print f;
+#X msg 425 231 0;
+#X obj 552 367 tabwrite egratedecay;
+#X msg 542 46 0.35 200;
+#X msg 554 67 0.43 200;
+#X msg 572 90 0.52 200;
+#X msg 584 113 0.59 200;
+#X msg 757 58 read egratedecay.txt;
+#X msg 740 17 bang;
+#X obj 754 179 print test;
+#X obj 756 126 qlist;
+#X msg 800 18 rewind;
+#X msg 868 19 next;
+#X msg 754 -33 tempo 1;
+#X msg 118 264 bang;
+#X obj 118 293 t b b;
+#X obj 196 362 f;
+#X obj 234 362 + 1;
+#X msg 212 332 0;
+#X obj 118 322 until;
+#X obj 100 388 sel 122;
+#X obj 198 397 t f f;
+#X connect 3 0 5 0;
+#X connect 3 0 10 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 5 0 6 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 0 9 0;
+#X connect 7 0 11 1;
+#X connect 8 0 7 1;
+#X connect 10 0 7 1;
+#X connect 12 0 5 0;
+#X connect 13 0 5 0;
+#X connect 14 0 5 0;
+#X connect 15 0 5 0;
+#X connect 16 0 19 0;
+#X connect 17 0 19 0;
+#X connect 19 0 5 0;
+#X connect 19 0 18 0;
+#X connect 20 0 19 0;
+#X connect 21 0 19 0;
+#X connect 22 0 19 0;
+#X connect 23 0 24 0;
+#X connect 24 0 28 0;
+#X connect 24 1 27 0;
+#X connect 25 0 26 0;
+#X connect 25 0 29 0;
+#X connect 25 0 30 0;
+#X connect 26 0 25 1;
+#X connect 27 0 25 1;
+#X connect 28 0 25 0;
+#X connect 29 0 28 1;

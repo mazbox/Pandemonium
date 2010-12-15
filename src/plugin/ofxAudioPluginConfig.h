@@ -7,7 +7,7 @@
  *
  */
 
-//#define ofxAudioPlugin_IsSynth
+#define ofxAudioPlugin_IsSynth
 
 // this is set in the project settings
 #ifdef ofxAudioPlugin_IsSynth

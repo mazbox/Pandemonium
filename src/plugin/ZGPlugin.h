@@ -22,6 +22,7 @@ class ZGPlugin {
 public:
 	
 	ZGPlugin() {
+		lastBufferSize = 256;
 #ifdef ofxAudioPlugin_IsSynth	
 		findPatches("/Library/Audio/Sounds/Pandemonium/Instruments");
 #else
@@ -31,10 +32,14 @@ public:
 
 		pd = new ofxPd();
 		running = true;
+		
 	}
 	
 	
-	
+	~ZGPlugin() {
+
+		delete pd;
+	}
 	
 	int getAudioUnitUnit(string type, string unit) {
 		

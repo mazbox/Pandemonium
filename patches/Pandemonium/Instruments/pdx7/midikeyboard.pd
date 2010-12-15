@@ -1,0 +1,105 @@
+#N canvas 206 241 819 605 10;
+#X obj 692 386 mtof;
+#X obj 531 54 key;
+#X floatatom 530 114 4 0 0;
+#X floatatom 692 410 8 0 0;
+#X floatatom 450 220 0 0 0;
+#X floatatom 11 213 0 0 0;
+#X obj 167 268 tabwrite key2midi;
+#X graph graph2 0 0 299 128 109 490 409 350;
+#X array key2midi 300 float 1;
+#A 0 59 0 0 0 0 0 0 0 0 0 60 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 74 77 76 0 0 0 0 0 0 0 0 0 0 0 0 0 60 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 61 69 65 0 0 66 68 70 0 0 73 75 72 71 0 0 0 0 63 0 0 67 0 64 62 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0;
+#X pop;
+#X text 342 219 set k value x;
+#X floatatom 228 198 0 0 0;
+#X msg 186 152 bang;
+#X obj 228 174 + 1;
+#X obj 186 176 float;
+#X msg 255 131 0;
+#X text 174 133 Counter;
+#X msg 592 -6 \; key2midi write key2midi.txt;
+#X obj 531 343 tabread key2midi;
+#X floatatom 531 367 4 0 0;
+#X floatatom 398 138 0 0 0;
+#X obj 398 162 spigot;
+#X floatatom 440 138 0 0 0;
+#X floatatom 398 186 0 0 0;
+#X msg 56 2 \; record 0;
+#X obj 12 -24 loadbang;
+#X text 119 -29 Click here to record keys;
+#X text 586 -34 Click here to save keybindings;
+#X obj 440 114 r record;
+#X text 49 212 set midi value y;
+#X obj 531 481 outlet;
+#X msg 647 98 \; key2midi const 0;
+#X text 647 78 Clear all!;
+#X obj 531 91 spigot;
+#X floatatom 571 68 0 0 0;
+#X msg 366 16 \; on 0;
+#X msg 433 15 \; on 1;
+#X text 437 51 ON;
+#X text 371 50 OFF;
+#X obj 615 49 r on;
+#X text 317 -29 Start keyboard (default off);
+#X msg 35 34 \; key2midi bounds 0 0 299 128 \; key2midi ylabel 310
+0 20 40 60 80 100 120 \; key2midi xlabel -10 0 50 100 150 200 250 \;
+key2midi yticks 0 10 1 \; key2midi xticks 0 50 1 \; key2midi read key2midi.txt
+;
+#X floatatom 55 263 0 0 0;
+#X obj 55 287 spigot;
+#X floatatom 97 263 0 0 0;
+#X floatatom 55 311 0 0 0;
+#X obj 97 239 r record;
+#X msg 147 -7 \; record 1 \; on 1;
+#X msg 295 157 59;
+#X text 338 155 B;
+#X obj 528 -21 inlet;
+#X obj 366 -2 select 0;
+#X obj 434 -3 select 1;
+#X connect 0 0 3 0;
+#X connect 1 0 31 0;
+#X connect 2 0 16 0;
+#X connect 2 0 18 0;
+#X connect 4 0 6 1;
+#X connect 5 0 40 0;
+#X connect 9 0 5 0;
+#X connect 10 0 12 0;
+#X connect 11 0 9 0;
+#X connect 11 0 12 1;
+#X connect 12 0 11 0;
+#X connect 13 0 12 1;
+#X connect 13 0 9 0;
+#X connect 16 0 17 0;
+#X connect 17 0 0 0;
+#X connect 17 0 28 0;
+#X connect 18 0 19 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 1;
+#X connect 21 0 4 0;
+#X connect 23 0 22 0;
+#X connect 23 0 39 0;
+#X connect 23 0 33 0;
+#X connect 26 0 20 0;
+#X connect 31 0 2 0;
+#X connect 32 0 31 1;
+#X connect 37 0 32 0;
+#X connect 40 0 41 0;
+#X connect 41 0 43 0;
+#X connect 42 0 41 1;
+#X connect 43 0 6 0;
+#X connect 44 0 42 0;
+#X connect 46 0 12 1;
+#X connect 46 0 9 0;
+#X connect 48 0 49 0;
+#X connect 48 0 50 0;
+#X connect 49 0 33 0;
+#X connect 50 0 34 0;

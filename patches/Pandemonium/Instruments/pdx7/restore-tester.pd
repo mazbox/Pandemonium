@@ -1,0 +1,8 @@
+#N canvas 0 0 450 300 10;
+#X obj 194 135 restore-settings;
+#X floatatom 231 65 4 0 0;
+#X msg 129 64 bang;
+#X obj 189 97 f 0;
+#X connect 1 0 3 1;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;

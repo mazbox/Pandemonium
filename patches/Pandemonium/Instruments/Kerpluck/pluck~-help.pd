@@ -1,0 +1,34 @@
+#N canvas 829 385 469 289 10;
+#X floatatom 326 160 5 0 0 0 - - -;
+#X obj 326 181 mtof;
+#X obj 169 248 dac~;
+#X msg 79 153 1;
+#X msg 109 153 0.5;
+#X obj 326 139 f 69;
+#X obj 326 119 loadbang;
+#X text 363 160 pitch;
+#X text 22 152 velocity;
+#X msg 138 153 0;
+#X msg 200 124 feedback 0.999;
+#X msg 200 144 feedback 0.99;
+#X msg 201 166 feedback 0.9;
+#X text 43 24 pluck~ models a plucked string with Karplus-Strong. Floats
+sent to the cold inlet determine the pitch (in Hz) \; floats sent to
+the hot inlet are velocities in the range 0...1. The feedback coefficient
+that determines the rate of decay can be set with a message to the
+hot inlet \, or with a creation argument. If neither is given \, the
+coefficient defaults to 0.993.;
+#X obj 176 208 pluck~ 0.99;
+#X text 256 210 Creation argument is optional.;
+#X connect 0 0 1 0;
+#X connect 1 0 14 1;
+#X connect 3 0 14 0;
+#X connect 4 0 14 0;
+#X connect 5 0 0 0;
+#X connect 6 0 5 0;
+#X connect 9 0 14 0;
+#X connect 10 0 14 0;
+#X connect 11 0 14 0;
+#X connect 12 0 14 0;
+#X connect 14 0 2 0;
+#X connect 14 0 2 1;

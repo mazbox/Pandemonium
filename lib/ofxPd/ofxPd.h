@@ -32,11 +32,15 @@ public:
 	void processNonInterleaved(float *input, float *output, int frameCount);
 	
 	bool isRunning() { return running; }
+	
+	void openPatch(string file, string dir);
+	void closePatch(string file, string dir);
+	
+	
 private:
 	void stopPd();
 	void startPd();
-	void openPatch(string file, string dir);
-	void closePatch(string file, string dir);
+	
 
 	int blockSize;
 	int numInputChannels;

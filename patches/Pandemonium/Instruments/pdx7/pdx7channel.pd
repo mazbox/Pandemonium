@@ -1,0 +1,16 @@
+#N canvas 481 163 334 287 10;
+#X obj 57 200 pdx7voice;
+#X obj 57 96 mtof;
+#X obj 57 54 unpack 0 0;
+#X obj 57 231 outlet~;
+#X obj 57 22 inlet;
+#X obj 150 157 env4seg;
+#X obj 160 121 r ampenv;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 2 1 0 1;
+#X connect 2 1 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 0 2;
+#X connect 6 0 5 1;

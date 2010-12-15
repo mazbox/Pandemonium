@@ -9,9 +9,9 @@
 #include <Carbon/Carbon.h>
 #include <vector>
 using namespace std;
-
-#define INSTRUMENT		"/Library/Audio/Sounds/Pandemonium/Instruments"
-#define EFFECT			"/Library/Audio/Sounds/Pandemonium/Effects"
+#define BASE_DIRECTORY  "/Library/Audio/Sounds/Pandemonium"
+#define INSTRUMENT		BASE_DIRECTORY "/Instruments"
+#define EFFECT			BASE_DIRECTORY "/Effects"
 
 
 // creates directories for the instrument and effects

@@ -1,0 +1,198 @@
+#N canvas 13 -4 1141 875 10;
+#X text 38 20 Algo 1;
+#X text 242 21 Algo 2;
+#X text 447 21 Algo 3;
+#X text 650 22 Algo 4;
+#X text 35 137 Algo 5;
+#X text 237 136 Algo 6;
+#X text 444 138 Algo 7;
+#X text 922 -13 Voice Init;
+#X text 651 138 Algo 8;
+#X text 861 140 Algo 9;
+#X text 35 258 Algo 10;
+#X text 241 260 Algo 11;
+#X text 463 260 Algo 12;
+#X text 657 263 Algo 13;
+#X text 871 265 Algo 14;
+#X text 42 379 Algo 15;
+#X text 247 381 Algo 16;
+#X text 464 382 Algo 17;
+#X text 657 382 Algo 18;
+#X text 259 -21 The 32 DX7 algorithms;
+#X text 869 382 Algo 19;
+#X text 43 494 Algo 20;
+#X msg 909 6 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 0 \; algo-op4 0 0 0 0 0 0 0 \; algo-op5 0 0 0 0 0 0 0 \;
+algo-op6 0 0 0 0 0 0 0 \;;
+#X msg 30 513 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+100 100 20 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 100
+0 0 0 \; algo-op6 0 0 0 100 0 0 0 \;;
+#X msg 29 398 \; algo-op1 0 100 \; algo-op2 100 20 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 0 100 0
+0 0 \; algo-op6 0 0 0 100 0 0 0 \;;
+#X msg 234 400 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+100 0 0 0 0 0 0 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 100 0 0 0 0
+0 0 \; algo-op6 0 0 0 0 100 20 0 \;;
+#X msg 451 401 \; algo-op1 0 100 \; algo-op2 100 20 0 0 0 0 0 \; algo-op3
+100 0 0 0 0 0 0 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 100 0 0 0 0
+0 0 \; algo-op6 0 0 0 0 100 0 0 \;;
+#X msg 644 401 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+100 0 20 0 0 0 0 \; algo-op4 100 0 0 0 0 0 0 \; algo-op5 0 0 0 100
+0 0 0 \; algo-op6 0 0 0 0 100 0 0 \;;
+#X msg 856 401 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 100 0 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 0 100 100 20 0 \;;
+#X msg 858 284 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 0 100 0
+0 0 \; algo-op6 0 0 0 100 0 20 0 \;;
+#X msg 644 282 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 100 0 0
+0 0 \; algo-op6 0 0 100 0 0 20 0 \;;
+#X msg 450 279 \; algo-op1 0 100 \; algo-op2 100 20 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 100 0 0
+0 0 \; algo-op6 0 0 100 0 0 0 0 \;;
+#X msg 237 279 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 100 0 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 100 0
+0 0 \; algo-op6 0 0 0 100 0 10 0 \;;
+#X msg 31 277 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 100 20 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 100
+0 0 0 \; algo-op6 0 0 0 100 0 0 0 \;;
+#X msg 34 156 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 0 0 100 20 0 \;;
+#X msg 237 160 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 0 0 0 20
+100 \; algo-op6 0 0 0 0 100 0 0 \;;
+#X msg 446 158 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 0 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 100 0 0 0
+0 \; algo-op6 0 0 0 0 100 20 0 \;;
+#X msg 649 161 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 0 \; algo-op4 20 0 100 0 0 0 0 \; algo-op5 0 0 100 0 0
+0 0 \; algo-op6 0 0 0 0 100 0 0 \;;
+#X msg 862 162 \; algo-op1 0 100 \; algo-op2 100 20 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 0 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 100 0 0 0
+0 \; algo-op6 0 0 0 0 100 0 0 \;;
+#X text 256 497 Algo 21;
+#X msg 243 516 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+100 100 20 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 0
+0 0 100 \; algo-op6 0 0 0 100 100 0 0 \;;
+#X text 468 497 Algo 22;
+#X msg 455 516 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 100 100 100 20 0 \;;
+#X text 694 499 Algo 23;
+#X msg 681 518 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 100 0 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 0 100 100 20 0 \;;
+#X text 911 500 Algo 24;
+#X msg 898 519 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 100 100 100 20 0 \;;
+#X text 43 610 Algo 25;
+#X msg 30 629 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 0 100 100 20 0 \;;
+#X text 259 611 Algo 26;
+#X msg 246 630 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 100 0 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 100 0
+0 0 \; algo-op6 0 0 0 100 0 20 0 \;;
+#X text 469 613 Algo 27;
+#X msg 455 632 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 100 20 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 100
+0 0 0 \; algo-op6 0 0 0 100 0 0 0 \;;
+#X text 673 619 Algo 28;
+#X msg 660 638 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 0 100 20
+0 0 \; algo-op6 0 0 0 0 0 0 100 \;;
+#X text 874 617 Algo 29;
+#X msg 861 636 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 0 0 100 20 0 \;;
+#X text 45 728 Algo 30;
+#X msg 31 747 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 0 0 0 0 \; algo-op5 0 0 0 100 20
+0 0 \; algo-op6 0 0 0 0 0 0 100 \;;
+#X text 252 729 Algo 31;
+#X msg 239 748 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 0 0 100 20 0 \;;
+#X text 467 732 Algo 32;
+#X msg 454 751 \; algo-op1 0 100 \; algo-op2 0 0 0 0 0 0 100 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 0 0 0
+100 \; algo-op6 0 0 0 0 0 0 100 \;;
+#X msg 644 39 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 100 0 0 0 0 0 \; algo-op4 0 0 0 0 0 20 100 \; algo-op5 0 0 0 100
+0 0 0 \; algo-op6 0 0 0 0 100 0 0 \;;
+#X msg 440 38 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 100 0 0 0 0 0 \; algo-op4 0 0 0 0 0 0 100 \; algo-op5 0 0 0 100 0
+0 0 \; algo-op6 0 0 0 0 100 20 0 \;;
+#X msg 235 38 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 20 0 0 0 100 \; algo-op4 0 0 100 20 0 0 0 \; algo-op5 0 0 0 100
+0 0 0 \; algo-op6 0 0 0 0 100 0 0 \;;
+#X msg 31 37 \; algo-op1 0 100 \; algo-op2 100 0 0 0 0 0 0 \; algo-op3
+0 0 0 0 0 0 100 \; algo-op4 0 0 100 20 0 0 0 \; algo-op5 0 0 0 100
+0 0 0 \; algo-op6 0 0 0 0 100 0 0 \;;
+#X obj 32 -1 r 1-dx7-algo;
+#X obj 235 -1 r 2-dx7-algo;
+#X obj 437 0 r 3-dx7-algo;
+#X obj 644 -1 r 4-dx7-algo;
+#X obj 89 134 r 5-dx7-algo;
+#X obj 289 138 r 6-dx7-algo;
+#X obj 502 137 r 7-dx7-algo;
+#X obj 701 141 r 8-dx7-algo;
+#X obj 127 255 r 10-dx7-algo;
+#X obj 297 258 r 11-dx7-algo;
+#X obj 530 258 r 12-dx7-algo;
+#X obj 716 261 r 13-dx7-algo;
+#X obj 932 262 r 14-dx7-algo;
+#X obj 111 377 r 15-dx7-algo;
+#X obj 314 380 r 16-dx7-algo;
+#X obj 526 379 r 17-dx7-algo;
+#X obj 719 380 r 18-dx7-algo;
+#X obj 929 380 r 19-dx7-algo;
+#X obj 102 494 r 20-dx7-algo;
+#X obj 319 496 r 21-dx7-algo;
+#X obj 533 497 r 22-dx7-algo;
+#X obj 761 498 r 23-dx7-algo;
+#X obj 975 500 r 24-dx7-algo;
+#X obj 124 609 r 25-dx7-algo;
+#X obj 317 611 r 26-dx7-algo;
+#X obj 536 613 r 27-dx7-algo;
+#X obj 728 619 r 28-dx7-algo;
+#X obj 926 617 r 29-dx7-algo;
+#X obj 123 728 r 30-dx7-algo;
+#X obj 313 729 r 31-dx7-algo;
+#X obj 525 733 r 32-dx7-algo;
+#X obj 911 138 r 9-dx7-algo;
+#X connect 67 0 66 0;
+#X connect 68 0 65 0;
+#X connect 69 0 64 0;
+#X connect 70 0 63 0;
+#X connect 71 0 34 0;
+#X connect 72 0 35 0;
+#X connect 73 0 36 0;
+#X connect 74 0 37 0;
+#X connect 75 0 33 0;
+#X connect 76 0 32 0;
+#X connect 77 0 31 0;
+#X connect 78 0 30 0;
+#X connect 79 0 29 0;
+#X connect 80 0 24 0;
+#X connect 81 0 25 0;
+#X connect 82 0 26 0;
+#X connect 83 0 27 0;
+#X connect 84 0 28 0;
+#X connect 85 0 23 0;
+#X connect 86 0 40 0;
+#X connect 87 0 42 0;
+#X connect 88 0 44 0;
+#X connect 89 0 46 0;
+#X connect 90 0 48 0;
+#X connect 91 0 50 0;
+#X connect 92 0 52 0;
+#X connect 93 0 54 0;
+#X connect 94 0 56 0;
+#X connect 95 0 58 0;
+#X connect 96 0 60 0;
+#X connect 97 0 62 0;
+#X connect 98 0 38 0;

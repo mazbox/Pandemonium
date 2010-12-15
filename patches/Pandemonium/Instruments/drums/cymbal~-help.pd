@@ -1,0 +1,9 @@
+#N canvas 705 279 435 296 10;
+#X msg 109 65 1;
+#X obj 135 123 dac~;
+#X msg 152 65 0.5;
+#X obj 140 94 cymbal~;
+#X connect 0 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;

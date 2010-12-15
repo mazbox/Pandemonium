@@ -1,0 +1,20 @@
+#N canvas 510 204 622 363 12;
+#X obj 128 303 dac~;
+#X text 26 18 Soda can synth;
+#X text 193 279 optional creation parameter indicating bp filter sharpness
+;
+#X obj 140 256 can~ 500;
+#X obj 239 29 notein;
+#X obj 248 114 / 127;
+#X obj 134 49 r sharpness;
+#X msg 139 122 sharpness \$1;
+#X text 66 96 param sharpness 100 1600 800;
+#X obj 371 115 mtof;
+#X connect 3 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 9 0;
+#X connect 4 1 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X connect 9 0 3 1;

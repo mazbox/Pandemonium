@@ -149,7 +149,7 @@ public:
 			pd->process(input, outs[0], numFrames);
 		}	
 		 
-		 
+		lastBufferSize = numFrames;
 	}
 	
 	
