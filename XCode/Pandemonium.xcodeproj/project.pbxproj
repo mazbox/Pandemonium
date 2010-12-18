@@ -499,7 +499,6 @@
 		EAD06DEB1292003700971CC9 /* ofxAudioPluginWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPluginWrapper.h; sourceTree = "<group>"; };
 		EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAudioPluginWrapper.cpp; sourceTree = "<group>"; };
 		EAD1F26412918BD20017A281 /* ofxAudioPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPlugin.h; sourceTree = "<group>"; };
-		EAD1F26912918BD20017A281 /* juce_AU_Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = juce_AU_Wrapper.mm; sourceTree = "<group>"; };
 		EAD1F26B12918BD20017A281 /* ofxAudioUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAudioUnit.cpp; sourceTree = "<group>"; };
 		F7C347EE0ECE5AF8008ADFB6 /* AUBaseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AUBaseHelper.cpp; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUBaseHelper.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		F7C347EF0ECE5AF8008ADFB6 /* AUBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUBaseHelper.h; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUBaseHelper.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
@@ -889,7 +888,6 @@
 			children = (
 				EA9BC71012A9252800EDA5CA /* AU_Resources.r */,
 				EAD06C0512919B2F00971CC9 /* ofxAudioUnit.exp */,
-				EAD1F26912918BD20017A281 /* juce_AU_Wrapper.mm */,
 				EAD1F26B12918BD20017A281 /* ofxAudioUnit.cpp */,
 			);
 			path = AU;
