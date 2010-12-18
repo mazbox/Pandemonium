@@ -4,6 +4,51 @@
 using namespace std;
 
 
+
+
+typedef void (*void_t)();
+//libpd_init
+//libpd_clear_search_path
+//libpd_start_message
+
+
+typedef int (*int_t)();
+//libpd_blocksize();
+
+typedef void (*t__int)(int);
+//libpd_set_ticks_per_buffer
+
+typedef void (*t__float)(float);
+//libpd_add_float
+
+typedef void (*t_str_float)(const char *, float);
+//libpd_float
+
+
+typedef void (*t_str_str)(const char *, char *);
+//libpd_finish_message
+
+typedef void (*t_str)(const char *);
+//libpd_bang
+//libpd_finish_list
+//libpd_add_symbol
+
+typedef void (*t_int_int_int_int)(int, int, int, int);
+//libpd_init_audio
+
+typedef void (*t_floatp_floatp)(float *, float *);
+//libpd_process_float
+//libpd_process_raw
+
+
+
+
+
+
+
+
+
+
 class ofxPd {
 public:
 	ofxPd();
@@ -41,7 +86,7 @@ private:
 	void stopPd();
 	void startPd();
 	
-
+	void *pdHandle;
 	int blockSize;
 	int numInputChannels;
 	int numOutputChannels;
@@ -53,4 +98,41 @@ private:
 	bool patchIsOpen;
 	bool hasADC;
 	bool running;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	void_t init;
+	void_t clear_search_path;
+	void_t start_message;
+	
+	int_t blocksize;
+	t__int set_ticks_per_buffer;
+	
+	t__float add_float;
+	
+	
+	t_str_float Float;
+	t_str_str finish_message;
+	
+	t_str bang;
+	t_str finish_list;
+	t_str add_symbol;
+	
+	t_str add_to_search_path;
+	
+	t_int_int_int_int init_audio;
+	
+	
+	t_floatp_floatp process_float;
+	t_floatp_floatp process_raw;
+
+	
 };
