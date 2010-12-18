@@ -14,7 +14,7 @@
 #include "ofxAudioPluginWrapper.h"
 
 #include <fstream>
-
+#include "Logger.h"
 
 
 #pragma mark ____Pandemonium
@@ -37,12 +37,13 @@ public:
 #endif
 	{
 	
-
+		LOG("START AUDIO UNIT")
 		ofxAudioPluginWrapper::instance = this;
 		plugin = ofxAudioPlugin_getPlugin();
 
 		CreateElements();
 		int numParams = plugin->getNumParameters();
+
 		Globals()->UseIndexedParameters(numParams);
 		
 		for(int i = 0; i < numParams; i++) {
@@ -258,13 +259,13 @@ public:
     {
 #ifdef ofxAudioPlugin_IsSynth
 		//static const AUChannelInfo sChannels[2] = {  {0,1},{0,2} };
-		static const AUChannelInfo sChannels[2] = {  {0,2} };
+		static const AUChannelInfo sChannels[1] = {  {0,2} };
 #else 
 		//static const AUChannelInfo sChannels[2] = {  {1,1},{2,2} };
-		static const AUChannelInfo sChannels[2] = { {2,2} };
+		static const AUChannelInfo sChannels[1] = { {2,2} };
 #endif
 		if (outInfo) *outInfo = sChannels;
-        return 2;
+        return 1;
     }
 	
 	

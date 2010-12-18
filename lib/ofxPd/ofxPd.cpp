@@ -12,10 +12,7 @@
 #include "Logger.h"
 extern "C" {
 	void ofxPd_printhook(const char *ptr) {
-		ofstream file("/Users/marek/Desktop/log.txt", ofstream::app);
-		file << (char *)ptr << endl;
-		file.close();
-		printf("%s\n", (char *) ptr);
+		LOG(ptr)
 	}
 };
 
@@ -25,10 +22,27 @@ ofxPd::ofxPd() {
 	patchIsOpen = false;
 	libpd_init();
 	libpd_clear_search_path();
-	LOG("ofxPd::ofxPd");
+	char strin[512];
+	sprintf(strin, "%x", (int)this);
+	string ide = strin;
+	INIT_LOG("/Users/marek/Desktop/Pandemonium "+ide+" Log.txt")
+	LOG("ofxPd::ofxPd")
 	
 }
 
+void ofxPd::setup(int inputs, int outputs, int samplerate, int bufferSize) {
+	// mutex.lock();	
+	// ensure that blockSize is a multiple of Pd's blocksize
+	if(bufferSize==0) bufferSize = 256;
+	blockSize = (bufferSize / libpd_blocksize()) * libpd_blocksize();
+	numInputChannels = inputs;
+	numOutputChannels = outputs;
+	sampleRate = samplerate;
+
+	
+	libpd_init_audio(numInputChannels, numOutputChannels, sampleRate, blockSize/libpd_blocksize());
+	// mutex.unlock();
+}
 
 bool ofxPd::hasInput() {
 	return hasADC;
@@ -47,28 +61,28 @@ void ofxPd::getDirAndFile(const char *path, char *outDir, char *outFile) {
 } 
 
 void ofxPd::setBlockSize(int bufferSize) {
+	// mutex.lock();
 	if(bufferSize != blockSize) {
+		//stopPd();
 		//printf("Readjusting block size from %d to %d\n", blockSize, bufferSize);
-		LOG("Changing buffer size from "<< blockSize << " to " << bufferSize << endl);
-		load(path, numInputChannels, numOutputChannels, sampleRate, bufferSize);
-
+//		LOG("Changing buffer size from "<< blockSize << " to " << bufferSize << endl);
+//		load(path, numInputChannels, numOutputChannels, sampleRate, bufferSize);
+		blockSize = bufferSize;
+		libpd_set_ticks_per_buffer(blockSize/libpd_blocksize());
+		//startPd();
 	}
+	// mutex.unlock();
 }
 
-void ofxPd::load(string patchFile, int inputs, int outputs, int samplerate, int bufferSize) {
+void ofxPd::load(string patchFile) {
+	// mutex.lock();
 	running = false;
 	
 
-	
+	path = patchFile;
 	
 	hasADC = false;
-	// ensure that blockSize is a multiple of Pd's blocksize
-	if(bufferSize==0) bufferSize = 256;
-	blockSize = (bufferSize / libpd_blocksize()) * libpd_blocksize();
-	numInputChannels = inputs;
-	numOutputChannels = outputs;
-	sampleRate = samplerate;
-	path = patchFile;
+	
 	
 	char file[256];
 	char dir[512];
@@ -76,8 +90,9 @@ void ofxPd::load(string patchFile, int inputs, int outputs, int samplerate, int 
 	
 	//printf("Starting graph with in: %d out: %d sr: %d bs: %d\n", numInputChannels, numOutputChannels,
 	//	   sampleRate, blockSize);
-	/*
+	
 	 libpd_printhook = (t_libpd_printhook) ofxPd_printhook;
+	/*
 	 libpd_banghook = (t_libpd_banghook) NULL;
 	 libpd_floathook = (t_libpd_floathook) NULL;
 	 libpd_symbolhook = (t_libpd_symbolhook) NULL;
@@ -85,14 +100,13 @@ void ofxPd::load(string patchFile, int inputs, int outputs, int samplerate, int 
 	 libpd_messagehook = (t_libpd_messagehook) NULL;
 	 */
 	
-	stopPd();
-	libpd_init_audio(numInputChannels, numOutputChannels, samplerate, blockSize/libpd_blocksize());
+	//stopPd();
 	
-	
+	startPd();
 	
 	openPatch(file, dir);
 	
-	startPd();
+	
 	
 	
 	
@@ -120,6 +134,7 @@ void ofxPd::load(string patchFile, int inputs, int outputs, int samplerate, int 
 	
 	
 	running = true;
+	// mutex.unlock();
 }
 void ofxPd::closePatch(string file, string dir) {
 	libpd_clear_search_path();
@@ -133,7 +148,7 @@ void ofxPd::closePatch(string file, string dir) {
 
 void ofxPd::openPatch(string file, string dir) {
 
-	
+	libpd_clear_search_path();
 	//if(patchIsOpen) closePatch(currFile, currDir);
 	libpd_add_to_search_path(dir.c_str());
 	currDir = dir;
@@ -146,20 +161,25 @@ void ofxPd::openPatch(string file, string dir) {
 	libpd_add_symbol(dir.c_str());
 
 	libpd_finish_message("pd", "open");
+	 
 
 }
 void ofxPd::stopPd() {
+	
 	// send "pd dsp 0", ensure that dsp is turned off
 	libpd_start_message();
 	libpd_add_float(0);
 	libpd_finish_message("pd", "dsp");
+	 
 }
 
 void ofxPd::startPd() {
+	
 	// send "pd dsp 1"
 	libpd_start_message();
 	libpd_add_float(1);
 	libpd_finish_message("pd", "dsp");
+	 
 }
 
 ofxPd::~ofxPd() {
@@ -170,59 +190,75 @@ ofxPd::~ofxPd() {
 
 void ofxPd::sendFloat(string receiverName, float value) {
 	if(!running) return;
+	// mutex.lock();
 	libpd_float(receiverName.c_str(), value);
+	// mutex.unlock();
 }
 
 void ofxPd::sendBang(string receiverName) {
 	if(!running) return;
+	// mutex.lock();
 	libpd_bang(receiverName.c_str());
+	// mutex.unlock();
 }
 
 void ofxPd::sendMidiNote(int channel, int noteNum, int velocity, int blockOffset) {
 	if(!running) return;
+	// mutex.lock();
 	// TODO(mhroth): implement for libpd
 	libpd_start_message();
 	libpd_add_float(noteNum);
 	libpd_add_float(velocity);
 	libpd_add_float(channel);
 	libpd_finish_list("#notein");
+	// mutex.unlock();
 }
 
 void ofxPd::sendMidiControlChange(int channel, int ctlNum, int value) {
+	// mutex.lock();
 	libpd_start_message();
 	libpd_add_float(ctlNum);
 	libpd_add_float(value);
 	libpd_add_float(channel);
 	libpd_finish_list("#ctlin");
+	// mutex.unlock();
 }
 void ofxPd::sendMidiBend(int channel, int value) {
+	// mutex.lock();
 	libpd_start_message();
 	libpd_add_float(value);
 	libpd_add_float(channel);
 	libpd_finish_list("#bendin");
+	// mutex.unlock();
 }
 
 
 void ofxPd::sendMidiAfterTouch(int channel, int value) {
+	// mutex.lock();
 	libpd_start_message();
 	libpd_add_float(value);
 	libpd_add_float(channel);
 	libpd_finish_list("#touchin");
+	// mutex.unlock();
 }
 
 void ofxPd::sendMidiPolyTouch(int channel, int noteNum, int value) {
+	// mutex.lock();
 	libpd_start_message();
 	libpd_add_float(noteNum);
 	libpd_add_float(value);
 	libpd_add_float(channel);
 	libpd_finish_list("#polytouchin");
+	// mutex.unlock();
 }
 
 void ofxPd::sendMidiProgramChange(int channel, int program) {
+	// mutex.lock();
 	libpd_start_message();
 	libpd_add_float(program);
 	libpd_add_float(channel);
 	libpd_finish_list("#pgmin");
+	// mutex.unlock();
 }
 
 
@@ -230,16 +266,25 @@ void ofxPd::sendMidiProgramChange(int channel, int program) {
 
 void ofxPd::process(float *input, float *output, int frameCount) {
 	if(!running) return;  
+	// mutex.lock();
 	setBlockSize(frameCount);
 	
 	// this function uninterleaves and interleaves the input and output buffers, respectively
 	libpd_process_float(input, output);
+/*
+	for(int i = 0; i < frameCount; i++) {
+		output[i*2 + 0] = 0;
+		output[i*2 + 1] = 0;
+	}
+*/	// mutex.unlock();
 }
 
 void ofxPd::processNonInterleaved(float *input, float *output, int frameCount) {
 	if(!running) return;
+	// mutex.lock();
 	setBlockSize(frameCount);
 	libpd_process_raw(input, output);
+	// mutex.unlock();
 }
 
 

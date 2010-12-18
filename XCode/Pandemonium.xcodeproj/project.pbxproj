@@ -43,13 +43,13 @@
 		8BA05B070720754400365D66 /* CAAUParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA05B050720754400365D66 /* CAAUParameter.cpp */; };
 		8BA05B080720754400365D66 /* CAAUParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA05B060720754400365D66 /* CAAUParameter.h */; };
 		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		EA0842AD12BD34430018E285 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0842AC12BD34430018E285 /* Logger.cpp */; };
+		EA0842AE12BD34430018E285 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0842AC12BD34430018E285 /* Logger.cpp */; };
 		EA410DD312A914D0007E3440 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DBF12A914D0007E3440 /* Logger.h */; };
 		EA410DD412A914D0007E3440 /* ofxAudioPluginConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DC112A914D0007E3440 /* ofxAudioPluginConfig.h */; };
 		EA410DDD12A914D0007E3440 /* Pandemonium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA410DCB12A914D0007E3440 /* Pandemonium.cpp */; };
 		EA410DDE12A914D0007E3440 /* Pandemonium.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DCC12A914D0007E3440 /* Pandemonium.h */; };
 		EA410DDF12A914D0007E3440 /* PdPluginParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DCD12A914D0007E3440 /* PdPluginParameters.h */; };
-		EA410DE012A914D0007E3440 /* URLLauncher.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DCE12A914D0007E3440 /* URLLauncher.h */; };
-		EA410DE112A914D0007E3440 /* URLLauncher.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA410DCF12A914D0007E3440 /* URLLauncher.mm */; };
 		EA410DE212A914D0007E3440 /* ZGAUUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA410DD012A914D0007E3440 /* ZGAUUtils.cpp */; };
 		EA410DE312A914D0007E3440 /* ZGAUUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DD112A914D0007E3440 /* ZGAUUtils.h */; };
 		EA410DE412A914D0007E3440 /* ZGPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DD212A914D0007E3440 /* ZGPlugin.h */; };
@@ -59,8 +59,6 @@
 		EA8BD95612A91A45000D847D /* ZGPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DD212A914D0007E3440 /* ZGPlugin.h */; };
 		EA8BD95712A91A46000D847D /* ZGAUUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DD112A914D0007E3440 /* ZGAUUtils.h */; };
 		EA8BD95812A91A46000D847D /* ZGAUUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA410DD012A914D0007E3440 /* ZGAUUtils.cpp */; };
-		EA8BD95912A91A47000D847D /* URLLauncher.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA410DCF12A914D0007E3440 /* URLLauncher.mm */; };
-		EA8BD95A12A91A47000D847D /* URLLauncher.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DCE12A914D0007E3440 /* URLLauncher.h */; };
 		EA8BD95B12A91A49000D847D /* PdPluginParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DCD12A914D0007E3440 /* PdPluginParameters.h */; };
 		EA8BD95C12A91A49000D847D /* Pandemonium.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DCC12A914D0007E3440 /* Pandemonium.h */; };
 		EA8BD95D12A91A4A000D847D /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DBF12A914D0007E3440 /* Logger.h */; };
@@ -380,13 +378,12 @@
 		8BA05B060720754400365D66 /* CAAUParameter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAAUParameter.h; sourceTree = "<group>"; };
 		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D01CCD20486CAD60068D4B7 /* Pandemonium.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pandemonium.component; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0842AC12BD34430018E285 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
 		EA410DBF12A914D0007E3440 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		EA410DC112A914D0007E3440 /* ofxAudioPluginConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPluginConfig.h; sourceTree = "<group>"; };
 		EA410DCB12A914D0007E3440 /* Pandemonium.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pandemonium.cpp; sourceTree = "<group>"; };
 		EA410DCC12A914D0007E3440 /* Pandemonium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pandemonium.h; sourceTree = "<group>"; };
 		EA410DCD12A914D0007E3440 /* PdPluginParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdPluginParameters.h; sourceTree = "<group>"; };
-		EA410DCE12A914D0007E3440 /* URLLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLLauncher.h; sourceTree = "<group>"; };
-		EA410DCF12A914D0007E3440 /* URLLauncher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = URLLauncher.mm; sourceTree = "<group>"; };
 		EA410DD012A914D0007E3440 /* ZGAUUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZGAUUtils.cpp; sourceTree = "<group>"; };
 		EA410DD112A914D0007E3440 /* ZGAUUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGAUUtils.h; sourceTree = "<group>"; };
 		EA410DD212A914D0007E3440 /* ZGPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPlugin.h; sourceTree = "<group>"; };
@@ -667,6 +664,7 @@
 		EA410DBE12A914D0007E3440 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				EA0842AC12BD34430018E285 /* Logger.cpp */,
 				EA410DBF12A914D0007E3440 /* Logger.h */,
 				EA410DC012A914D0007E3440 /* plugin */,
 			);
@@ -681,8 +679,6 @@
 				EA410DCB12A914D0007E3440 /* Pandemonium.cpp */,
 				EA410DCC12A914D0007E3440 /* Pandemonium.h */,
 				EA410DCD12A914D0007E3440 /* PdPluginParameters.h */,
-				EA410DCE12A914D0007E3440 /* URLLauncher.h */,
-				EA410DCF12A914D0007E3440 /* URLLauncher.mm */,
 				EA410DD012A914D0007E3440 /* ZGAUUtils.cpp */,
 				EA410DD112A914D0007E3440 /* ZGAUUtils.h */,
 				EA410DD212A914D0007E3440 /* ZGPlugin.h */,
@@ -946,7 +942,6 @@
 				EA8BD95512A91A3F000D847D /* ofxAudioPluginConfig.h in Headers */,
 				EA8BD95612A91A45000D847D /* ZGPlugin.h in Headers */,
 				EA8BD95712A91A46000D847D /* ZGAUUtils.h in Headers */,
-				EA8BD95A12A91A47000D847D /* URLLauncher.h in Headers */,
 				EA8BD95B12A91A49000D847D /* PdPluginParameters.h in Headers */,
 				EA8BD95C12A91A49000D847D /* Pandemonium.h in Headers */,
 				EA8BD95D12A91A4A000D847D /* Logger.h in Headers */,
@@ -1002,7 +997,6 @@
 				EA410DD412A914D0007E3440 /* ofxAudioPluginConfig.h in Headers */,
 				EA410DDE12A914D0007E3440 /* Pandemonium.h in Headers */,
 				EA410DDF12A914D0007E3440 /* PdPluginParameters.h in Headers */,
-				EA410DE012A914D0007E3440 /* URLLauncher.h in Headers */,
 				EA410DE312A914D0007E3440 /* ZGAUUtils.h in Headers */,
 				EA410DE412A914D0007E3440 /* ZGPlugin.h in Headers */,
 			);
@@ -1212,7 +1206,7 @@
 				EAF05DB312A918DA00A75A3B /* AUMIDIBase.cpp in Sources */,
 				EA8BD95412A91A3A000D847D /* Pandemonium.cpp in Sources */,
 				EA8BD95812A91A46000D847D /* ZGAUUtils.cpp in Sources */,
-				EA8BD95912A91A47000D847D /* URLLauncher.mm in Sources */,
+				EA0842AD12BD34430018E285 /* Logger.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1321,8 +1315,8 @@
 				EAA54DD7129471070025E7BC /* AUMIDIBase.cpp in Sources */,
 				EAA54DD9129471070025E7BC /* MusicDeviceBase.cpp in Sources */,
 				EA410DDD12A914D0007E3440 /* Pandemonium.cpp in Sources */,
-				EA410DE112A914D0007E3440 /* URLLauncher.mm in Sources */,
 				EA410DE212A914D0007E3440 /* ZGAUUtils.cpp in Sources */,
+				EA0842AE12BD34430018E285 /* Logger.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

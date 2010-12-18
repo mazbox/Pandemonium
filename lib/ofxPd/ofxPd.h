@@ -7,13 +7,13 @@ using namespace std;
 class ofxPd {
 public:
 	ofxPd();
-	
+	void setup(int inputs, int outputs, int samplerate, int bufferSize);
 	void getDirAndFile(const char *path, char *outDir, char *outFile);
 	int getBlockSize() { return blockSize; } 
 	
 	
 	void setBlockSize(int bufferSize);	
-	void load(string patchFile, int inputs, int outputs, int samplerate, int bufferSize);
+	void load(string patchFile);
 	
 	// returns whether this patch has an audio input
 	bool hasInput();

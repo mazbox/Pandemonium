@@ -7,8 +7,20 @@
  *
  */
 #include <fstream>
+
+
 using namespace std;
-#define LOG(TEXT) ofstream out; \
-out.open("/Users/marek/Desktop/Pandemonium Log.txt", ios::out | ios::app ); \
+
+
+#define INIT_LOG(A) initLog(A);
+
+#define LOG(TEXT){ ofstream out; \
+out.open(getLogFile().c_str(), ios::out | ios::app ); \
 out << TEXT << endl; \
-out.close();
+out.close();}
+
+
+void initLog(string path);
+
+string getLogFile();
+

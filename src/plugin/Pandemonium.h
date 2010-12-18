@@ -14,7 +14,7 @@
 class Pandemonium: public ofxAudioPlugin, public ZGPlugin {
 public:
 	
-	Pandemonium(): ZGPlugin() {
+	Pandemonium(): ZGPlugin(), ofxAudioPlugin() {
 		//ofstream out("/Users/marek/Desktop/Pandemonium Log.txt");
 		//out << "Pandemonium" << endl;
 		//out.close();
@@ -87,7 +87,7 @@ public:
 	void process(int numIns, float **ins, int numOuts, float **outs, int numFrames) {
 		
 		if(!running) return;
-		
+		/*
 		int menuIndex = getParameter(0);
 		int patchIndex = menuIndex - EXTRA_MENU_ITEMS;
 		
@@ -120,7 +120,7 @@ public:
 				}
 			}
 		}
-		
+		*/
 		if(numOuts==2) {
 			
 			if(numIns==2) {
