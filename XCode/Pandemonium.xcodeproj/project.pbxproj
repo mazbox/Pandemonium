@@ -88,15 +88,6 @@
 		EAA54CF8129466CA0025E7BC /* ofxDirList.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C601291F9DB00971CC9 /* ofxDirList.h */; };
 		EAA54CF9129466CA0025E7BC /* ofxFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C631291F9DB00971CC9 /* ofxFileUtils.h */; };
 		EAA54CFA129466CA0025E7BC /* ofxPd.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C671291F9DB00971CC9 /* ofxPd.h */; };
-		EAA54CFB129466CA0025E7BC /* g_all_guis.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C8B1291FA0C00971CC9 /* g_all_guis.h */; };
-		EAA54CFC129466CA0025E7BC /* g_canvas.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C8F1291FA0C00971CC9 /* g_canvas.h */; };
-		EAA54CFD129466CA0025E7BC /* m_fixed.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CA61291FA0C00971CC9 /* m_fixed.h */; };
-		EAA54CFE129466CA0025E7BC /* m_imp.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CA81291FA0C00971CC9 /* m_imp.h */; };
-		EAA54CFF129466CA0025E7BC /* m_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CAC1291FA0C00971CC9 /* m_pd.h */; };
-		EAA54D00129466CA0025E7BC /* s_stuff.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CE41291FA0C00971CC9 /* s_stuff.h */; };
-		EAA54D01129466CA0025E7BC /* s_utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CE61291FA0C00971CC9 /* s_utf8.h */; };
-		EAA54D02129466CA0025E7BC /* x_libpdreceive.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CF01291FA0C00971CC9 /* x_libpdreceive.h */; };
-		EAA54D03129466CA0025E7BC /* z_libpd.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CFA1291FA0C00971CC9 /* z_libpd.h */; };
 		EAA54D04129466CA0025E7BC /* ofxAudioPluginWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06DEB1292003700971CC9 /* ofxAudioPluginWrapper.h */; };
 		EAA54D06129466CA0025E7BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		EAA54D08129466CA0025E7BC /* AUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA05A7F072073D200365D66 /* AUBase.cpp */; };
@@ -119,79 +110,6 @@
 		EAA54D1C129466CA0025E7BC /* ofxDirList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C5F1291F9DB00971CC9 /* ofxDirList.cpp */; };
 		EAA54D1D129466CA0025E7BC /* ofxFileUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C641291F9DB00971CC9 /* ofxFileUtils.mm */; };
 		EAA54D1E129466CA0025E7BC /* ofxPd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C661291F9DB00971CC9 /* ofxPd.cpp */; };
-		EAA54D1F129466CA0025E7BC /* d_arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C731291FA0C00971CC9 /* d_arithmetic.c */; };
-		EAA54D20129466CA0025E7BC /* d_array.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C741291FA0C00971CC9 /* d_array.c */; };
-		EAA54D21129466CA0025E7BC /* d_ctl.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C751291FA0C00971CC9 /* d_ctl.c */; };
-		EAA54D22129466CA0025E7BC /* d_dac.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C761291FA0C00971CC9 /* d_dac.c */; };
-		EAA54D23129466CA0025E7BC /* d_delay.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C771291FA0C00971CC9 /* d_delay.c */; };
-		EAA54D24129466CA0025E7BC /* d_fft_mayer.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7A1291FA0C00971CC9 /* d_fft_mayer.c */; };
-		EAA54D25129466CA0025E7BC /* d_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7B1291FA0C00971CC9 /* d_fft.c */; };
-		EAA54D26129466CA0025E7BC /* d_fftroutine.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7C1291FA0C00971CC9 /* d_fftroutine.c */; };
-		EAA54D27129466CA0025E7BC /* d_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7E1291FA0C00971CC9 /* d_filter.c */; };
-		EAA54D28129466CA0025E7BC /* d_global.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7F1291FA0C00971CC9 /* d_global.c */; };
-		EAA54D29129466CA0025E7BC /* d_math.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C801291FA0C00971CC9 /* d_math.c */; };
-		EAA54D2A129466CA0025E7BC /* d_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C811291FA0C00971CC9 /* d_misc.c */; };
-		EAA54D2B129466CA0025E7BC /* d_osc.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C821291FA0C00971CC9 /* d_osc.c */; };
-		EAA54D2C129466CA0025E7BC /* d_resample.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C831291FA0C00971CC9 /* d_resample.c */; };
-		EAA54D2D129466CA0025E7BC /* d_soundfile.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C841291FA0C00971CC9 /* d_soundfile.c */; };
-		EAA54D2E129466CA0025E7BC /* d_ugen.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C851291FA0C00971CC9 /* d_ugen.c */; };
-		EAA54D2F129466CA0025E7BC /* g_all_guis.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C8A1291FA0C00971CC9 /* g_all_guis.c */; };
-		EAA54D30129466CA0025E7BC /* g_array.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C8C1291FA0C00971CC9 /* g_array.c */; };
-		EAA54D31129466CA0025E7BC /* g_bang.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C8D1291FA0C00971CC9 /* g_bang.c */; };
-		EAA54D32129466CA0025E7BC /* g_canvas.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C8E1291FA0C00971CC9 /* g_canvas.c */; };
-		EAA54D33129466CA0025E7BC /* g_editor.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C901291FA0C00971CC9 /* g_editor.c */; };
-		EAA54D34129466CA0025E7BC /* g_graph.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C911291FA0C00971CC9 /* g_graph.c */; };
-		EAA54D35129466CA0025E7BC /* g_guiconnect.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C921291FA0C00971CC9 /* g_guiconnect.c */; };
-		EAA54D36129466CA0025E7BC /* g_hdial.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C931291FA0C00971CC9 /* g_hdial.c */; };
-		EAA54D37129466CA0025E7BC /* g_hslider.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C941291FA0C00971CC9 /* g_hslider.c */; };
-		EAA54D38129466CA0025E7BC /* g_io.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C951291FA0C00971CC9 /* g_io.c */; };
-		EAA54D39129466CA0025E7BC /* g_mycanvas.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C961291FA0C00971CC9 /* g_mycanvas.c */; };
-		EAA54D3A129466CA0025E7BC /* g_numbox.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C971291FA0C00971CC9 /* g_numbox.c */; };
-		EAA54D3B129466CA0025E7BC /* g_readwrite.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C981291FA0C00971CC9 /* g_readwrite.c */; };
-		EAA54D3C129466CA0025E7BC /* g_rtext.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C991291FA0C00971CC9 /* g_rtext.c */; };
-		EAA54D3D129466CA0025E7BC /* g_scalar.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9A1291FA0C00971CC9 /* g_scalar.c */; };
-		EAA54D3E129466CA0025E7BC /* g_template.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9B1291FA0C00971CC9 /* g_template.c */; };
-		EAA54D3F129466CA0025E7BC /* g_text.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9C1291FA0C00971CC9 /* g_text.c */; };
-		EAA54D40129466CA0025E7BC /* g_toggle.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9D1291FA0C00971CC9 /* g_toggle.c */; };
-		EAA54D41129466CA0025E7BC /* g_traversal.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9E1291FA0C00971CC9 /* g_traversal.c */; };
-		EAA54D42129466CA0025E7BC /* g_vdial.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9F1291FA0C00971CC9 /* g_vdial.c */; };
-		EAA54D43129466CA0025E7BC /* g_vslider.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA01291FA0C00971CC9 /* g_vslider.c */; };
-		EAA54D44129466CA0025E7BC /* g_vumeter.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA11291FA0C00971CC9 /* g_vumeter.c */; };
-		EAA54D45129466CA0025E7BC /* m_atom.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA21291FA0C00971CC9 /* m_atom.c */; };
-		EAA54D46129466CA0025E7BC /* m_binbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA31291FA0C00971CC9 /* m_binbuf.c */; };
-		EAA54D47129466CA0025E7BC /* m_class.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA41291FA0C00971CC9 /* m_class.c */; };
-		EAA54D48129466CA0025E7BC /* m_conf.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA51291FA0C00971CC9 /* m_conf.c */; };
-		EAA54D49129466CA0025E7BC /* m_glob.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA71291FA0C00971CC9 /* m_glob.c */; };
-		EAA54D4A129466CA0025E7BC /* m_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA91291FA0C00971CC9 /* m_memory.c */; };
-		EAA54D4B129466CA0025E7BC /* m_obj.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CAA1291FA0C00971CC9 /* m_obj.c */; };
-		EAA54D4C129466CA0025E7BC /* m_pd.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CAB1291FA0C00971CC9 /* m_pd.c */; };
-		EAA54D4D129466CA0025E7BC /* m_sched.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CAD1291FA0C00971CC9 /* m_sched.c */; };
-		EAA54D4E129466CA0025E7BC /* s_audio_audiounit.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CCB1291FA0C00971CC9 /* s_audio_audiounit.c */; };
-		EAA54D4F129466CA0025E7BC /* s_audio_dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CCC1291FA0C00971CC9 /* s_audio_dummy.c */; };
-		EAA54D50129466CA0025E7BC /* s_audio.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CD61291FA0C00971CC9 /* s_audio.c */; };
-		EAA54D51129466CA0025E7BC /* s_entry.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CD71291FA0C00971CC9 /* s_entry.c */; };
-		EAA54D52129466CA0025E7BC /* s_file.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CD81291FA0C00971CC9 /* s_file.c */; };
-		EAA54D53129466CA0025E7BC /* s_inter.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CD91291FA0C00971CC9 /* s_inter.c */; };
-		EAA54D54129466CA0025E7BC /* s_loader.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CDA1291FA0C00971CC9 /* s_loader.c */; };
-		EAA54D55129466CA0025E7BC /* s_main.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CDB1291FA0C00971CC9 /* s_main.c */; };
-		EAA54D56129466CA0025E7BC /* s_midi_dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CDD1291FA0C00971CC9 /* s_midi_dummy.c */; };
-		EAA54D57129466CA0025E7BC /* s_midi.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CE11291FA0C00971CC9 /* s_midi.c */; };
-		EAA54D58129466CA0025E7BC /* s_path.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CE21291FA0C00971CC9 /* s_path.c */; };
-		EAA54D59129466CA0025E7BC /* s_print.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CE31291FA0C00971CC9 /* s_print.c */; };
-		EAA54D5A129466CA0025E7BC /* s_utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CE51291FA0C00971CC9 /* s_utf8.c */; };
-		EAA54D5B129466CA0025E7BC /* x_acoustics.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEA1291FA0C00971CC9 /* x_acoustics.c */; };
-		EAA54D5C129466CA0025E7BC /* x_arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEB1291FA0C00971CC9 /* x_arithmetic.c */; };
-		EAA54D5D129466CA0025E7BC /* x_connective.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEC1291FA0C00971CC9 /* x_connective.c */; };
-		EAA54D5E129466CA0025E7BC /* x_gui.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CED1291FA0C00971CC9 /* x_gui.c */; };
-		EAA54D5F129466CA0025E7BC /* x_interface.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEE1291FA0C00971CC9 /* x_interface.c */; };
-		EAA54D60129466CA0025E7BC /* x_libpdreceive.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEF1291FA0C00971CC9 /* x_libpdreceive.c */; };
-		EAA54D61129466CA0025E7BC /* x_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF11291FA0C00971CC9 /* x_list.c */; };
-		EAA54D62129466CA0025E7BC /* x_midi.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF21291FA0C00971CC9 /* x_midi.c */; };
-		EAA54D63129466CA0025E7BC /* x_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF31291FA0C00971CC9 /* x_misc.c */; };
-		EAA54D64129466CA0025E7BC /* x_net.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF41291FA0C00971CC9 /* x_net.c */; };
-		EAA54D65129466CA0025E7BC /* x_qlist.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF51291FA0C00971CC9 /* x_qlist.c */; };
-		EAA54D66129466CA0025E7BC /* x_time.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF61291FA0C00971CC9 /* x_time.c */; };
-		EAA54D67129466CA0025E7BC /* z_libpd.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF91291FA0C00971CC9 /* z_libpd.c */; };
 		EAA54D68129466CA0025E7BC /* ofxAudioPluginWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */; };
 		EAA54D6A129466CA0025E7BC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05AF9072074E100365D66 /* AudioToolbox.framework */; };
 		EAA54D6B129466CA0025E7BC /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05AFA072074E100365D66 /* AudioUnit.framework */; };
@@ -220,88 +138,6 @@
 		EAD06C6B1291F9DB00971CC9 /* ofxFileUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C641291F9DB00971CC9 /* ofxFileUtils.mm */; };
 		EAD06C6C1291F9DB00971CC9 /* ofxPd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C661291F9DB00971CC9 /* ofxPd.cpp */; };
 		EAD06C6D1291F9DB00971CC9 /* ofxPd.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C671291F9DB00971CC9 /* ofxPd.h */; };
-		EAD06CFB1291FA0C00971CC9 /* d_arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C731291FA0C00971CC9 /* d_arithmetic.c */; };
-		EAD06CFC1291FA0C00971CC9 /* d_array.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C741291FA0C00971CC9 /* d_array.c */; };
-		EAD06CFD1291FA0C00971CC9 /* d_ctl.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C751291FA0C00971CC9 /* d_ctl.c */; };
-		EAD06CFE1291FA0C00971CC9 /* d_dac.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C761291FA0C00971CC9 /* d_dac.c */; };
-		EAD06CFF1291FA0C00971CC9 /* d_delay.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C771291FA0C00971CC9 /* d_delay.c */; };
-		EAD06D021291FA0C00971CC9 /* d_fft_mayer.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7A1291FA0C00971CC9 /* d_fft_mayer.c */; };
-		EAD06D031291FA0C00971CC9 /* d_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7B1291FA0C00971CC9 /* d_fft.c */; };
-		EAD06D041291FA0C00971CC9 /* d_fftroutine.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7C1291FA0C00971CC9 /* d_fftroutine.c */; };
-		EAD06D061291FA0C00971CC9 /* d_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7E1291FA0C00971CC9 /* d_filter.c */; };
-		EAD06D071291FA0C00971CC9 /* d_global.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C7F1291FA0C00971CC9 /* d_global.c */; };
-		EAD06D081291FA0C00971CC9 /* d_math.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C801291FA0C00971CC9 /* d_math.c */; };
-		EAD06D091291FA0C00971CC9 /* d_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C811291FA0C00971CC9 /* d_misc.c */; };
-		EAD06D0A1291FA0C00971CC9 /* d_osc.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C821291FA0C00971CC9 /* d_osc.c */; };
-		EAD06D0B1291FA0C00971CC9 /* d_resample.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C831291FA0C00971CC9 /* d_resample.c */; };
-		EAD06D0C1291FA0C00971CC9 /* d_soundfile.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C841291FA0C00971CC9 /* d_soundfile.c */; };
-		EAD06D0D1291FA0C00971CC9 /* d_ugen.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C851291FA0C00971CC9 /* d_ugen.c */; };
-		EAD06D111291FA0C00971CC9 /* g_all_guis.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C8A1291FA0C00971CC9 /* g_all_guis.c */; };
-		EAD06D121291FA0C00971CC9 /* g_all_guis.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C8B1291FA0C00971CC9 /* g_all_guis.h */; };
-		EAD06D131291FA0C00971CC9 /* g_array.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C8C1291FA0C00971CC9 /* g_array.c */; };
-		EAD06D141291FA0C00971CC9 /* g_bang.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C8D1291FA0C00971CC9 /* g_bang.c */; };
-		EAD06D151291FA0C00971CC9 /* g_canvas.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C8E1291FA0C00971CC9 /* g_canvas.c */; };
-		EAD06D161291FA0C00971CC9 /* g_canvas.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C8F1291FA0C00971CC9 /* g_canvas.h */; };
-		EAD06D171291FA0C00971CC9 /* g_editor.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C901291FA0C00971CC9 /* g_editor.c */; };
-		EAD06D181291FA0C00971CC9 /* g_graph.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C911291FA0C00971CC9 /* g_graph.c */; };
-		EAD06D191291FA0C00971CC9 /* g_guiconnect.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C921291FA0C00971CC9 /* g_guiconnect.c */; };
-		EAD06D1A1291FA0C00971CC9 /* g_hdial.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C931291FA0C00971CC9 /* g_hdial.c */; };
-		EAD06D1B1291FA0C00971CC9 /* g_hslider.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C941291FA0C00971CC9 /* g_hslider.c */; };
-		EAD06D1C1291FA0C00971CC9 /* g_io.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C951291FA0C00971CC9 /* g_io.c */; };
-		EAD06D1D1291FA0C00971CC9 /* g_mycanvas.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C961291FA0C00971CC9 /* g_mycanvas.c */; };
-		EAD06D1E1291FA0C00971CC9 /* g_numbox.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C971291FA0C00971CC9 /* g_numbox.c */; };
-		EAD06D1F1291FA0C00971CC9 /* g_readwrite.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C981291FA0C00971CC9 /* g_readwrite.c */; };
-		EAD06D201291FA0C00971CC9 /* g_rtext.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C991291FA0C00971CC9 /* g_rtext.c */; };
-		EAD06D211291FA0C00971CC9 /* g_scalar.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9A1291FA0C00971CC9 /* g_scalar.c */; };
-		EAD06D221291FA0C00971CC9 /* g_template.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9B1291FA0C00971CC9 /* g_template.c */; };
-		EAD06D231291FA0C00971CC9 /* g_text.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9C1291FA0C00971CC9 /* g_text.c */; };
-		EAD06D241291FA0C00971CC9 /* g_toggle.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9D1291FA0C00971CC9 /* g_toggle.c */; };
-		EAD06D251291FA0C00971CC9 /* g_traversal.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9E1291FA0C00971CC9 /* g_traversal.c */; };
-		EAD06D261291FA0C00971CC9 /* g_vdial.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C9F1291FA0C00971CC9 /* g_vdial.c */; };
-		EAD06D271291FA0C00971CC9 /* g_vslider.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA01291FA0C00971CC9 /* g_vslider.c */; };
-		EAD06D281291FA0C00971CC9 /* g_vumeter.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA11291FA0C00971CC9 /* g_vumeter.c */; };
-		EAD06D291291FA0C00971CC9 /* m_atom.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA21291FA0C00971CC9 /* m_atom.c */; };
-		EAD06D2A1291FA0C00971CC9 /* m_binbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA31291FA0C00971CC9 /* m_binbuf.c */; };
-		EAD06D2B1291FA0C00971CC9 /* m_class.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA41291FA0C00971CC9 /* m_class.c */; };
-		EAD06D2C1291FA0C00971CC9 /* m_conf.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA51291FA0C00971CC9 /* m_conf.c */; };
-		EAD06D2D1291FA0C00971CC9 /* m_fixed.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CA61291FA0C00971CC9 /* m_fixed.h */; };
-		EAD06D2E1291FA0C00971CC9 /* m_glob.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA71291FA0C00971CC9 /* m_glob.c */; };
-		EAD06D2F1291FA0C00971CC9 /* m_imp.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CA81291FA0C00971CC9 /* m_imp.h */; };
-		EAD06D301291FA0C00971CC9 /* m_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CA91291FA0C00971CC9 /* m_memory.c */; };
-		EAD06D311291FA0C00971CC9 /* m_obj.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CAA1291FA0C00971CC9 /* m_obj.c */; };
-		EAD06D321291FA0C00971CC9 /* m_pd.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CAB1291FA0C00971CC9 /* m_pd.c */; };
-		EAD06D331291FA0C00971CC9 /* m_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CAC1291FA0C00971CC9 /* m_pd.h */; };
-		EAD06D341291FA0C00971CC9 /* m_sched.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CAD1291FA0C00971CC9 /* m_sched.c */; };
-		EAD06D4B1291FA0C00971CC9 /* s_audio_audiounit.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CCB1291FA0C00971CC9 /* s_audio_audiounit.c */; };
-		EAD06D4C1291FA0C00971CC9 /* s_audio_dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CCC1291FA0C00971CC9 /* s_audio_dummy.c */; };
-		EAD06D561291FA0C00971CC9 /* s_audio.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CD61291FA0C00971CC9 /* s_audio.c */; };
-		EAD06D571291FA0C00971CC9 /* s_entry.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CD71291FA0C00971CC9 /* s_entry.c */; };
-		EAD06D581291FA0C00971CC9 /* s_file.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CD81291FA0C00971CC9 /* s_file.c */; };
-		EAD06D591291FA0C00971CC9 /* s_inter.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CD91291FA0C00971CC9 /* s_inter.c */; };
-		EAD06D5A1291FA0C00971CC9 /* s_loader.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CDA1291FA0C00971CC9 /* s_loader.c */; };
-		EAD06D5B1291FA0C00971CC9 /* s_main.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CDB1291FA0C00971CC9 /* s_main.c */; };
-		EAD06D5D1291FA0C00971CC9 /* s_midi_dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CDD1291FA0C00971CC9 /* s_midi_dummy.c */; };
-		EAD06D611291FA0C00971CC9 /* s_midi.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CE11291FA0C00971CC9 /* s_midi.c */; };
-		EAD06D621291FA0C00971CC9 /* s_path.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CE21291FA0C00971CC9 /* s_path.c */; };
-		EAD06D631291FA0C00971CC9 /* s_print.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CE31291FA0C00971CC9 /* s_print.c */; };
-		EAD06D641291FA0C00971CC9 /* s_stuff.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CE41291FA0C00971CC9 /* s_stuff.h */; };
-		EAD06D651291FA0C00971CC9 /* s_utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CE51291FA0C00971CC9 /* s_utf8.c */; };
-		EAD06D661291FA0C00971CC9 /* s_utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CE61291FA0C00971CC9 /* s_utf8.h */; };
-		EAD06D6A1291FA0C00971CC9 /* x_acoustics.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEA1291FA0C00971CC9 /* x_acoustics.c */; };
-		EAD06D6B1291FA0C00971CC9 /* x_arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEB1291FA0C00971CC9 /* x_arithmetic.c */; };
-		EAD06D6C1291FA0C00971CC9 /* x_connective.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEC1291FA0C00971CC9 /* x_connective.c */; };
-		EAD06D6D1291FA0C00971CC9 /* x_gui.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CED1291FA0C00971CC9 /* x_gui.c */; };
-		EAD06D6E1291FA0C00971CC9 /* x_interface.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEE1291FA0C00971CC9 /* x_interface.c */; };
-		EAD06D6F1291FA0C00971CC9 /* x_libpdreceive.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CEF1291FA0C00971CC9 /* x_libpdreceive.c */; };
-		EAD06D701291FA0C00971CC9 /* x_libpdreceive.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CF01291FA0C00971CC9 /* x_libpdreceive.h */; };
-		EAD06D711291FA0C00971CC9 /* x_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF11291FA0C00971CC9 /* x_list.c */; };
-		EAD06D721291FA0C00971CC9 /* x_midi.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF21291FA0C00971CC9 /* x_midi.c */; };
-		EAD06D731291FA0C00971CC9 /* x_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF31291FA0C00971CC9 /* x_misc.c */; };
-		EAD06D741291FA0C00971CC9 /* x_net.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF41291FA0C00971CC9 /* x_net.c */; };
-		EAD06D751291FA0C00971CC9 /* x_qlist.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF51291FA0C00971CC9 /* x_qlist.c */; };
-		EAD06D761291FA0C00971CC9 /* x_time.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF61291FA0C00971CC9 /* x_time.c */; };
-		EAD06D791291FA0C00971CC9 /* z_libpd.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD06CF91291FA0C00971CC9 /* z_libpd.c */; };
-		EAD06D7A1291FA0C00971CC9 /* z_libpd.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06CFA1291FA0C00971CC9 /* z_libpd.h */; };
 		EAD06DEC1292003700971CC9 /* ofxAudioPluginWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06DEB1292003700971CC9 /* ofxAudioPluginWrapper.h */; };
 		EAD06EA812940B8900971CC9 /* ofxAudioPluginWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */; };
 		EAD1F26C12918BD20017A281 /* ofxAudioPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD1F26412918BD20017A281 /* ofxAudioPlugin.h */; };
@@ -411,88 +247,6 @@
 		EAD06C641291F9DB00971CC9 /* ofxFileUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxFileUtils.mm; sourceTree = "<group>"; };
 		EAD06C661291F9DB00971CC9 /* ofxPd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPd.cpp; sourceTree = "<group>"; };
 		EAD06C671291F9DB00971CC9 /* ofxPd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPd.h; sourceTree = "<group>"; };
-		EAD06C731291FA0C00971CC9 /* d_arithmetic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_arithmetic.c; path = "../lib/pd-for-android/PdCore/jni/src/d_arithmetic.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C741291FA0C00971CC9 /* d_array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_array.c; path = "../lib/pd-for-android/PdCore/jni/src/d_array.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C751291FA0C00971CC9 /* d_ctl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_ctl.c; path = "../lib/pd-for-android/PdCore/jni/src/d_ctl.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C761291FA0C00971CC9 /* d_dac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_dac.c; path = "../lib/pd-for-android/PdCore/jni/src/d_dac.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C771291FA0C00971CC9 /* d_delay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_delay.c; path = "../lib/pd-for-android/PdCore/jni/src/d_delay.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C7A1291FA0C00971CC9 /* d_fft_mayer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_fft_mayer.c; path = "../lib/pd-for-android/PdCore/jni/src/d_fft_mayer.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C7B1291FA0C00971CC9 /* d_fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_fft.c; path = "../lib/pd-for-android/PdCore/jni/src/d_fft.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C7C1291FA0C00971CC9 /* d_fftroutine.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_fftroutine.c; path = "../lib/pd-for-android/PdCore/jni/src/d_fftroutine.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C7E1291FA0C00971CC9 /* d_filter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_filter.c; path = "../lib/pd-for-android/PdCore/jni/src/d_filter.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C7F1291FA0C00971CC9 /* d_global.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_global.c; path = "../lib/pd-for-android/PdCore/jni/src/d_global.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C801291FA0C00971CC9 /* d_math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_math.c; path = "../lib/pd-for-android/PdCore/jni/src/d_math.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C811291FA0C00971CC9 /* d_misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_misc.c; path = "../lib/pd-for-android/PdCore/jni/src/d_misc.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C821291FA0C00971CC9 /* d_osc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_osc.c; path = "../lib/pd-for-android/PdCore/jni/src/d_osc.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C831291FA0C00971CC9 /* d_resample.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_resample.c; path = "../lib/pd-for-android/PdCore/jni/src/d_resample.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C841291FA0C00971CC9 /* d_soundfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_soundfile.c; path = "../lib/pd-for-android/PdCore/jni/src/d_soundfile.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C851291FA0C00971CC9 /* d_ugen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = d_ugen.c; path = "../lib/pd-for-android/PdCore/jni/src/d_ugen.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C8A1291FA0C00971CC9 /* g_all_guis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_all_guis.c; path = "../lib/pd-for-android/PdCore/jni/src/g_all_guis.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C8B1291FA0C00971CC9 /* g_all_guis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = g_all_guis.h; path = "../lib/pd-for-android/PdCore/jni/src/g_all_guis.h"; sourceTree = SOURCE_ROOT; };
-		EAD06C8C1291FA0C00971CC9 /* g_array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_array.c; path = "../lib/pd-for-android/PdCore/jni/src/g_array.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C8D1291FA0C00971CC9 /* g_bang.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_bang.c; path = "../lib/pd-for-android/PdCore/jni/src/g_bang.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C8E1291FA0C00971CC9 /* g_canvas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_canvas.c; path = "../lib/pd-for-android/PdCore/jni/src/g_canvas.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C8F1291FA0C00971CC9 /* g_canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = g_canvas.h; path = "../lib/pd-for-android/PdCore/jni/src/g_canvas.h"; sourceTree = SOURCE_ROOT; };
-		EAD06C901291FA0C00971CC9 /* g_editor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_editor.c; path = "../lib/pd-for-android/PdCore/jni/src/g_editor.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C911291FA0C00971CC9 /* g_graph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_graph.c; path = "../lib/pd-for-android/PdCore/jni/src/g_graph.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C921291FA0C00971CC9 /* g_guiconnect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_guiconnect.c; path = "../lib/pd-for-android/PdCore/jni/src/g_guiconnect.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C931291FA0C00971CC9 /* g_hdial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_hdial.c; path = "../lib/pd-for-android/PdCore/jni/src/g_hdial.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C941291FA0C00971CC9 /* g_hslider.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_hslider.c; path = "../lib/pd-for-android/PdCore/jni/src/g_hslider.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C951291FA0C00971CC9 /* g_io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_io.c; path = "../lib/pd-for-android/PdCore/jni/src/g_io.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C961291FA0C00971CC9 /* g_mycanvas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_mycanvas.c; path = "../lib/pd-for-android/PdCore/jni/src/g_mycanvas.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C971291FA0C00971CC9 /* g_numbox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_numbox.c; path = "../lib/pd-for-android/PdCore/jni/src/g_numbox.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C981291FA0C00971CC9 /* g_readwrite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_readwrite.c; path = "../lib/pd-for-android/PdCore/jni/src/g_readwrite.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C991291FA0C00971CC9 /* g_rtext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_rtext.c; path = "../lib/pd-for-android/PdCore/jni/src/g_rtext.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C9A1291FA0C00971CC9 /* g_scalar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_scalar.c; path = "../lib/pd-for-android/PdCore/jni/src/g_scalar.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C9B1291FA0C00971CC9 /* g_template.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_template.c; path = "../lib/pd-for-android/PdCore/jni/src/g_template.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C9C1291FA0C00971CC9 /* g_text.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_text.c; path = "../lib/pd-for-android/PdCore/jni/src/g_text.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C9D1291FA0C00971CC9 /* g_toggle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_toggle.c; path = "../lib/pd-for-android/PdCore/jni/src/g_toggle.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C9E1291FA0C00971CC9 /* g_traversal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_traversal.c; path = "../lib/pd-for-android/PdCore/jni/src/g_traversal.c"; sourceTree = SOURCE_ROOT; };
-		EAD06C9F1291FA0C00971CC9 /* g_vdial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_vdial.c; path = "../lib/pd-for-android/PdCore/jni/src/g_vdial.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CA01291FA0C00971CC9 /* g_vslider.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_vslider.c; path = "../lib/pd-for-android/PdCore/jni/src/g_vslider.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CA11291FA0C00971CC9 /* g_vumeter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = g_vumeter.c; path = "../lib/pd-for-android/PdCore/jni/src/g_vumeter.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CA21291FA0C00971CC9 /* m_atom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_atom.c; path = "../lib/pd-for-android/PdCore/jni/src/m_atom.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CA31291FA0C00971CC9 /* m_binbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_binbuf.c; path = "../lib/pd-for-android/PdCore/jni/src/m_binbuf.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CA41291FA0C00971CC9 /* m_class.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_class.c; path = "../lib/pd-for-android/PdCore/jni/src/m_class.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CA51291FA0C00971CC9 /* m_conf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_conf.c; path = "../lib/pd-for-android/PdCore/jni/src/m_conf.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CA61291FA0C00971CC9 /* m_fixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = m_fixed.h; path = "../lib/pd-for-android/PdCore/jni/src/m_fixed.h"; sourceTree = SOURCE_ROOT; };
-		EAD06CA71291FA0C00971CC9 /* m_glob.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_glob.c; path = "../lib/pd-for-android/PdCore/jni/src/m_glob.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CA81291FA0C00971CC9 /* m_imp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = m_imp.h; path = "../lib/pd-for-android/PdCore/jni/src/m_imp.h"; sourceTree = SOURCE_ROOT; };
-		EAD06CA91291FA0C00971CC9 /* m_memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_memory.c; path = "../lib/pd-for-android/PdCore/jni/src/m_memory.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CAA1291FA0C00971CC9 /* m_obj.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_obj.c; path = "../lib/pd-for-android/PdCore/jni/src/m_obj.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CAB1291FA0C00971CC9 /* m_pd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_pd.c; path = "../lib/pd-for-android/PdCore/jni/src/m_pd.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CAC1291FA0C00971CC9 /* m_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = m_pd.h; path = "../lib/pd-for-android/PdCore/jni/src/m_pd.h"; sourceTree = SOURCE_ROOT; };
-		EAD06CAD1291FA0C00971CC9 /* m_sched.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = m_sched.c; path = "../lib/pd-for-android/PdCore/jni/src/m_sched.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CCB1291FA0C00971CC9 /* s_audio_audiounit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_audio_audiounit.c; path = "../lib/pd-for-android/PdCore/jni/src/s_audio_audiounit.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CCC1291FA0C00971CC9 /* s_audio_dummy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_audio_dummy.c; path = "../lib/pd-for-android/PdCore/jni/src/s_audio_dummy.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CD61291FA0C00971CC9 /* s_audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_audio.c; path = "../lib/pd-for-android/PdCore/jni/src/s_audio.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CD71291FA0C00971CC9 /* s_entry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_entry.c; path = "../lib/pd-for-android/PdCore/jni/src/s_entry.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CD81291FA0C00971CC9 /* s_file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_file.c; path = "../lib/pd-for-android/PdCore/jni/src/s_file.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CD91291FA0C00971CC9 /* s_inter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_inter.c; path = "../lib/pd-for-android/PdCore/jni/src/s_inter.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CDA1291FA0C00971CC9 /* s_loader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_loader.c; path = "../lib/pd-for-android/PdCore/jni/src/s_loader.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CDB1291FA0C00971CC9 /* s_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_main.c; path = "../lib/pd-for-android/PdCore/jni/src/s_main.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CDD1291FA0C00971CC9 /* s_midi_dummy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_midi_dummy.c; path = "../lib/pd-for-android/PdCore/jni/src/s_midi_dummy.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CE11291FA0C00971CC9 /* s_midi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_midi.c; path = "../lib/pd-for-android/PdCore/jni/src/s_midi.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CE21291FA0C00971CC9 /* s_path.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_path.c; path = "../lib/pd-for-android/PdCore/jni/src/s_path.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CE31291FA0C00971CC9 /* s_print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_print.c; path = "../lib/pd-for-android/PdCore/jni/src/s_print.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CE41291FA0C00971CC9 /* s_stuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = s_stuff.h; path = "../lib/pd-for-android/PdCore/jni/src/s_stuff.h"; sourceTree = SOURCE_ROOT; };
-		EAD06CE51291FA0C00971CC9 /* s_utf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = s_utf8.c; path = "../lib/pd-for-android/PdCore/jni/src/s_utf8.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CE61291FA0C00971CC9 /* s_utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = s_utf8.h; path = "../lib/pd-for-android/PdCore/jni/src/s_utf8.h"; sourceTree = SOURCE_ROOT; };
-		EAD06CEA1291FA0C00971CC9 /* x_acoustics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_acoustics.c; path = "../lib/pd-for-android/PdCore/jni/src/x_acoustics.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CEB1291FA0C00971CC9 /* x_arithmetic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_arithmetic.c; path = "../lib/pd-for-android/PdCore/jni/src/x_arithmetic.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CEC1291FA0C00971CC9 /* x_connective.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_connective.c; path = "../lib/pd-for-android/PdCore/jni/src/x_connective.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CED1291FA0C00971CC9 /* x_gui.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_gui.c; path = "../lib/pd-for-android/PdCore/jni/src/x_gui.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CEE1291FA0C00971CC9 /* x_interface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_interface.c; path = "../lib/pd-for-android/PdCore/jni/src/x_interface.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CEF1291FA0C00971CC9 /* x_libpdreceive.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_libpdreceive.c; path = "../lib/pd-for-android/PdCore/jni/src/x_libpdreceive.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CF01291FA0C00971CC9 /* x_libpdreceive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x_libpdreceive.h; path = "../lib/pd-for-android/PdCore/jni/src/x_libpdreceive.h"; sourceTree = SOURCE_ROOT; };
-		EAD06CF11291FA0C00971CC9 /* x_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_list.c; path = "../lib/pd-for-android/PdCore/jni/src/x_list.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CF21291FA0C00971CC9 /* x_midi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_midi.c; path = "../lib/pd-for-android/PdCore/jni/src/x_midi.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CF31291FA0C00971CC9 /* x_misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_misc.c; path = "../lib/pd-for-android/PdCore/jni/src/x_misc.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CF41291FA0C00971CC9 /* x_net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_net.c; path = "../lib/pd-for-android/PdCore/jni/src/x_net.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CF51291FA0C00971CC9 /* x_qlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_qlist.c; path = "../lib/pd-for-android/PdCore/jni/src/x_qlist.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CF61291FA0C00971CC9 /* x_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x_time.c; path = "../lib/pd-for-android/PdCore/jni/src/x_time.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CF91291FA0C00971CC9 /* z_libpd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = z_libpd.c; path = "../lib/pd-for-android/PdCore/jni/src/z_libpd.c"; sourceTree = SOURCE_ROOT; };
-		EAD06CFA1291FA0C00971CC9 /* z_libpd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = z_libpd.h; path = "../lib/pd-for-android/PdCore/jni/src/z_libpd.h"; sourceTree = SOURCE_ROOT; };
 		EAD06DEB1292003700971CC9 /* ofxAudioPluginWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPluginWrapper.h; sourceTree = "<group>"; };
 		EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAudioPluginWrapper.cpp; sourceTree = "<group>"; };
 		EAD1F26412918BD20017A281 /* ofxAudioPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPlugin.h; sourceTree = "<group>"; };
@@ -758,7 +512,6 @@
 		EAD06C651291F9DB00971CC9 /* ofxPd */ = {
 			isa = PBXGroup;
 			children = (
-				EAD06C6F1291F9F700971CC9 /* pd-for-android */,
 				EAD06C661291F9DB00971CC9 /* ofxPd.cpp */,
 				EAD06C671291F9DB00971CC9 /* ofxPd.h */,
 			);
@@ -775,95 +528,6 @@
 				EAD1F26312918BD20017A281 /* ofxAudioPlugin */,
 			);
 			name = addons;
-			sourceTree = "<group>";
-		};
-		EAD06C6F1291F9F700971CC9 /* pd-for-android */ = {
-			isa = PBXGroup;
-			children = (
-				EAD06C731291FA0C00971CC9 /* d_arithmetic.c */,
-				EAD06C741291FA0C00971CC9 /* d_array.c */,
-				EAD06C751291FA0C00971CC9 /* d_ctl.c */,
-				EAD06C761291FA0C00971CC9 /* d_dac.c */,
-				EAD06C771291FA0C00971CC9 /* d_delay.c */,
-				EAD06C7A1291FA0C00971CC9 /* d_fft_mayer.c */,
-				EAD06C7B1291FA0C00971CC9 /* d_fft.c */,
-				EAD06C7C1291FA0C00971CC9 /* d_fftroutine.c */,
-				EAD06C7E1291FA0C00971CC9 /* d_filter.c */,
-				EAD06C7F1291FA0C00971CC9 /* d_global.c */,
-				EAD06C801291FA0C00971CC9 /* d_math.c */,
-				EAD06C811291FA0C00971CC9 /* d_misc.c */,
-				EAD06C821291FA0C00971CC9 /* d_osc.c */,
-				EAD06C831291FA0C00971CC9 /* d_resample.c */,
-				EAD06C841291FA0C00971CC9 /* d_soundfile.c */,
-				EAD06C851291FA0C00971CC9 /* d_ugen.c */,
-				EAD06C8A1291FA0C00971CC9 /* g_all_guis.c */,
-				EAD06C8B1291FA0C00971CC9 /* g_all_guis.h */,
-				EAD06C8C1291FA0C00971CC9 /* g_array.c */,
-				EAD06C8D1291FA0C00971CC9 /* g_bang.c */,
-				EAD06C8E1291FA0C00971CC9 /* g_canvas.c */,
-				EAD06C8F1291FA0C00971CC9 /* g_canvas.h */,
-				EAD06C901291FA0C00971CC9 /* g_editor.c */,
-				EAD06C911291FA0C00971CC9 /* g_graph.c */,
-				EAD06C921291FA0C00971CC9 /* g_guiconnect.c */,
-				EAD06C931291FA0C00971CC9 /* g_hdial.c */,
-				EAD06C941291FA0C00971CC9 /* g_hslider.c */,
-				EAD06C951291FA0C00971CC9 /* g_io.c */,
-				EAD06C961291FA0C00971CC9 /* g_mycanvas.c */,
-				EAD06C971291FA0C00971CC9 /* g_numbox.c */,
-				EAD06C981291FA0C00971CC9 /* g_readwrite.c */,
-				EAD06C991291FA0C00971CC9 /* g_rtext.c */,
-				EAD06C9A1291FA0C00971CC9 /* g_scalar.c */,
-				EAD06C9B1291FA0C00971CC9 /* g_template.c */,
-				EAD06C9C1291FA0C00971CC9 /* g_text.c */,
-				EAD06C9D1291FA0C00971CC9 /* g_toggle.c */,
-				EAD06C9E1291FA0C00971CC9 /* g_traversal.c */,
-				EAD06C9F1291FA0C00971CC9 /* g_vdial.c */,
-				EAD06CA01291FA0C00971CC9 /* g_vslider.c */,
-				EAD06CA11291FA0C00971CC9 /* g_vumeter.c */,
-				EAD06CA21291FA0C00971CC9 /* m_atom.c */,
-				EAD06CA31291FA0C00971CC9 /* m_binbuf.c */,
-				EAD06CA41291FA0C00971CC9 /* m_class.c */,
-				EAD06CA51291FA0C00971CC9 /* m_conf.c */,
-				EAD06CA61291FA0C00971CC9 /* m_fixed.h */,
-				EAD06CA71291FA0C00971CC9 /* m_glob.c */,
-				EAD06CA81291FA0C00971CC9 /* m_imp.h */,
-				EAD06CA91291FA0C00971CC9 /* m_memory.c */,
-				EAD06CAA1291FA0C00971CC9 /* m_obj.c */,
-				EAD06CAB1291FA0C00971CC9 /* m_pd.c */,
-				EAD06CAC1291FA0C00971CC9 /* m_pd.h */,
-				EAD06CAD1291FA0C00971CC9 /* m_sched.c */,
-				EAD06CCB1291FA0C00971CC9 /* s_audio_audiounit.c */,
-				EAD06CCC1291FA0C00971CC9 /* s_audio_dummy.c */,
-				EAD06CD61291FA0C00971CC9 /* s_audio.c */,
-				EAD06CD71291FA0C00971CC9 /* s_entry.c */,
-				EAD06CD81291FA0C00971CC9 /* s_file.c */,
-				EAD06CD91291FA0C00971CC9 /* s_inter.c */,
-				EAD06CDA1291FA0C00971CC9 /* s_loader.c */,
-				EAD06CDB1291FA0C00971CC9 /* s_main.c */,
-				EAD06CDD1291FA0C00971CC9 /* s_midi_dummy.c */,
-				EAD06CE11291FA0C00971CC9 /* s_midi.c */,
-				EAD06CE21291FA0C00971CC9 /* s_path.c */,
-				EAD06CE31291FA0C00971CC9 /* s_print.c */,
-				EAD06CE41291FA0C00971CC9 /* s_stuff.h */,
-				EAD06CE51291FA0C00971CC9 /* s_utf8.c */,
-				EAD06CE61291FA0C00971CC9 /* s_utf8.h */,
-				EAD06CEA1291FA0C00971CC9 /* x_acoustics.c */,
-				EAD06CEB1291FA0C00971CC9 /* x_arithmetic.c */,
-				EAD06CEC1291FA0C00971CC9 /* x_connective.c */,
-				EAD06CED1291FA0C00971CC9 /* x_gui.c */,
-				EAD06CEE1291FA0C00971CC9 /* x_interface.c */,
-				EAD06CEF1291FA0C00971CC9 /* x_libpdreceive.c */,
-				EAD06CF01291FA0C00971CC9 /* x_libpdreceive.h */,
-				EAD06CF11291FA0C00971CC9 /* x_list.c */,
-				EAD06CF21291FA0C00971CC9 /* x_midi.c */,
-				EAD06CF31291FA0C00971CC9 /* x_misc.c */,
-				EAD06CF41291FA0C00971CC9 /* x_net.c */,
-				EAD06CF51291FA0C00971CC9 /* x_qlist.c */,
-				EAD06CF61291FA0C00971CC9 /* x_time.c */,
-				EAD06CF91291FA0C00971CC9 /* z_libpd.c */,
-				EAD06CFA1291FA0C00971CC9 /* z_libpd.h */,
-			);
-			name = "pd-for-android";
 			sourceTree = "<group>";
 		};
 		EAD1F26312918BD20017A281 /* ofxAudioPlugin */ = {
@@ -927,15 +591,6 @@
 				EAD06C691291F9DB00971CC9 /* ofxDirList.h in Headers */,
 				EAD06C6A1291F9DB00971CC9 /* ofxFileUtils.h in Headers */,
 				EAD06C6D1291F9DB00971CC9 /* ofxPd.h in Headers */,
-				EAD06D121291FA0C00971CC9 /* g_all_guis.h in Headers */,
-				EAD06D161291FA0C00971CC9 /* g_canvas.h in Headers */,
-				EAD06D2D1291FA0C00971CC9 /* m_fixed.h in Headers */,
-				EAD06D2F1291FA0C00971CC9 /* m_imp.h in Headers */,
-				EAD06D331291FA0C00971CC9 /* m_pd.h in Headers */,
-				EAD06D641291FA0C00971CC9 /* s_stuff.h in Headers */,
-				EAD06D661291FA0C00971CC9 /* s_utf8.h in Headers */,
-				EAD06D701291FA0C00971CC9 /* x_libpdreceive.h in Headers */,
-				EAD06D7A1291FA0C00971CC9 /* z_libpd.h in Headers */,
 				EAD06DEC1292003700971CC9 /* ofxAudioPluginWrapper.h in Headers */,
 				EAF05DB012A918D800A75A3B /* MusicDeviceBase.h in Headers */,
 				EAF05DB212A918D900A75A3B /* AUMIDIBase.h in Headers */,
@@ -975,15 +630,6 @@
 				EAA54CF8129466CA0025E7BC /* ofxDirList.h in Headers */,
 				EAA54CF9129466CA0025E7BC /* ofxFileUtils.h in Headers */,
 				EAA54CFA129466CA0025E7BC /* ofxPd.h in Headers */,
-				EAA54CFB129466CA0025E7BC /* g_all_guis.h in Headers */,
-				EAA54CFC129466CA0025E7BC /* g_canvas.h in Headers */,
-				EAA54CFD129466CA0025E7BC /* m_fixed.h in Headers */,
-				EAA54CFE129466CA0025E7BC /* m_imp.h in Headers */,
-				EAA54CFF129466CA0025E7BC /* m_pd.h in Headers */,
-				EAA54D00129466CA0025E7BC /* s_stuff.h in Headers */,
-				EAA54D01129466CA0025E7BC /* s_utf8.h in Headers */,
-				EAA54D02129466CA0025E7BC /* x_libpdreceive.h in Headers */,
-				EAA54D03129466CA0025E7BC /* z_libpd.h in Headers */,
 				EAA54D04129466CA0025E7BC /* ofxAudioPluginWrapper.h in Headers */,
 				EAA54DBC12946D6D0025E7BC /* AUInstrumentBase.h in Headers */,
 				EAA54DBE12946D6D0025E7BC /* SynthElement.h in Headers */,
@@ -1128,79 +774,6 @@
 				EAD06C681291F9DB00971CC9 /* ofxDirList.cpp in Sources */,
 				EAD06C6B1291F9DB00971CC9 /* ofxFileUtils.mm in Sources */,
 				EAD06C6C1291F9DB00971CC9 /* ofxPd.cpp in Sources */,
-				EAD06CFB1291FA0C00971CC9 /* d_arithmetic.c in Sources */,
-				EAD06CFC1291FA0C00971CC9 /* d_array.c in Sources */,
-				EAD06CFD1291FA0C00971CC9 /* d_ctl.c in Sources */,
-				EAD06CFE1291FA0C00971CC9 /* d_dac.c in Sources */,
-				EAD06CFF1291FA0C00971CC9 /* d_delay.c in Sources */,
-				EAD06D021291FA0C00971CC9 /* d_fft_mayer.c in Sources */,
-				EAD06D031291FA0C00971CC9 /* d_fft.c in Sources */,
-				EAD06D041291FA0C00971CC9 /* d_fftroutine.c in Sources */,
-				EAD06D061291FA0C00971CC9 /* d_filter.c in Sources */,
-				EAD06D071291FA0C00971CC9 /* d_global.c in Sources */,
-				EAD06D081291FA0C00971CC9 /* d_math.c in Sources */,
-				EAD06D091291FA0C00971CC9 /* d_misc.c in Sources */,
-				EAD06D0A1291FA0C00971CC9 /* d_osc.c in Sources */,
-				EAD06D0B1291FA0C00971CC9 /* d_resample.c in Sources */,
-				EAD06D0C1291FA0C00971CC9 /* d_soundfile.c in Sources */,
-				EAD06D0D1291FA0C00971CC9 /* d_ugen.c in Sources */,
-				EAD06D111291FA0C00971CC9 /* g_all_guis.c in Sources */,
-				EAD06D131291FA0C00971CC9 /* g_array.c in Sources */,
-				EAD06D141291FA0C00971CC9 /* g_bang.c in Sources */,
-				EAD06D151291FA0C00971CC9 /* g_canvas.c in Sources */,
-				EAD06D171291FA0C00971CC9 /* g_editor.c in Sources */,
-				EAD06D181291FA0C00971CC9 /* g_graph.c in Sources */,
-				EAD06D191291FA0C00971CC9 /* g_guiconnect.c in Sources */,
-				EAD06D1A1291FA0C00971CC9 /* g_hdial.c in Sources */,
-				EAD06D1B1291FA0C00971CC9 /* g_hslider.c in Sources */,
-				EAD06D1C1291FA0C00971CC9 /* g_io.c in Sources */,
-				EAD06D1D1291FA0C00971CC9 /* g_mycanvas.c in Sources */,
-				EAD06D1E1291FA0C00971CC9 /* g_numbox.c in Sources */,
-				EAD06D1F1291FA0C00971CC9 /* g_readwrite.c in Sources */,
-				EAD06D201291FA0C00971CC9 /* g_rtext.c in Sources */,
-				EAD06D211291FA0C00971CC9 /* g_scalar.c in Sources */,
-				EAD06D221291FA0C00971CC9 /* g_template.c in Sources */,
-				EAD06D231291FA0C00971CC9 /* g_text.c in Sources */,
-				EAD06D241291FA0C00971CC9 /* g_toggle.c in Sources */,
-				EAD06D251291FA0C00971CC9 /* g_traversal.c in Sources */,
-				EAD06D261291FA0C00971CC9 /* g_vdial.c in Sources */,
-				EAD06D271291FA0C00971CC9 /* g_vslider.c in Sources */,
-				EAD06D281291FA0C00971CC9 /* g_vumeter.c in Sources */,
-				EAD06D291291FA0C00971CC9 /* m_atom.c in Sources */,
-				EAD06D2A1291FA0C00971CC9 /* m_binbuf.c in Sources */,
-				EAD06D2B1291FA0C00971CC9 /* m_class.c in Sources */,
-				EAD06D2C1291FA0C00971CC9 /* m_conf.c in Sources */,
-				EAD06D2E1291FA0C00971CC9 /* m_glob.c in Sources */,
-				EAD06D301291FA0C00971CC9 /* m_memory.c in Sources */,
-				EAD06D311291FA0C00971CC9 /* m_obj.c in Sources */,
-				EAD06D321291FA0C00971CC9 /* m_pd.c in Sources */,
-				EAD06D341291FA0C00971CC9 /* m_sched.c in Sources */,
-				EAD06D4B1291FA0C00971CC9 /* s_audio_audiounit.c in Sources */,
-				EAD06D4C1291FA0C00971CC9 /* s_audio_dummy.c in Sources */,
-				EAD06D561291FA0C00971CC9 /* s_audio.c in Sources */,
-				EAD06D571291FA0C00971CC9 /* s_entry.c in Sources */,
-				EAD06D581291FA0C00971CC9 /* s_file.c in Sources */,
-				EAD06D591291FA0C00971CC9 /* s_inter.c in Sources */,
-				EAD06D5A1291FA0C00971CC9 /* s_loader.c in Sources */,
-				EAD06D5B1291FA0C00971CC9 /* s_main.c in Sources */,
-				EAD06D5D1291FA0C00971CC9 /* s_midi_dummy.c in Sources */,
-				EAD06D611291FA0C00971CC9 /* s_midi.c in Sources */,
-				EAD06D621291FA0C00971CC9 /* s_path.c in Sources */,
-				EAD06D631291FA0C00971CC9 /* s_print.c in Sources */,
-				EAD06D651291FA0C00971CC9 /* s_utf8.c in Sources */,
-				EAD06D6A1291FA0C00971CC9 /* x_acoustics.c in Sources */,
-				EAD06D6B1291FA0C00971CC9 /* x_arithmetic.c in Sources */,
-				EAD06D6C1291FA0C00971CC9 /* x_connective.c in Sources */,
-				EAD06D6D1291FA0C00971CC9 /* x_gui.c in Sources */,
-				EAD06D6E1291FA0C00971CC9 /* x_interface.c in Sources */,
-				EAD06D6F1291FA0C00971CC9 /* x_libpdreceive.c in Sources */,
-				EAD06D711291FA0C00971CC9 /* x_list.c in Sources */,
-				EAD06D721291FA0C00971CC9 /* x_midi.c in Sources */,
-				EAD06D731291FA0C00971CC9 /* x_misc.c in Sources */,
-				EAD06D741291FA0C00971CC9 /* x_net.c in Sources */,
-				EAD06D751291FA0C00971CC9 /* x_qlist.c in Sources */,
-				EAD06D761291FA0C00971CC9 /* x_time.c in Sources */,
-				EAD06D791291FA0C00971CC9 /* z_libpd.c in Sources */,
 				EAD06EA812940B8900971CC9 /* ofxAudioPluginWrapper.cpp in Sources */,
 				EAF05DB112A918D800A75A3B /* MusicDeviceBase.cpp in Sources */,
 				EAF05DB312A918DA00A75A3B /* AUMIDIBase.cpp in Sources */,
@@ -1234,79 +807,6 @@
 				EAA54D1C129466CA0025E7BC /* ofxDirList.cpp in Sources */,
 				EAA54D1D129466CA0025E7BC /* ofxFileUtils.mm in Sources */,
 				EAA54D1E129466CA0025E7BC /* ofxPd.cpp in Sources */,
-				EAA54D1F129466CA0025E7BC /* d_arithmetic.c in Sources */,
-				EAA54D20129466CA0025E7BC /* d_array.c in Sources */,
-				EAA54D21129466CA0025E7BC /* d_ctl.c in Sources */,
-				EAA54D22129466CA0025E7BC /* d_dac.c in Sources */,
-				EAA54D23129466CA0025E7BC /* d_delay.c in Sources */,
-				EAA54D24129466CA0025E7BC /* d_fft_mayer.c in Sources */,
-				EAA54D25129466CA0025E7BC /* d_fft.c in Sources */,
-				EAA54D26129466CA0025E7BC /* d_fftroutine.c in Sources */,
-				EAA54D27129466CA0025E7BC /* d_filter.c in Sources */,
-				EAA54D28129466CA0025E7BC /* d_global.c in Sources */,
-				EAA54D29129466CA0025E7BC /* d_math.c in Sources */,
-				EAA54D2A129466CA0025E7BC /* d_misc.c in Sources */,
-				EAA54D2B129466CA0025E7BC /* d_osc.c in Sources */,
-				EAA54D2C129466CA0025E7BC /* d_resample.c in Sources */,
-				EAA54D2D129466CA0025E7BC /* d_soundfile.c in Sources */,
-				EAA54D2E129466CA0025E7BC /* d_ugen.c in Sources */,
-				EAA54D2F129466CA0025E7BC /* g_all_guis.c in Sources */,
-				EAA54D30129466CA0025E7BC /* g_array.c in Sources */,
-				EAA54D31129466CA0025E7BC /* g_bang.c in Sources */,
-				EAA54D32129466CA0025E7BC /* g_canvas.c in Sources */,
-				EAA54D33129466CA0025E7BC /* g_editor.c in Sources */,
-				EAA54D34129466CA0025E7BC /* g_graph.c in Sources */,
-				EAA54D35129466CA0025E7BC /* g_guiconnect.c in Sources */,
-				EAA54D36129466CA0025E7BC /* g_hdial.c in Sources */,
-				EAA54D37129466CA0025E7BC /* g_hslider.c in Sources */,
-				EAA54D38129466CA0025E7BC /* g_io.c in Sources */,
-				EAA54D39129466CA0025E7BC /* g_mycanvas.c in Sources */,
-				EAA54D3A129466CA0025E7BC /* g_numbox.c in Sources */,
-				EAA54D3B129466CA0025E7BC /* g_readwrite.c in Sources */,
-				EAA54D3C129466CA0025E7BC /* g_rtext.c in Sources */,
-				EAA54D3D129466CA0025E7BC /* g_scalar.c in Sources */,
-				EAA54D3E129466CA0025E7BC /* g_template.c in Sources */,
-				EAA54D3F129466CA0025E7BC /* g_text.c in Sources */,
-				EAA54D40129466CA0025E7BC /* g_toggle.c in Sources */,
-				EAA54D41129466CA0025E7BC /* g_traversal.c in Sources */,
-				EAA54D42129466CA0025E7BC /* g_vdial.c in Sources */,
-				EAA54D43129466CA0025E7BC /* g_vslider.c in Sources */,
-				EAA54D44129466CA0025E7BC /* g_vumeter.c in Sources */,
-				EAA54D45129466CA0025E7BC /* m_atom.c in Sources */,
-				EAA54D46129466CA0025E7BC /* m_binbuf.c in Sources */,
-				EAA54D47129466CA0025E7BC /* m_class.c in Sources */,
-				EAA54D48129466CA0025E7BC /* m_conf.c in Sources */,
-				EAA54D49129466CA0025E7BC /* m_glob.c in Sources */,
-				EAA54D4A129466CA0025E7BC /* m_memory.c in Sources */,
-				EAA54D4B129466CA0025E7BC /* m_obj.c in Sources */,
-				EAA54D4C129466CA0025E7BC /* m_pd.c in Sources */,
-				EAA54D4D129466CA0025E7BC /* m_sched.c in Sources */,
-				EAA54D4E129466CA0025E7BC /* s_audio_audiounit.c in Sources */,
-				EAA54D4F129466CA0025E7BC /* s_audio_dummy.c in Sources */,
-				EAA54D50129466CA0025E7BC /* s_audio.c in Sources */,
-				EAA54D51129466CA0025E7BC /* s_entry.c in Sources */,
-				EAA54D52129466CA0025E7BC /* s_file.c in Sources */,
-				EAA54D53129466CA0025E7BC /* s_inter.c in Sources */,
-				EAA54D54129466CA0025E7BC /* s_loader.c in Sources */,
-				EAA54D55129466CA0025E7BC /* s_main.c in Sources */,
-				EAA54D56129466CA0025E7BC /* s_midi_dummy.c in Sources */,
-				EAA54D57129466CA0025E7BC /* s_midi.c in Sources */,
-				EAA54D58129466CA0025E7BC /* s_path.c in Sources */,
-				EAA54D59129466CA0025E7BC /* s_print.c in Sources */,
-				EAA54D5A129466CA0025E7BC /* s_utf8.c in Sources */,
-				EAA54D5B129466CA0025E7BC /* x_acoustics.c in Sources */,
-				EAA54D5C129466CA0025E7BC /* x_arithmetic.c in Sources */,
-				EAA54D5D129466CA0025E7BC /* x_connective.c in Sources */,
-				EAA54D5E129466CA0025E7BC /* x_gui.c in Sources */,
-				EAA54D5F129466CA0025E7BC /* x_interface.c in Sources */,
-				EAA54D60129466CA0025E7BC /* x_libpdreceive.c in Sources */,
-				EAA54D61129466CA0025E7BC /* x_list.c in Sources */,
-				EAA54D62129466CA0025E7BC /* x_midi.c in Sources */,
-				EAA54D63129466CA0025E7BC /* x_misc.c in Sources */,
-				EAA54D64129466CA0025E7BC /* x_net.c in Sources */,
-				EAA54D65129466CA0025E7BC /* x_qlist.c in Sources */,
-				EAA54D66129466CA0025E7BC /* x_time.c in Sources */,
-				EAA54D67129466CA0025E7BC /* z_libpd.c in Sources */,
 				EAA54D68129466CA0025E7BC /* ofxAudioPluginWrapper.cpp in Sources */,
 				EAA54DBB12946D6D0025E7BC /* AUInstrumentBase.cpp in Sources */,
 				EAA54DBD12946D6D0025E7BC /* SynthElement.cpp in Sources */,

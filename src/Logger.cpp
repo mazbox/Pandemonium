@@ -10,7 +10,7 @@
 
 #include "Logger.h"
 
-string logFilePath;
+string logFilePath = "";
 
 void initLog(string path) {
 	logFilePath = path;

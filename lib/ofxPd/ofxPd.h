@@ -5,7 +5,7 @@ using namespace std;
 
 
 
-
+/*
 typedef void (*void_t)();
 //libpd_init
 //libpd_clear_search_path
@@ -39,7 +39,7 @@ typedef void (*t_int_int_int_int)(int, int, int, int);
 typedef void (*t_floatp_floatp)(float *, float *);
 //libpd_process_float
 //libpd_process_raw
-
+*/
 
 
 
@@ -106,7 +106,7 @@ private:
 	
 	
 	
-	
+	/*
 	
 	
 	void_t init;
@@ -134,5 +134,5 @@ private:
 	t_floatp_floatp process_float;
 	t_floatp_floatp process_raw;
 
-	
+	*/
 };
