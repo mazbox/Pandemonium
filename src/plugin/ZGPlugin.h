@@ -29,9 +29,9 @@ public:
 		findPatches("/Library/Audio/Sounds/Pandemonium/Effects");
 #endif
 	
-
+		ofxPd::setup(44100);
 		pd = new ofxPd();
-		pd->setup(44100);
+		
 		running = true;
 		
 	}

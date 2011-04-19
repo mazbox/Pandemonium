@@ -38,28 +38,32 @@ void ofxPd::setBufferSize(int bs) {
 
 void ofxPd::setup(int samplerate) {
     
-	// for debugging
-	libpd_printhook = (t_libpd_printhook) pdprint;
-	
-    // work out block size (pd works in 64 sample blocks - 
-	// specified by libpd_blocksize())
-    int bufferSize = 256;
-    bufferSize = (bufferSize/libpd_blocksize()) * libpd_blocksize();
-	
-	
-	
-    libpd_init();
-    libpd_init_audio(2, 2, samplerate, 1);
+	if(!pdInitialized) {
+		// for debugging
+		libpd_printhook = (t_libpd_printhook) pdprint;
+		
+		// work out block size (pd works in 64 sample blocks - 
+		// specified by libpd_blocksize())
+		int bufferSize = 256;
+		bufferSize = (bufferSize/libpd_blocksize()) * libpd_blocksize();
+		
+		
+		
+		libpd_init();
+		libpd_init_audio(2, 2, samplerate, 1);
 
-    // default value
-	setBufferSize(256);
-	
-    // enable sound - send "pd dsp 1"
-	libpd_start_message();
-	libpd_add_float(1);
-	libpd_finish_message("pd", "dsp");
-    pdInitialized = true;
-	printf("PD Initialized\n");
+		// default value
+		setBufferSize(256);
+		
+		// enable sound - send "pd dsp 1"
+		libpd_start_message();
+		libpd_add_float(1);
+		libpd_finish_message("pd", "dsp");
+		pdInitialized = true;
+		printf("PD Initialized\n");
+	} else {
+		printf("ofxPd: Warning: setup already called\n");
+	}
 }
 
 

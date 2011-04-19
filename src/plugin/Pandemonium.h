@@ -87,7 +87,7 @@ public:
 	void process(int numIns, float **ins, int numOuts, float **outs, int numFrames) {
 		
 		if(!running) return;
-		/*
+		
 		int menuIndex = getParameter(0);
 		int patchIndex = menuIndex - EXTRA_MENU_ITEMS;
 		
@@ -120,7 +120,7 @@ public:
 				}
 			}
 		}
-		*/
+		
 		if(numOuts==2) {
 			
 			if(numIns==2) {
