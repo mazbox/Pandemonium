@@ -1050,7 +1050,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 3E4BA247089833B7007656EC /* Build configuration list for PBXProject "Pandemonium" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* Pandemonium */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1347,7 +1351,7 @@
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Examples/CoreAudio/AudioUnits/AUPublic/AUBase\"";
 				PRODUCT_NAME = Pandemonium;
-				SDKROOT = macosx10.5;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = component;
 			};
 			name = Debug;
@@ -1370,7 +1374,7 @@
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Examples/CoreAudio/AudioUnits/AUPublic/AUBase\"";
 				PRODUCT_NAME = Pandemonium;
-				SDKROOT = macosx10.5;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = component;
 			};
 			name = Release;
@@ -1426,7 +1430,7 @@
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Examples/CoreAudio/AudioUnits/AUPublic/AUBase\"";
 				PRODUCT_NAME = "Pandemonium Instrument";
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = component;
 			};
 			name = Debug;
@@ -1450,7 +1454,7 @@
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Examples/CoreAudio/AudioUnits/AUPublic/AUBase\"";
 				PRODUCT_NAME = "Pandemonium Instrument";
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = component;
 			};
 			name = Release;
