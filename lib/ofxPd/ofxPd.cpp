@@ -1,293 +1,265 @@
-/*
- *  ofxPd.cpp
- *  PdPlayer
- *
- *  Created by Marek Bereza on 11/04/2010.
- *  Copyright 2010 Marek Bereza. All rights reserved.
- *
- */
-#include <fstream>
+//
+//  ofxPd.cpp
+//  audioOutputExample
+//
+//  Created by Marek Bereza on 19/04/2011.
+//
+
 #include "ofxPd.h"
-#include "ofxFileUtils.h"
-
 #include "z_libpd.h"
-#include "Logger.h"
-#include "Slots.h"
+#include <fstream>
+#include <vector>
+#include <sstream>
 
+int ofxPd::bufferSize = 0;
+bool ofxPd::pdInitialized = false;
 
-extern "C" {
-	void ofxPd_printhook(const char *ptr) {
-		LOG(ptr)
-	}
-};
-
-
-class PdInstance {
-public:
-	
-	
-	PdInstance() {
-		libpd_init();
-		libpd_clear_search_path();
-		int numInputs = 2;
-		int numOutputs = 2;
-		int samplerate = 44100;
-		int blockSize = 256;
-		libpd_init_audio(numInputs, numOutputs, samplerate, blockSize/libpd_blocksize());
-	}
-	
-		
-	
-	
-	static PdInstance *getInstance() {
-		static PdInstance *pd = NULL;
-		if(pd==NULL) {
-			printf("Creating pd\n");
-			pd = new PdInstance();
-			
-		}
-		return pd;
-	}
-	Slots audioIns;
-	Slots audioOuts;
-	Slots midiChannels;
-	
-	
-};
-
-
+void pdprint(const char *s) {
+	printf("PD: %s", s);
+}
 
 ofxPd::ofxPd() {
-	char strin[512];
-	sprintf(strin, "%x", (int)this);
-	string ide = strin;
-	INIT_LOG("/Users/marek/Desktop/Pandemonium "+ide+" Log.txt")
-	LOG("ofxPd::ofxPd")
-	
-	hasADC = false;
-	patchIsOpen = false;
-	
-	pd = PdInstance::getInstance();
-
-	audioIns = new int[2];
-	audioOuts = new int[2];
-	audioIns[0] = pd->audioIns.getSlot();
-	audioIns[1] = pd->audioIns.getSlot();
-	
-	audioOuts[0] = pd->audioOuts.getSlot();
-	audioOuts[1] = pd->audioOuts.getSlot();
-	
-	midiChannel = pd->midiChannels.getSlot();
-	
-	pd->audioIns.print();
-	 
+	opened = false;
+	uid = "";
+	patchPointer = NULL;
 }
-
 ofxPd::~ofxPd() {
-	stopPd();
-	pd->audioIns.releaseSlot(audioIns[0]);
-	pd->audioIns.releaseSlot(audioIns[1]);
-	
-	pd->audioOuts.releaseSlot(audioOuts[0]);
-	pd->audioOuts.releaseSlot(audioOuts[1]);
-
-	pd->midiChannels.releaseSlot(midiChannel);
-	
-	LOG("ofxPd::~ofxPd");
-	// TODO(mhroth): what message must be sent to pd in order to clear all canvases?
-} 
-
- 
-bool ofxPd::hasInput() {
-	return hasADC;
-}
-
-void ofxPd::getDirAndFile(const char *path, char *outDir, char *outFile) { 
-	char *lastSlash = strrchr(path, '/'); 
-	sprintf(outDir, ""); 
-	if(lastSlash==NULL) { 
-		sprintf(outFile, "%s", path); 
-	} else { 
-		strncpy(outDir, path, 1+1+lastSlash-path); 
-		outDir[1+lastSlash-path] = '\0'; 
-		strcpy(outFile, lastSlash+1); 
-	} 
-} 
-
-void ofxPd::setBlockSize(int bufferSize) {
-	if(bufferSize != blockSize) {
-		blockSize = bufferSize;
-		libpd_set_ticks_per_buffer(blockSize/libpd_blocksize());
+	if(opened && pdInitialized) {
+		close();
 	}
 }
-
-void ofxPd::load(string patchFile) {
-	path = patchFile;
-	
-	hasADC = false;
-	
-	char file[256];
-	char dir[512];
-	getDirAndFile(patchFile.c_str(), dir, file);
-	
-	startPd();
-	
-	
-	
-
-	// look through the pd file and see if there's a adc~ in it
-	string line;
-	ifstream myfile (patchFile.c_str());
-	if (myfile.is_open()) {
-		while (! myfile.eof() ) {
-			getline (myfile,line);
-			if(line.find("adc~;")!=-1) {
-				hasADC = true;
-				break;
-			}
-		}
-		myfile.close();
+void ofxPd::setBufferSize(int bs) {
+	if(bufferSize!=bs) {
+		bufferSize = (bs/libpd_blocksize()) * libpd_blocksize();
+		libpd_set_ticks_per_buffer(bufferSize/libpd_blocksize());
 	}
-	
-	// at this point, rewrite the file to another file 
-	// with a unique id (this objects memory location)
-	// and set the channels up.
-	
-	openPatch(file, dir);
-}
-void ofxPd::closePatch(string file, string dir) {
-	libpd_clear_search_path();
-
-	libpd_start_message();
-
-	string recvr = "pd-"+file;
-	//printf("Trying to close patch %s\n", file.c_str());
-	libpd_finish_message(recvr.c_str(), "menuclose");
-
-	patchIsOpen = false;
-}
-
-void ofxPd::openPatch(string file, string dir) {
-
-	libpd_clear_search_path();
-	libpd_add_to_search_path(dir.c_str());
-
-	currDir = dir;
-	currFile = file;
-	
-	patchIsOpen = true;
-	// open patch
-	libpd_start_message();
-	libpd_add_symbol(file.c_str());
-	libpd_add_symbol(dir.c_str());
-
-	libpd_finish_message("pd", "open");
-
 
 }
 
-void ofxPd::stopPd() {
+void ofxPd::setup(int samplerate) {
+    
+	// for debugging
+	libpd_printhook = (t_libpd_printhook) pdprint;
 	
-	// send "pd dsp 0", ensure that dsp is turned off
-	libpd_start_message();
-	libpd_add_float(0);
-	libpd_finish_message("pd", "dsp");
+    // work out block size (pd works in 64 sample blocks - 
+	// specified by libpd_blocksize())
+    int bufferSize = 256;
+    bufferSize = (bufferSize/libpd_blocksize()) * libpd_blocksize();
 	
-}
+	
+	
+    libpd_init();
+    libpd_init_audio(2, 2, samplerate, 1);
 
-void ofxPd::startPd() {
+    // default value
+	setBufferSize(256);
 	
-	// send "pd dsp 1"
+    // enable sound - send "pd dsp 1"
 	libpd_start_message();
 	libpd_add_float(1);
 	libpd_finish_message("pd", "dsp");
+    pdInitialized = true;
+	printf("PD Initialized\n");
 }
 
 
 
+bool ofxPd::open(string patchFile) {
+	close();
+    if(!pdInitialized) {
+        printf("ofxPd::load() Error: Pd not inited - please call "
+               "ofxPd::setup(...) to start pd before loading a patch\n");
+        return false;
+    }
+    this->patchFile = patchFile;
+    int lastSlashPos = patchFile.rfind("/");
+    if(lastSlashPos==-1) {
+        printf("ofxPd::load() Error: absolute url not specified. We need a '/'"
+			   " in the path: '%s'\n", patchFile.c_str());
+        return false;
+    }
+	
+	folder = patchFile.substr(0, lastSlashPos);
+	file = patchFile.substr(lastSlashPos+1);
+    
+
+	
+	createUniquePatch();
+
+	
+	
+	
+	
+	
+    // file, folder
+    patchPointer = libpd_openfile(file.c_str(), folder.c_str());
+	printf("Patch %s loaded successfully\n", file.c_str());
+	opened = true;
+    return true;
+}
+void ofxPd::renameReceives(string &contents) {
+	
+}
+
+void ofxPd::createUniquePatch() {
+	
+	
+	// create a unique string
+	char uniqueIdStr[50];
+	sprintf(uniqueIdStr, "patch-%x", (int)this);
+	uid = uniqueIdStr;
+	
+	
+	// now we need to insert some code into the patch
+	
+	// load the file in as a string.
+	string data = parseFileToString(folder+"/"+file);
+	renameReceives(data);
+	
+	file = uid+".pd";
+	
+	// then save it to a unique file.
+	stringToFile(folder+"/"+file, data);
+}
+
+void ofxPd::stringToFile(string filePath, string contents) {
+	ofstream myfile (filePath.c_str());
+	if (myfile.is_open()) {
+		myfile << contents;
+		myfile.close();
+	} else {
+		printf("ofxPd::stringToFile() Error!! could not write temp patch file!\n");
+	}
+}
+
+#pragma mark string utils
+std::vector<std::string> &ofxPdsplit(const std::string &s, char delim, std::vector<std::string> &elems) {
+    std::stringstream ss(s);
+    std::string item;
+    while(std::getline(ss, item, delim)) {
+        elems.push_back(item);
+    }
+    return elems;
+}
+
+
+std::vector<std::string> ofxPdsplit(const std::string &s, char delim) {
+    std::vector<std::string> elems;
+    return ofxPdsplit(s, delim, elems);
+}
+
+string ofxPdToString(int i) {
+	ostringstream out;
+	out << i;
+	return out.str();
+}
+
+void ofxPd::processForConnects(string &line) {
+	// and then add 2 to all the connection object id's
+	// - that's #X connect a+2 b c+2 d
+	
+	if(line.find("#X connect")!=-1) {
+		// take the 1st and 3rd number, add one, and get out.
+		vector<string> parts = ofxPdsplit(line, ' ');
+		parts[2] = ofxPdToString(atoi(parts[2].c_str())+2);
+		parts[4] = ofxPdToString(atoi(parts[4].c_str())+2);
+		line = "";
+		for(int i = 0; i < parts.size(); i++) {
+			if(i>0) line += " ";
+			line += parts[i];
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+string ofxPd::parseFileToString(string filePath) {
+	// after #N canvas...
+	// we want
+	// "#X obj 232 108 r uid;"
+	// "#X obj 232 147 switch~;"
+	
+	// and put this at the end
+	// "#X connect 0 0 1 0;"
+	string line, buf;
+	ifstream InFile( filePath.c_str() );
+	while(getline(InFile,line)) {
+		if(buf=="") { // this is the first line - we want to append something
+					  // after the first line...
+			
+			buf += line+"\n";
+			buf += "#X obj 232 108 r "+uid+";\n#X obj 232 147 switch~;\n";
+		} else {
+			processForConnects(line);
+			buf += line+"\n";
+		}
+
+	}
+	
+	// the connection from the receive to the switch~
+	buf += "#X connect 0 0 1 0;\n";
+	return buf;
+
+}
+
+void ofxPd::close() {
+	if(patchPointer!=NULL) {
+		//libpd_clear_search_path();
+	
+		libpd_closefile(patchPointer);
+		
+		// this deletes the temp file we made in open.
+		string fp = folder + "/" + file;
+		remove(fp.c_str());
+		
+	}
+}
+
 void ofxPd::sendFloat(string receiverName, float value) {
-
 	libpd_float(receiverName.c_str(), value);
-
 }
 
 void ofxPd::sendBang(string receiverName) {
-
-	// mutex.lock();
 	libpd_bang(receiverName.c_str());
-	//bang(receiverName.c_str());
-	// mutex.unlock();
 }
 
 void ofxPd::sendMidiNote(int channel, int noteNum, int velocity, int blockOffset) {
-
-	// TODO(mhroth): implement for libpd
-	libpd_start_message();
-	libpd_add_float(noteNum);
-	libpd_add_float(velocity);
-	libpd_add_float(channel);
-	libpd_finish_list("#notein");
-
+	libpd_noteon(channel, noteNum, velocity);
 }
 
 void ofxPd::sendMidiControlChange(int channel, int ctlNum, int value) {
-
-	libpd_start_message();
-	libpd_add_float(ctlNum);
-	libpd_add_float(value);
-	libpd_add_float(channel);
-	libpd_finish_list("#ctlin");
-	
+	libpd_controlchange(channel, ctlNum, value);
 }
+
 void ofxPd::sendMidiBend(int channel, int value) {
-
-	libpd_start_message();
-	libpd_add_float(value);
-	libpd_add_float(channel);
-	libpd_finish_list("#bendin");
+	libpd_pitchbend(channel, value);
 }
-
 
 void ofxPd::sendMidiAfterTouch(int channel, int value) {
-	libpd_start_message();
-	libpd_add_float(value);
-	libpd_add_float(channel);
-	libpd_finish_list("#touchin");
+	libpd_aftertouch(channel, value);
 }
 
 void ofxPd::sendMidiPolyTouch(int channel, int noteNum, int value) {
-	libpd_start_message();
-	libpd_add_float(noteNum);
-	libpd_add_float(value);
-	libpd_add_float(channel);
-	libpd_finish_list("#polytouchin");
+	libpd_polyaftertouch(channel, noteNum, value);
 }
 
 void ofxPd::sendMidiProgramChange(int channel, int program) {
-	libpd_start_message();
-	libpd_add_float(program);
-	libpd_add_float(channel);
-	libpd_finish_list("#pgmin");
+	libpd_programchange(channel, program);
 }
 
 
-void ofxPd::process(float *input, float *output, int frameCount) {
-	setBlockSize(frameCount);
-	
-	
-	// this function uninterleaves and interleaves the input and output buffers, respectively
-	libpd_process_float(input, output);
-	
-	
-
-	
 
 
+
+
+void ofxPd::process(float *inputs, float *outputs, int numFrames) {
+	if(bufferSize!=numFrames) setBufferSize(numFrames);
+	sendFloat(uid.c_str(), 1);
+	libpd_process_float(inputs, outputs);
+	sendFloat(uid.c_str(), 0);
 }
-
-void ofxPd::processNonInterleaved(float *input, float *output, int frameCount) {
-	setBlockSize(frameCount);
-	libpd_process_raw(input, output);
-}
-
-

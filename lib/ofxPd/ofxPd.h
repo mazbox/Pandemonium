@@ -1,30 +1,37 @@
+//
+//  ofxPd.h
+//  audioOutputExample
+//
+//  Created by Marek Bereza on 19/04/2011.
+//
 #pragma once
 
 #include <string>
 using namespace std;
-
-
-
-
-class PdInstance;
-
-
+/**
+ * TODO:
+ * make different patches receive the same message name from different inputs
+ */
 
 class ofxPd {
+    
 public:
-	ofxPd();
-	void setup(int inputs, int outputs, int samplerate, int bufferSize);
-	void getDirAndFile(const char *path, char *outDir, char *outFile);
-	int getBlockSize() { return blockSize; } 
-	
-	
-	void setBlockSize(int bufferSize);	
-	void load(string patchFile);
-	
-	// returns whether this patch has an audio input
-	bool hasInput();
-	
+    ofxPd();
 	~ofxPd();
+	
+    // this must be called before anything else!
+    static void setup(int samplerate);
+
+    // need to give this an absolute path to the file
+    bool open(string patchFile);
+    
+	void close();
+	
+	// processing is always in stereo for now, numFrames is how
+	// many stereo samples we're using.
+	void process(float *inputs, float *outputs, int numFrames);
+	
+	
 	void sendFloat(string messageName, float value);
 	void sendBang(string messageName);	
 	void sendMidiNote(int channel, int noteNum, int velocity, int blockOffset = 0);
@@ -33,32 +40,40 @@ public:
 	void sendMidiProgramChange(int channel, int program);
 	void sendMidiPolyTouch(int channel, int noteNum, int value);
 	void sendMidiAfterTouch(int channel, int value);
-
-	void process(float *input, float *output, int frameCount);
-	void processNonInterleaved(float *input, float *output, int frameCount);
-	
-	void openPatch(string file, string dir);
-	void closePatch(string file, string dir);
-	
 	
 private:
-	PdInstance *pd;
-	void stopPd();
-	void startPd();
+    
+	bool opened;
 	
-	int midiChannel;
-	int *audioIns;
-	int *audioOuts;
+    // how many 64 sample chunks to process at one time.
+    string patchFile;
+    string folder;
+	string file;
 	
-	int blockSize;
-	int numInputChannels;
-	int numOutputChannels;
-	int sampleRate;
-	string path;
+	// must be a multiple of 64!
+	static void setBufferSize(int bufferSize);
+    
+    // static variables
+    static int bufferSize;
+    static bool pdInitialized;
 	
-	string currFile;
-	string currDir;
-	bool patchIsOpen;
-	bool hasADC;
-
+	void *patchPointer;
+	
+	// string reference to the 
+	// patch's switch~ receive.
+	string uid;
+	
+	// this creates a new file in the same folder
+	// as the original patch, but it adds the 
+	// switch~ code and a unique filename.
+	void createUniquePatch();
+	
+	// this renames any receives that are actually parameters
+	// in order to keep the patch unique - so if there's multiple
+	// instances we can differentiate.
+	void renameReceives(string &contents);
+	
+	string parseFileToString(string filePath);
+	void processForConnects(string &line);
+	void stringToFile(string filePath, string contents);
 };

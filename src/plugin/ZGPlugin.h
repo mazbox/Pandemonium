@@ -31,7 +31,7 @@ public:
 	
 
 		pd = new ofxPd();
-		pd->setup(2, 2, 44100, lastBufferSize);
+		pd->setup(44100);
 		running = true;
 		
 	}
@@ -109,7 +109,7 @@ public:
 		printf("path: %s\nfilename: %s\n", dir.c_str(), filename.c_str());
 		dir = dir + "/" + filename + ".pd";
 		printf("File: %s\n", dir.c_str());
-		pd->load(dir);
+		pd->open(dir);
 	}
 	
 	void findPatches(string dir = "") {
