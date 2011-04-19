@@ -8,7 +8,6 @@
 #include "ofxPd.h"
 #include "z_libpd.h"
 #include <fstream>
-#include <vector>
 #include <sstream>
 
 int ofxPd::bufferSize = 0;
@@ -101,8 +100,38 @@ bool ofxPd::open(string patchFile) {
 	opened = true;
     return true;
 }
+
+
+void ofxPd::clearParamList() {
+	params.clear();
+}
+void ofxPd::addParam(string param) {
+	params.push_back(param);
+}
+void ofxPdReplace(string &str, const string &find_what, const string &replace_with)
+{
+	string::size_type pos=0;
+	while((pos=str.find(find_what, pos))!=string::npos)
+	{
+		str.erase(pos, find_what.length());
+		str.insert(pos, replace_with);
+		pos+=replace_with.length();
+	}
+}
+
 void ofxPd::renameReceives(string &contents) {
-	
+	for(int i = 0; i < params.size(); i++) {
+		
+		// we're looking for every instance of 
+		// " r param;"
+		// or
+		// " receive param;"
+		// and want to replace it with
+		// " receive uid-param;"
+		
+		ofxPdReplace(contents, " r "+params[i]+";", " r "+params[i]+uid+";");
+		ofxPdReplace(contents, " receive "+params[i]+";", " r "+params[i]+uid+";");
+	}
 }
 
 void ofxPd::createUniquePatch() {
@@ -225,11 +254,16 @@ void ofxPd::close() {
 }
 
 void ofxPd::sendFloat(string receiverName, float value) {
-	libpd_float(receiverName.c_str(), value);
+//	libpd_float((receiverName+"_"+uid).c_str(), value);
+	string r = receiverName+uid;
+	//printf("Sending %s = %f\n", r.c_str(), value);
+	libpd_float(r.c_str(), value);
 }
 
 void ofxPd::sendBang(string receiverName) {
-	libpd_bang(receiverName.c_str());
+	//libpd_bang((receiverName+"_"+uid).c_str());
+	string r = receiverName+uid;
+	libpd_bang(r.c_str());
 }
 
 void ofxPd::sendMidiNote(int channel, int noteNum, int velocity, int blockOffset) {
@@ -263,7 +297,9 @@ void ofxPd::sendMidiProgramChange(int channel, int program) {
 
 void ofxPd::process(float *inputs, float *outputs, int numFrames) {
 	if(bufferSize!=numFrames) setBufferSize(numFrames);
-	sendFloat(uid.c_str(), 1);
+	libpd_float(uid.c_str(), 1);
 	libpd_process_float(inputs, outputs);
-	sendFloat(uid.c_str(), 0);
+	libpd_float(uid.c_str(), 0);
 }
+
+

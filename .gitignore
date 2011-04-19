@@ -5,6 +5,7 @@ XCode/build/*
 lib/vstsdk2.4/*
 lib/pd-for-android/*
 lib/libpd/*
+lib/libpd
 lib/pdlib-framework/build/*
 lib/pdlib-dylib/build/*
 dist/packages/*

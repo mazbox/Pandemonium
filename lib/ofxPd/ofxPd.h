@@ -7,6 +7,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 using namespace std;
 /**
  * TODO:
@@ -41,6 +42,10 @@ public:
 	void sendMidiPolyTouch(int channel, int noteNum, int value);
 	void sendMidiAfterTouch(int channel, int value);
 	
+	
+	// stuff for pandemonium - so you can rename parameters to have unique names
+	void clearParamList();
+	void addParam(string param);
 private:
     
 	bool opened;
@@ -76,4 +81,5 @@ private:
 	string parseFileToString(string filePath);
 	void processForConnects(string &line);
 	void stringToFile(string filePath, string contents);
+	vector<string> params;
 };
