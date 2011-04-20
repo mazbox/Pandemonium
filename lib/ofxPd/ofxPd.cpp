@@ -18,6 +18,7 @@ void pdprint(const char *s) {
 }
 
 ofxPd::ofxPd() {
+//	phase = 0;
 	opened = false;
 	uid = "";
 	patchPointer = NULL;
@@ -34,6 +35,13 @@ void ofxPd::setBufferSize(int bs) {
 	}
 
 }
+
+string ofxPdToString(int i) {
+	ostringstream out;
+	out << i;
+	return out.str();
+}
+
 
 void ofxPd::setup(int samplerate) {
     
@@ -96,18 +104,14 @@ bool ofxPd::open(string patchFile) {
 	
     // file, folder
     patchPointer = libpd_openfile(file.c_str(), folder.c_str());
+	dollarZero = libpd_getdollarzero(patchPointer);
+	dollarZeroString = ofxPdToString(dollarZero)+"-";
 	printf("Patch %s loaded successfully\n", file.c_str());
 	opened = true;
     return true;
 }
 
 
-void ofxPd::clearParamList() {
-	params.clear();
-}
-void ofxPd::addParam(string param) {
-	params.push_back(param);
-}
 void ofxPdReplace(string &str, const string &find_what, const string &replace_with)
 {
 	string::size_type pos=0;
@@ -116,21 +120,6 @@ void ofxPdReplace(string &str, const string &find_what, const string &replace_wi
 		str.erase(pos, find_what.length());
 		str.insert(pos, replace_with);
 		pos+=replace_with.length();
-	}
-}
-
-void ofxPd::renameReceives(string &contents) {
-	for(int i = 0; i < params.size(); i++) {
-		
-		// we're looking for every instance of 
-		// " r param;"
-		// or
-		// " receive param;"
-		// and want to replace it with
-		// " receive uid-param;"
-		
-		ofxPdReplace(contents, " r "+params[i]+";", " r "+params[i]+uid+";");
-		ofxPdReplace(contents, " receive "+params[i]+";", " r "+params[i]+uid+";");
 	}
 }
 
@@ -147,7 +136,7 @@ void ofxPd::createUniquePatch() {
 	
 	// load the file in as a string.
 	string data = parseFileToString(folder+"/"+file);
-	renameReceives(data);
+	//renameReceives(data);
 	
 	file = uid+".pd";
 	
@@ -181,11 +170,7 @@ std::vector<std::string> ofxPdsplit(const std::string &s, char delim) {
     return ofxPdsplit(s, delim, elems);
 }
 
-string ofxPdToString(int i) {
-	ostringstream out;
-	out << i;
-	return out.str();
-}
+
 
 void ofxPd::processForConnects(string &line) {
 	// and then add 2 to all the connection object id's
@@ -255,14 +240,14 @@ void ofxPd::close() {
 
 void ofxPd::sendFloat(string receiverName, float value) {
 //	libpd_float((receiverName+"_"+uid).c_str(), value);
-	string r = receiverName+uid;
+	string r = dollarZeroString + receiverName;
 	//printf("Sending %s = %f\n", r.c_str(), value);
 	libpd_float(r.c_str(), value);
 }
 
 void ofxPd::sendBang(string receiverName) {
 	//libpd_bang((receiverName+"_"+uid).c_str());
-	string r = receiverName+uid;
+	string r = dollarZeroString + receiverName;
 	libpd_bang(r.c_str());
 }
 
@@ -291,7 +276,7 @@ void ofxPd::sendMidiProgramChange(int channel, int program) {
 }
 
 
-
+#include <math.h>
 
 
 
@@ -300,6 +285,18 @@ void ofxPd::process(float *inputs, float *outputs, int numFrames) {
 	libpd_float(uid.c_str(), 1);
 	libpd_process_float(inputs, outputs);
 	libpd_float(uid.c_str(), 0);
+	/*float frequency = dollarZero % 3;
+	frequency += 3;
+	frequency *= 100;
+	float pi = 3.1415927f;
+	float TWOPI_BY_SAMPLERATE = pi*2.f/44100;
+	float phaseIncrement = frequency*TWOPI_BY_SAMPLERATE;
+	for(int i = 0; i < numFrames; i++) {
+		float o = sin(phase);
+		phase += phaseIncrement;
+		outputs[i*2] = o;
+		outputs[i*2+1] = o;
+	}*/
 }
 
 

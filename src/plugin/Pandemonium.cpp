@@ -9,6 +9,6 @@
 
 #include "Pandemonium.h"
 
-ofxAudioPlugin *ofxAudioPlugin_getPlugin() {
-	return new Pandemonium();
+ofxAudioPlugin *ofxAudioPlugin_getPlugin(ofxAudioPluginWrapper *wrapper) {
+	return new Pandemonium(wrapper);
 }

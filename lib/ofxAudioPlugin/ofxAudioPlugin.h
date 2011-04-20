@@ -29,6 +29,9 @@ struct ofxAudioPluginParameterInfo {
 class ofxAudioPlugin {
 public:
 	
+	ofxAudioPlugin(ofxAudioPluginWrapper *wrapper) {
+		this->wrapper = wrapper;
+	}
 	// return the number of parameters you have here
 	virtual int getNumParameters() {
 		return 0;
@@ -72,7 +75,9 @@ public:
 	
 	void setParameter(int parameterId, float value);
 	float getParameter(int parameterId);
+	
+	ofxAudioPluginWrapper *wrapper;
 };
 
 // you have to implement this and return an instance of your plugin for everything to work.
-ofxAudioPlugin *ofxAudioPlugin_getPlugin();
+ofxAudioPlugin *ofxAudioPlugin_getPlugin(ofxAudioPluginWrapper *wrapper);

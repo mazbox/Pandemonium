@@ -14,7 +14,8 @@
 class Pandemonium: public ofxAudioPlugin, public ZGPlugin {
 public:
 	
-	Pandemonium(): ZGPlugin(), ofxAudioPlugin() {
+	Pandemonium(ofxAudioPluginWrapper *wrapper): ZGPlugin(), ofxAudioPlugin(wrapper) {
+		
 		//ofstream out("/Users/marek/Desktop/Pandemonium Log.txt");
 		//out << "Pandemonium" << endl;
 		//out.close();
@@ -85,7 +86,7 @@ public:
 	
 	
 	void process(int numIns, float **ins, int numOuts, float **outs, int numFrames) {
-		
+		//printf("Num frames: %d\n", numFrames );
 		if(!running) return;
 		
 		int menuIndex = getParameter(0);
@@ -113,7 +114,9 @@ public:
 			}
 		} else {
 			for(int i = 0; i < params.size(); i++) {		
+				//printf("pandemonium: %x    ", (int)this);
 				float val = getParameter(i+1);
+				
 				ZGParameter *p = params.getParameter(i);
 				if(val!=p->value) {
 					pd->sendFloat(p->name, val);
@@ -137,12 +140,19 @@ public:
 				pd->process(input, output, numFrames);
 			}
 			
-
+			bool foundNan = false;
+			bool foundLoud = false;
 			for(int i = 0; i < numFrames; i++) {
 
 				outs[0][i] = output[i*2];
 				outs[1][i] = output[i*2+1];
+				if(outs[0][i]!=outs[0][i]) {
+					foundNan = true;
+				}
+				else if(outs[0][i]>3) foundLoud = true;
 			}
+			if(foundNan) printf("Found nan\n");
+			if(foundLoud) printf("Found loud\n");
 		} else if(numIns==1 && numOuts==1) {
 			pd->process(ins[0], outs[0], numFrames);
 		} else if(numIns==0 && numOuts==1) {

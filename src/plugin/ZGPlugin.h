@@ -109,10 +109,10 @@ public:
 		printf("path: %s\nfilename: %s\n", dir.c_str(), filename.c_str());
 		dir = dir + "/" + filename + ".pd";
 		printf("File: %s\n", dir.c_str());
-		pd->clearParamList();
+		/*pd->clearParamList();
 		for(int i = 0; i < params.size(); i++) {
 			pd->addParam(params.getParameter(i)->name);
-		}
+		}*/
 		pd->open(dir);
 	}
 	

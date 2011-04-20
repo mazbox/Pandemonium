@@ -268,7 +268,6 @@
 		EAA54D19129466CA0025E7BC /* ofxAudioUnit.exp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C0512919B2F00971CC9 /* ofxAudioUnit.exp */; };
 		EAA54D1C129466CA0025E7BC /* ofxDirList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C5F1291F9DB00971CC9 /* ofxDirList.cpp */; };
 		EAA54D1D129466CA0025E7BC /* ofxFileUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C641291F9DB00971CC9 /* ofxFileUtils.mm */; };
-		EAA54D68129466CA0025E7BC /* ofxAudioPluginWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */; };
 		EAA54D6A129466CA0025E7BC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05AF9072074E100365D66 /* AudioToolbox.framework */; };
 		EAA54D6B129466CA0025E7BC /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05AFA072074E100365D66 /* AudioUnit.framework */; };
 		EAA54D6C129466CA0025E7BC /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05B01072074F900365D66 /* CoreServices.framework */; };
@@ -295,7 +294,6 @@
 		EAD06C6A1291F9DB00971CC9 /* ofxFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06C631291F9DB00971CC9 /* ofxFileUtils.h */; };
 		EAD06C6B1291F9DB00971CC9 /* ofxFileUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAD06C641291F9DB00971CC9 /* ofxFileUtils.mm */; };
 		EAD06DEC1292003700971CC9 /* ofxAudioPluginWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD06DEB1292003700971CC9 /* ofxAudioPluginWrapper.h */; };
-		EAD06EA812940B8900971CC9 /* ofxAudioPluginWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */; };
 		EAD1F26C12918BD20017A281 /* ofxAudioPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD1F26412918BD20017A281 /* ofxAudioPlugin.h */; };
 		EAD1F27112918BD20017A281 /* ofxAudioUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD1F26B12918BD20017A281 /* ofxAudioUnit.cpp */; };
 		EAF05DB012A918D800A75A3B /* MusicDeviceBase.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA54DD6129471070025E7BC /* MusicDeviceBase.h */; };
@@ -482,7 +480,6 @@
 		EAD06C631291F9DB00971CC9 /* ofxFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFileUtils.h; sourceTree = "<group>"; };
 		EAD06C641291F9DB00971CC9 /* ofxFileUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxFileUtils.mm; sourceTree = "<group>"; };
 		EAD06DEB1292003700971CC9 /* ofxAudioPluginWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPluginWrapper.h; sourceTree = "<group>"; };
-		EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAudioPluginWrapper.cpp; sourceTree = "<group>"; };
 		EAD1F26412918BD20017A281 /* ofxAudioPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPlugin.h; sourceTree = "<group>"; };
 		EAD1F26B12918BD20017A281 /* ofxAudioUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAudioUnit.cpp; sourceTree = "<group>"; };
 		F7C347EE0ECE5AF8008ADFB6 /* AUBaseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AUBaseHelper.cpp; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUBaseHelper.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
@@ -873,7 +870,6 @@
 			children = (
 				EAD1F26412918BD20017A281 /* ofxAudioPlugin.h */,
 				EAD06DEB1292003700971CC9 /* ofxAudioPluginWrapper.h */,
-				EAD06EA712940B8900971CC9 /* ofxAudioPluginWrapper.cpp */,
 				EAD1F26612918BD20017A281 /* wrappers */,
 			);
 			name = ofxAudioPlugin;
@@ -1131,7 +1127,6 @@
 				EAD06C0612919B2F00971CC9 /* ofxAudioUnit.exp in Sources */,
 				EAD06C681291F9DB00971CC9 /* ofxDirList.cpp in Sources */,
 				EAD06C6B1291F9DB00971CC9 /* ofxFileUtils.mm in Sources */,
-				EAD06EA812940B8900971CC9 /* ofxAudioPluginWrapper.cpp in Sources */,
 				EAF05DB112A918D800A75A3B /* MusicDeviceBase.cpp in Sources */,
 				EAF05DB312A918DA00A75A3B /* AUMIDIBase.cpp in Sources */,
 				EA8BD95412A91A3A000D847D /* Pandemonium.cpp in Sources */,
@@ -1234,7 +1229,6 @@
 				EAA54D19129466CA0025E7BC /* ofxAudioUnit.exp in Sources */,
 				EAA54D1C129466CA0025E7BC /* ofxDirList.cpp in Sources */,
 				EAA54D1D129466CA0025E7BC /* ofxFileUtils.mm in Sources */,
-				EAA54D68129466CA0025E7BC /* ofxAudioPluginWrapper.cpp in Sources */,
 				EAA54DBB12946D6D0025E7BC /* AUInstrumentBase.cpp in Sources */,
 				EAA54DBD12946D6D0025E7BC /* SynthElement.cpp in Sources */,
 				EAA54DC012946D6D0025E7BC /* SynthNote.cpp in Sources */,

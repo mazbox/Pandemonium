@@ -43,9 +43,8 @@ public:
 	void sendMidiAfterTouch(int channel, int value);
 	
 	
-	// stuff for pandemonium - so you can rename parameters to have unique names
-	void clearParamList();
-	void addParam(string param);
+
+	
 private:
     
 	bool opened;
@@ -62,7 +61,15 @@ private:
     static int bufferSize;
     static bool pdInitialized;
 	
+	// libpd pointer to the patch
 	void *patchPointer;
+	
+	// the patch's $0 value - a unique identifier for pd
+	int dollarZero;
+	
+	// string representation with an appended '-'
+	// cached for speed
+	string dollarZeroString;
 	
 	// string reference to the 
 	// patch's switch~ receive.
@@ -72,11 +79,7 @@ private:
 	// as the original patch, but it adds the 
 	// switch~ code and a unique filename.
 	void createUniquePatch();
-	
-	// this renames any receives that are actually parameters
-	// in order to keep the patch unique - so if there's multiple
-	// instances we can differentiate.
-	void renameReceives(string &contents);
+//	float phase;
 	
 	string parseFileToString(string filePath);
 	void processForConnects(string &line);

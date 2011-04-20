@@ -13,6 +13,5 @@ public:
 	virtual void setParameter(int parameterId, float value) = 0;
 	virtual float getParameter(int parameterId) = 0;
 	virtual void parametersChanged() = 0;
-	static ofxAudioPluginWrapper *instance;
 	
 };

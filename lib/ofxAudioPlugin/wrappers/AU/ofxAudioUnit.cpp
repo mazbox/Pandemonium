@@ -17,7 +17,6 @@
 #include "Logger.h"
 
 
-#pragma mark ____Pandemonium
 class ofxAudioUnit : 
 
 #ifdef ofxAudioPlugin_IsSynth
@@ -38,9 +37,7 @@ public:
 	{
 	
 		LOG("START AUDIO UNIT")
-		ofxAudioPluginWrapper::instance = this;
-		plugin = ofxAudioPlugin_getPlugin();
-
+		plugin = ofxAudioPlugin_getPlugin(this);
 		CreateElements();
 		int numParams = plugin->getNumParameters();
 
@@ -365,6 +362,7 @@ public:
 	}
 	
 	float getParameter(int parameterId) {
+//		if(parameterId>0) printf("this: %x, globals: %x\n", (int)this, (int)Globals());
 		return Globals()->GetParameter(parameterId);
 	}
 protected:
@@ -375,18 +373,18 @@ protected:
 float **ofxAudioUnit::outBuff = NULL;
 
 void ofxAudioPlugin::setNumParameters(int _numParameters) {
-	ofxAudioPluginWrapper::instance->setNumParameters(_numParameters);
+	wrapper->setNumParameters(_numParameters);
 }
 
 void ofxAudioPlugin::setParameter(int parameterId, float value) {
-	ofxAudioPluginWrapper::instance->setParameter(parameterId, value);
+	wrapper->setParameter(parameterId, value);
 }
 float ofxAudioPlugin::getParameter(int parameterId) {
-	return ofxAudioPluginWrapper::instance->getParameter(parameterId);
+	return wrapper->getParameter(parameterId);
 }
 
 void ofxAudioPlugin::parametersChanged() {
-	ofxAudioPluginWrapper::instance->parametersChanged();
+	wrapper->parametersChanged();
 }
 
 
