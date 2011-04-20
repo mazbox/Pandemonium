@@ -12,13 +12,12 @@
 
 int ofxPd::bufferSize = 0;
 bool ofxPd::pdInitialized = false;
-
+Slots ofxPd::midiChannels;
 void pdprint(const char *s) {
 	printf("PD: %s", s);
 }
 
 ofxPd::ofxPd() {
-//	phase = 0;
 	opened = false;
 	uid = "";
 	patchPointer = NULL;
@@ -93,7 +92,9 @@ bool ofxPd::open(string patchFile) {
 	folder = patchFile.substr(0, lastSlashPos);
 	file = patchFile.substr(lastSlashPos+1);
     
-
+	
+	// get next available midi channel. 
+	midiChannel = midiChannels.getSlot();
 	
 	createUniquePatch();
 
@@ -112,47 +113,6 @@ bool ofxPd::open(string patchFile) {
 }
 
 
-void ofxPdReplace(string &str, const string &find_what, const string &replace_with)
-{
-	string::size_type pos=0;
-	while((pos=str.find(find_what, pos))!=string::npos)
-	{
-		str.erase(pos, find_what.length());
-		str.insert(pos, replace_with);
-		pos+=replace_with.length();
-	}
-}
-
-void ofxPd::createUniquePatch() {
-	
-	
-	// create a unique string
-	char uniqueIdStr[50];
-	sprintf(uniqueIdStr, "patch-%x", (int)this);
-	uid = uniqueIdStr;
-	
-	
-	// now we need to insert some code into the patch
-	
-	// load the file in as a string.
-	string data = parseFileToString(folder+"/"+file);
-	//renameReceives(data);
-	
-	file = uid+".pd";
-	
-	// then save it to a unique file.
-	stringToFile(folder+"/"+file, data);
-}
-
-void ofxPd::stringToFile(string filePath, string contents) {
-	ofstream myfile (filePath.c_str());
-	if (myfile.is_open()) {
-		myfile << contents;
-		myfile.close();
-	} else {
-		printf("ofxPd::stringToFile() Error!! could not write temp patch file!\n");
-	}
-}
 
 #pragma mark string utils
 std::vector<std::string> &ofxPdsplit(const std::string &s, char delim, std::vector<std::string> &elems) {
@@ -170,6 +130,127 @@ std::vector<std::string> ofxPdsplit(const std::string &s, char delim) {
     return ofxPdsplit(s, delim, elems);
 }
 
+
+
+void ofxPdReplace(string &str, const string &find_what, const string &replace_with)
+{
+	string::size_type pos=0;
+	while((pos=str.find(find_what, pos))!=string::npos)
+	{
+		str.erase(pos, find_what.length());
+		str.insert(pos, replace_with);
+		pos+=replace_with.length();
+	}
+}
+
+
+
+void ofxPdReplaceWithChannel(string &str, const string &find_begin, const string &replace_with) {
+	
+	string::size_type pos=0;
+	
+	while((pos=str.find(find_begin, pos))!=string::npos)
+	{
+		// now here, we need to work out how much of the string to replace 
+		// - everything up to the next ';' (including it)
+		string::size_type semiPos = str.find(";", pos)+1;
+		str.erase(pos, semiPos - pos);
+		str.insert(pos, replace_with);
+		pos+=replace_with.length();
+	}
+}
+void ofxPdReplaceCtlinWithChannel(string &str, string newMidiChannel) {
+	string::size_type pos=0;
+	string find_begin = " ctlin";
+	while((pos=str.find(find_begin, pos))!=string::npos)
+	{
+		
+		// we have to decide what to do with it.
+		// ctlin; - passthrough
+		// ctlin nn; - rewrite as ctlin nn midichannel;
+		// ctlin nn mm; - rewrite as ctlin nn midichannel;
+		string::size_type semiPos = str.find(";", pos);
+		string ss = str.substr(pos, semiPos - pos);
+		printf("\n\nremoving : %s\n\n", ss.c_str());
+		
+		string replace_with = " ctlin;";
+		
+		if(ss==" ctlin") { // pass through
+			replace_with = " ctlin";
+		} else {
+			vector<string> parts = ofxPdsplit(ss, ' ');
+			if(parts.size()>=3) { // ctlin nn mm; - rewrite as ctlin nn midichannel;
+				replace_with = " ctlin " + parts[2] + " " + newMidiChannel;
+			}
+			str.erase(pos, semiPos - pos);
+			str.insert(pos, replace_with);
+		}
+		pos+=replace_with.length();
+	}
+}
+
+
+void ofxPd::renameMidiChannels(string &data) {
+	
+	// TODO:
+	// - then find/replace
+	string midiChannelString = ofxPdToString(midiChannel);
+	
+	// notein nn; ->  notein x;
+	ofxPdReplaceWithChannel(data, " notein ", " notein " + midiChannelString+";");
+	// bendin nn; ->  bendin x;
+	ofxPdReplaceWithChannel(data, " bendin ", " bendin " + midiChannelString+";");
+	// pgmin nn;  ->  pgmin x;
+	ofxPdReplaceWithChannel(data, " pgmin ", " pgmin " + midiChannelString+";");
+	
+	// notein;    ->  notein x;
+	ofxPdReplace(data, " notein;", " notein " + midiChannelString+";");
+	
+	
+	
+	// bendin;    ->  bendin x;
+	ofxPdReplace(data, " bendin;", " bendin " + midiChannelString+";");
+	
+	// pgmin;     ->  pgmin x;
+	ofxPdReplace(data, " pgmin;", " pgmin " + midiChannelString+";");
+	
+	// ctlin nn; ->  ctlin nn x;
+	// and
+	// ctlin nn mm; -> ctlin nn x;
+	ofxPdReplaceCtlinWithChannel(data, midiChannelString);
+}
+
+
+void ofxPd::createUniquePatch() {
+	
+	
+	// create a unique string
+	char uniqueIdStr[50];
+	sprintf(uniqueIdStr, "patch-%x", (int)this);
+	uid = uniqueIdStr;
+	
+	
+	// now we need to insert some code into the patch
+	
+	// load the file in as a string.
+	string data = parseFileToString(folder+"/"+file);
+	renameMidiChannels(data);
+	
+	file = uid+".pd";
+	
+	// then save it to a unique file.
+	stringToFile(folder+"/"+file, data);
+}
+
+void ofxPd::stringToFile(string filePath, string contents) {
+	ofstream myfile (filePath.c_str());
+	if (myfile.is_open()) {
+		myfile << contents;
+		myfile.close();
+	} else {
+		printf("ofxPd::stringToFile() Error!! could not write temp patch file!\n");
+	}
+}
 
 
 void ofxPd::processForConnects(string &line) {
@@ -227,13 +308,17 @@ string ofxPd::parseFileToString(string filePath) {
 
 void ofxPd::close() {
 	if(patchPointer!=NULL) {
+		printf("Closing patch\n");
 		//libpd_clear_search_path();
 	
 		libpd_closefile(patchPointer);
-		
+		patchPointer = NULL;
 		// this deletes the temp file we made in open.
 		string fp = folder + "/" + file;
-		remove(fp.c_str());
+		if(!remove(fp.c_str())) {
+			printf("Failed to delete %s\n", fp.c_str());
+		}
+		midiChannels.releaseSlot(midiChannel);
 		
 	}
 }
@@ -251,52 +336,46 @@ void ofxPd::sendBang(string receiverName) {
 	libpd_bang(r.c_str());
 }
 
-void ofxPd::sendMidiNote(int channel, int noteNum, int velocity, int blockOffset) {
-	libpd_noteon(channel, noteNum, velocity);
+void ofxPd::sendMidiNote(int noteNum, int velocity, int blockOffset) {
+	libpd_noteon(midiChannel, noteNum, velocity);
 }
 
-void ofxPd::sendMidiControlChange(int channel, int ctlNum, int value) {
-	libpd_controlchange(channel, ctlNum, value);
+void ofxPd::sendMidiControlChange(int ctlNum, int value) {
+	libpd_controlchange(midiChannel, ctlNum, value);
 }
 
-void ofxPd::sendMidiBend(int channel, int value) {
-	libpd_pitchbend(channel, value);
+void ofxPd::sendMidiBend(int value) {
+	libpd_pitchbend(midiChannel, value);
 }
 
-void ofxPd::sendMidiAfterTouch(int channel, int value) {
-	libpd_aftertouch(channel, value);
+void ofxPd::sendMidiAfterTouch(int value) {
+	libpd_aftertouch(midiChannel, value);
 }
 
-void ofxPd::sendMidiPolyTouch(int channel, int noteNum, int value) {
-	libpd_polyaftertouch(channel, noteNum, value);
+void ofxPd::sendMidiPolyTouch(int noteNum, int value) {
+	libpd_polyaftertouch(midiChannel, noteNum, value);
 }
 
-void ofxPd::sendMidiProgramChange(int channel, int program) {
-	libpd_programchange(channel, program);
+void ofxPd::sendMidiProgramChange(int program) {
+	libpd_programchange(midiChannel, program);
 }
 
-
-#include <math.h>
-
-
-
+float ofxPdClip(float inp) {
+	if(inp>1) inp = 1;
+	else if(inp<-1) inp = -1;
+	else if(inp!=inp) inp = 0;
+	return inp;
+}
 void ofxPd::process(float *inputs, float *outputs, int numFrames) {
 	if(bufferSize!=numFrames) setBufferSize(numFrames);
 	libpd_float(uid.c_str(), 1);
 	libpd_process_float(inputs, outputs);
 	libpd_float(uid.c_str(), 0);
-	/*float frequency = dollarZero % 3;
-	frequency += 3;
-	frequency *= 100;
-	float pi = 3.1415927f;
-	float TWOPI_BY_SAMPLERATE = pi*2.f/44100;
-	float phaseIncrement = frequency*TWOPI_BY_SAMPLERATE;
+	
 	for(int i = 0; i < numFrames; i++) {
-		float o = sin(phase);
-		phase += phaseIncrement;
-		outputs[i*2] = o;
-		outputs[i*2+1] = o;
-	}*/
+		outputs[i*2] = ofxPdClip(outputs[i*2]);
+		outputs[i*2+1] = ofxPdClip(outputs[i*2+1]);
+	}
 }
 
 

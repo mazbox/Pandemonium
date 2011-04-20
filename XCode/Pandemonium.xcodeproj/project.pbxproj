@@ -43,6 +43,8 @@
 		8BA05B070720754400365D66 /* CAAUParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA05B050720754400365D66 /* CAAUParameter.cpp */; };
 		8BA05B080720754400365D66 /* CAAUParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA05B060720754400365D66 /* CAAUParameter.h */; };
 		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		EA019E1C135F6CBA00543A76 /* Slots.h in Headers */ = {isa = PBXBuildFile; fileRef = EA019E1B135F6CBA00543A76 /* Slots.h */; };
+		EA019E1D135F6CBA00543A76 /* Slots.h in Headers */ = {isa = PBXBuildFile; fileRef = EA019E1B135F6CBA00543A76 /* Slots.h */; };
 		EA0842AD12BD34430018E285 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0842AC12BD34430018E285 /* Logger.cpp */; };
 		EA0842AE12BD34430018E285 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0842AC12BD34430018E285 /* Logger.cpp */; };
 		EA410DD312A914D0007E3440 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DBF12A914D0007E3440 /* Logger.h */; };
@@ -368,6 +370,7 @@
 		8BA05B060720754400365D66 /* CAAUParameter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAAUParameter.h; sourceTree = "<group>"; };
 		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D01CCD20486CAD60068D4B7 /* Pandemonium.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pandemonium.component; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA019E1B135F6CBA00543A76 /* Slots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Slots.h; path = plugin/Slots.h; sourceTree = "<group>"; };
 		EA0842AC12BD34430018E285 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
 		EA410DBF12A914D0007E3440 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		EA410DC112A914D0007E3440 /* ofxAudioPluginConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPluginConfig.h; sourceTree = "<group>"; };
@@ -651,6 +654,7 @@
 			children = (
 				EA0842AC12BD34430018E285 /* Logger.cpp */,
 				EA410DBF12A914D0007E3440 /* Logger.h */,
+				EA019E1B135F6CBA00543A76 /* Slots.h */,
 				EA410DC012A914D0007E3440 /* plugin */,
 			);
 			name = src;
@@ -942,6 +946,7 @@
 				EA87E9F2135E002400B6B570 /* s_stuff.h in Headers */,
 				EA87E9F6135E002400B6B570 /* s_utf8.h in Headers */,
 				EA87EA12135E002F00B6B570 /* ofxPd.h in Headers */,
+				EA019E1C135F6CBA00543A76 /* Slots.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,6 +1000,7 @@
 				EA87E9F3135E002400B6B570 /* s_stuff.h in Headers */,
 				EA87E9F7135E002400B6B570 /* s_utf8.h in Headers */,
 				EA87EA13135E002F00B6B570 /* ofxPd.h in Headers */,
+				EA019E1D135F6CBA00543A76 /* Slots.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

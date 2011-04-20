@@ -10,3 +10,5 @@ lib/pdlib-framework/build/*
 lib/pdlib-dylib/build/*
 dist/packages/*
 XCode/VST/mac/build/*
+dist/*.zip
+dist/pandemonium-au/

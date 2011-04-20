@@ -24,6 +24,9 @@ public:
 
 	}
 	
+	~Pandemonium() {
+		pd->close();
+	}
 	
 	int getNumParameters() {
 		return params.size()+1;
@@ -63,24 +66,24 @@ public:
 	float output[16384];
 
 	void noteIn(int noteNum, int velocity) {
-		pd->sendMidiNote(1, noteNum, velocity);
+		pd->sendMidiNote(noteNum, velocity);
 	}
 	
 	void ctlIn(int ctlNum, int value) {
-		pd->sendMidiControlChange(1, ctlNum, value);
+		pd->sendMidiControlChange(ctlNum, value);
 	}
 	void bendIn(int value) {
-		pd->sendMidiBend(1, value);
+		pd->sendMidiBend(value);
 	}
 	
 	
 	//program change
-	void pgmIn(int value) {pd->sendMidiProgramChange(1, value);}
+	void pgmIn(int value) {pd->sendMidiProgramChange(value);}
 	
 	// aftertouch
-	void touchIn(int value) {pd->sendMidiAfterTouch(1, value);}
+	void touchIn(int value) {pd->sendMidiAfterTouch(value);}
 	
-	void polyTouchIn(int note, int value) {pd->sendMidiPolyTouch(1, note, value);}
+	void polyTouchIn(int note, int value) {pd->sendMidiPolyTouch(note, value);}
 	
 	
 	

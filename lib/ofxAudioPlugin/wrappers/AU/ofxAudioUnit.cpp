@@ -56,9 +56,15 @@ public:
 	}
 	
 	
-#if AU_DEBUG_DISPATCHER
-	virtual ~ofxAudioUnit () { delete mDebugDispatcher; }
-#endif
+
+	virtual ~ofxAudioUnit () { 
+		
+#if AU_DEBUG_DISPATCHER		
+		delete mDebugDispatcher; 
+#endif		
+		delete plugin;
+	}
+
 	
 	void setNumParameters(int numParams) {
 		Globals()->UseIndexedParameters(numParams);

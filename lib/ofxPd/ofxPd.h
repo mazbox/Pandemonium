@@ -8,6 +8,7 @@
 
 #include <string>
 #include <vector>
+#include "Slots.h"
 using namespace std;
 /**
  * TODO:
@@ -35,12 +36,12 @@ public:
 	
 	void sendFloat(string messageName, float value);
 	void sendBang(string messageName);	
-	void sendMidiNote(int channel, int noteNum, int velocity, int blockOffset = 0);
-	void sendMidiControlChange(int channel, int ctlNum, int value);
-	void sendMidiBend(int channel, int value);
-	void sendMidiProgramChange(int channel, int program);
-	void sendMidiPolyTouch(int channel, int noteNum, int value);
-	void sendMidiAfterTouch(int channel, int value);
+	void sendMidiNote(int noteNum, int velocity, int blockOffset = 0);
+	void sendMidiControlChange(int ctlNum, int value);
+	void sendMidiBend(int value);
+	void sendMidiProgramChange(int program);
+	void sendMidiPolyTouch(int noteNum, int value);
+	void sendMidiAfterTouch(int value);
 	
 	
 
@@ -75,14 +76,24 @@ private:
 	// patch's switch~ receive.
 	string uid;
 	
+	// this is the plugin's unique midi channel
+	int midiChannel;
+	
 	// this creates a new file in the same folder
 	// as the original patch, but it adds the 
 	// switch~ code and a unique filename.
 	void createUniquePatch();
-//	float phase;
+
 	
 	string parseFileToString(string filePath);
 	void processForConnects(string &line);
 	void stringToFile(string filePath, string contents);
 	vector<string> params;
+	
+	// to allow us to have multiple instances of effects
+	// and instruments, we need to remap the midi channels
+	// so each instance has its own.
+	void renameMidiChannels(string &data);
+	static Slots midiChannels;
+	
 };
