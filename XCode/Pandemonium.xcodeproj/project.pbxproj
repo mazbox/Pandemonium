@@ -43,10 +43,14 @@
 		8BA05B070720754400365D66 /* CAAUParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA05B050720754400365D66 /* CAAUParameter.cpp */; };
 		8BA05B080720754400365D66 /* CAAUParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA05B060720754400365D66 /* CAAUParameter.h */; };
 		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		EA002A8C135F7F0A005C520C /* Mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = EA002A8B135F7F0A005C520C /* Mutex.h */; };
+		EA002A8D135F7F0A005C520C /* Mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = EA002A8B135F7F0A005C520C /* Mutex.h */; };
 		EA019E1C135F6CBA00543A76 /* Slots.h in Headers */ = {isa = PBXBuildFile; fileRef = EA019E1B135F6CBA00543A76 /* Slots.h */; };
 		EA019E1D135F6CBA00543A76 /* Slots.h in Headers */ = {isa = PBXBuildFile; fileRef = EA019E1B135F6CBA00543A76 /* Slots.h */; };
 		EA0842AD12BD34430018E285 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0842AC12BD34430018E285 /* Logger.cpp */; };
 		EA0842AE12BD34430018E285 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0842AC12BD34430018E285 /* Logger.cpp */; };
+		EA20B32013662E190038E922 /* PdPluginParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA20B31F13662E190038E922 /* PdPluginParameters.cpp */; };
+		EA20B32113662E190038E922 /* PdPluginParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA20B31F13662E190038E922 /* PdPluginParameters.cpp */; };
 		EA410DD312A914D0007E3440 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DBF12A914D0007E3440 /* Logger.h */; };
 		EA410DD412A914D0007E3440 /* ofxAudioPluginConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = EA410DC112A914D0007E3440 /* ofxAudioPluginConfig.h */; };
 		EA410DDD12A914D0007E3440 /* Pandemonium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA410DCB12A914D0007E3440 /* Pandemonium.cpp */; };
@@ -370,8 +374,10 @@
 		8BA05B060720754400365D66 /* CAAUParameter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAAUParameter.h; sourceTree = "<group>"; };
 		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D01CCD20486CAD60068D4B7 /* Pandemonium.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pandemonium.component; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA002A8B135F7F0A005C520C /* Mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mutex.h; sourceTree = "<group>"; };
 		EA019E1B135F6CBA00543A76 /* Slots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Slots.h; path = plugin/Slots.h; sourceTree = "<group>"; };
 		EA0842AC12BD34430018E285 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
+		EA20B31F13662E190038E922 /* PdPluginParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PdPluginParameters.cpp; sourceTree = "<group>"; };
 		EA410DBF12A914D0007E3440 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		EA410DC112A914D0007E3440 /* ofxAudioPluginConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAudioPluginConfig.h; sourceTree = "<group>"; };
 		EA410DCB12A914D0007E3440 /* Pandemonium.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pandemonium.cpp; sourceTree = "<group>"; };
@@ -654,6 +660,7 @@
 			children = (
 				EA0842AC12BD34430018E285 /* Logger.cpp */,
 				EA410DBF12A914D0007E3440 /* Logger.h */,
+				EA002A8B135F7F0A005C520C /* Mutex.h */,
 				EA019E1B135F6CBA00543A76 /* Slots.h */,
 				EA410DC012A914D0007E3440 /* plugin */,
 			);
@@ -664,6 +671,7 @@
 		EA410DC012A914D0007E3440 /* plugin */ = {
 			isa = PBXGroup;
 			children = (
+				EA20B31F13662E190038E922 /* PdPluginParameters.cpp */,
 				EA410DC112A914D0007E3440 /* ofxAudioPluginConfig.h */,
 				EA410DCB12A914D0007E3440 /* Pandemonium.cpp */,
 				EA410DCC12A914D0007E3440 /* Pandemonium.h */,
@@ -947,6 +955,7 @@
 				EA87E9F6135E002400B6B570 /* s_utf8.h in Headers */,
 				EA87EA12135E002F00B6B570 /* ofxPd.h in Headers */,
 				EA019E1C135F6CBA00543A76 /* Slots.h in Headers */,
+				EA002A8C135F7F0A005C520C /* Mutex.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,6 +1010,7 @@
 				EA87E9F7135E002400B6B570 /* s_utf8.h in Headers */,
 				EA87EA13135E002F00B6B570 /* ofxPd.h in Headers */,
 				EA019E1D135F6CBA00543A76 /* Slots.h in Headers */,
+				EA002A8D135F7F0A005C520C /* Mutex.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,6 +1219,7 @@
 				EA87EA0A135E002400B6B570 /* x_qlist.c in Sources */,
 				EA87EA0C135E002400B6B570 /* x_time.c in Sources */,
 				EA87EA10135E002F00B6B570 /* ofxPd.cpp in Sources */,
+				EA20B32013662E190038E922 /* PdPluginParameters.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1315,6 +1326,7 @@
 				EA87EA0B135E002400B6B570 /* x_qlist.c in Sources */,
 				EA87EA0D135E002400B6B570 /* x_time.c in Sources */,
 				EA87EA11135E002F00B6B570 /* ofxPd.cpp in Sources */,
+				EA20B32113662E190038E922 /* PdPluginParameters.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

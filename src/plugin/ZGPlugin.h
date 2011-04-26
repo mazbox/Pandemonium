@@ -63,7 +63,7 @@ public:
 			return kAudioUnitParameterUnit_Hertz;
 		}
 		
-		if(type=="int") {
+		if(type=="int" || type=="intslider") {
 			return kAudioUnitParameterUnit_Indexed;
 		} else {
 			return kAudioUnitParameterUnit_Generic;

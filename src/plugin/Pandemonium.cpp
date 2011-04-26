@@ -9,6 +9,8 @@
 
 #include "Pandemonium.h"
 
+Mutex Pandemonium::takeItInTurnsMutex;
+
 ofxAudioPlugin *ofxAudioPlugin_getPlugin(ofxAudioPluginWrapper *wrapper) {
 	return new Pandemonium(wrapper);
 }

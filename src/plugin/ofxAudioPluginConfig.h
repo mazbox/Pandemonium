@@ -16,7 +16,7 @@
 #define ofxAudioPlugin_Desc                 "Pandemonium Instrument"
 #define ofxAudioPlugin_Manufacturer         "MAZBOX.COM"
 #define ofxAudioPlugin_ManufacturerCode     'MazB'
-#define ofxAudioPlugin_PluginCode           'PanI'
+#define ofxAudioPlugin_PluginCode           'Pani'
 #define ofxAudioPlugin_AUMainType           kAudioUnitType_MusicDevice
 #else
 
@@ -24,7 +24,7 @@
 #define ofxAudioPlugin_Desc                 "Pandemonium Effect"
 #define ofxAudioPlugin_Manufacturer         "MAZBOX.COM"
 #define ofxAudioPlugin_ManufacturerCode     'MazB'
-#define ofxAudioPlugin_PluginCode           'PanE'
+#define ofxAudioPlugin_PluginCode           'Pane'
 #define ofxAudioPlugin_AUMainType           kAudioUnitType_Effect
 
 #endif

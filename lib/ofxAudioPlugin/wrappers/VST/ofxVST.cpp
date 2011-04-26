@@ -21,8 +21,8 @@ class ofxVSTPlugin: public AudioEffectX, public ofxAudioPluginWrapper {
 	
 public:
 	ofxVSTPlugin(audioMasterCallback audioMaster): AudioEffectX (audioMaster, 1, 1) {
-		ofxAudioPluginWrapper::instance = this;
-		plugin = ofxAudioPlugin_getPlugin();
+
+		plugin = ofxAudioPlugin_getPlugin(this);
 		
 		
 #ifdef ofxAudioPlugin_IsSynth
@@ -43,11 +43,14 @@ public:
 		
 		
 		cEffect.numParams = plugin->getNumParameters();
-		
+		cEffect.numParams = 1;
 		
 		parametersChanged();
 	}
 	
+	void setNumParameters(int numParams) {
+		
+	}
 	
 	void parametersChanged() {
 		updateDisplay();
@@ -130,7 +133,18 @@ protected:
 	ofxAudioPlugin *plugin;
 };
 
+float ofxAudioPlugin::getParameter(int parameterId) {
 
+}
+void ofxAudioPlugin::setNumParameters(int numParameters) {
+}
+
+void ofxAudioPlugin::setParameter(int parameterId, float value) {
+}
+
+void ofxAudioPlugin::parametersChanged() {
+
+}
 //-------------------------------------------------------------------------------------------------------
 AudioEffect* createEffectInstance (audioMasterCallback audioMaster)
 {

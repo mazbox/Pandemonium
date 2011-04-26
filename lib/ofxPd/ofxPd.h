@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include "Slots.h"
+#include "Mutex.h"
 using namespace std;
 /**
  * TODO:
@@ -95,5 +96,6 @@ private:
 	// so each instance has its own.
 	void renameMidiChannels(string &data);
 	static Slots midiChannels;
+
 	
 };

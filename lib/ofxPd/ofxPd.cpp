@@ -13,6 +13,7 @@
 int ofxPd::bufferSize = 0;
 bool ofxPd::pdInitialized = false;
 Slots ofxPd::midiChannels;
+
 void pdprint(const char *s) {
 	printf("PD: %s", s);
 }
@@ -366,12 +367,13 @@ float ofxPdClip(float inp) {
 	else if(inp!=inp) inp = 0;
 	return inp;
 }
+
 void ofxPd::process(float *inputs, float *outputs, int numFrames) {
 	if(bufferSize!=numFrames) setBufferSize(numFrames);
 	libpd_float(uid.c_str(), 1);
 	libpd_process_float(inputs, outputs);
 	libpd_float(uid.c_str(), 0);
-	
+
 	for(int i = 0; i < numFrames; i++) {
 		outputs[i*2] = ofxPdClip(outputs[i*2]);
 		outputs[i*2+1] = ofxPdClip(outputs[i*2+1]);

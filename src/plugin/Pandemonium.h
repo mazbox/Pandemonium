@@ -46,7 +46,11 @@ public:
 			info->min = p->min;
 			info->max = p->max;
 			info->initial = p->value;
-			info->type = ofxAudioPlugin_FLOAT;
+			if(p->type=="int" || p->type=="intslider") {
+				info->type = ofxAudioPlugin_INT;
+			} else {
+				info->type = ofxAudioPlugin_FLOAT;
+			}
 		}
 	}
 	
@@ -94,7 +98,7 @@ public:
 		
 		int menuIndex = getParameter(0);
 		int patchIndex = menuIndex - EXTRA_MENU_ITEMS;
-		
+			takeItInTurnsMutex.lock();
 		
 		
 		if(currPatchIndex!=patchIndex) {
@@ -103,7 +107,7 @@ public:
 				return;
 			} else {
 				if(menuIndex==ABOUT) {
-					system("open http://www.mrkbrz.com/zgau/");
+					system("open http://www.mazbox.com/pandemonium/");
 					setParameter(0, currPatchIndex+EXTRA_MENU_ITEMS);
 				} else if(menuIndex==REFRESH) {
 					findPatches();
@@ -161,7 +165,7 @@ public:
 		} else if(numIns==0 && numOuts==1) {
 			pd->process(input, outs[0], numFrames);
 		}	
-		 
+		takeItInTurnsMutex.unlock();
 		lastBufferSize = numFrames;
 	}
 	
@@ -188,5 +192,5 @@ private:
 			currPatchIndex = patchIndex;
 		}
 	}
-		 
+		static Mutex takeItInTurnsMutex;
 };

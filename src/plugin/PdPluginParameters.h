@@ -22,6 +22,7 @@ public:
 		units = "";
 		value = 0;
 	}
+
 	
 	// "slider" or "bang"
 	string type;
@@ -39,7 +40,13 @@ public:
 	
 	// name of units (TODO)
 	string units;
+	
+	// use the y to sort the parameters
+	float y;
 };
+
+bool sortZGParameters(ZGParameter *one, ZGParameter *two);
+
 
 class PdPluginParameters {
 public:
@@ -59,11 +66,19 @@ public:
 				parseParameter(line);
 			}
 		}
+		
+		
+		sort(parameters.begin(), parameters.end(), sortZGParameters);
+		
 	}
+	
+	
+	
 	ZGParameter *getParameter(int i) { return parameters[i]; };
 	int size() { return parameters.size(); }
 	//void clear() { for(int i = 0; i < parameters.size(); i++) delete parameters[i]; parameters.clear(); }
 private:
+	
 	
 	void parseParameter(string paramStr) {
 		// format is 
@@ -77,6 +92,7 @@ private:
 		// they're for setting the minimum, maximum, default and units of the slider
 		// (default to range [0,1])
 		
+		// after, we need to sort on y
 		
 		vector<string> parts = split(paramStr, ' ');
 		if(parts.size()<7) {
@@ -84,7 +100,7 @@ private:
 			return;
 		}
 		ZGParameter *param = new ZGParameter();
-		
+		param->y = atof(parts[3].c_str());
 		param->name = parts[5];
 		param->type = parts[6];
 		
