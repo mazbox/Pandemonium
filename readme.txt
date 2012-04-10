@@ -4,6 +4,7 @@ Pandemonium is a plugin for running Pd patches in your DAW. Currently it has onl
 
 Make sure you create a folder at /Library/Audio/Sounds/Pandemonium
 and 2 subfolders in there: "Effects" and "Instruments"
+
 Future features
 ---------------
 - VST version
